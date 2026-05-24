@@ -103,10 +103,7 @@ body {
   margin: 35px 0 35px;
 }
 
-#rolling-word {
+#rolling-line {
   font-weight: 400;
-  display: inline-block;
-  min-width: 260px;
   text-align: center;
-  white-space: nowrap;
 }
