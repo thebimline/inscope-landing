@@ -72,21 +72,6 @@ body {
     position: relative;
 }
 
-/* schematic vertical guide */
-
-.tri-factor::before {
-    content: "+ ──";
-    position: absolute;
-    left: 78px;
-    top: 118px;
-
-    color: #7E9077;
-    font-family: monospace;
-    font-size: 34px;
-    letter-spacing: -2px;
-    opacity: 0.75;
-}
-
 .tri-factor h2 {
     text-align: center;
     font-size: 42px;
