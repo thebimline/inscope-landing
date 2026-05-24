@@ -106,6 +106,7 @@ body {
 #rolling-word {
   font-weight: 400;
   display: inline-block;
-  min-width: 220px;
+  min-width: 260px;
   text-align: center;
+  white-space: nowrap;
 }
