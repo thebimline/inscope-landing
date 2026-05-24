@@ -19,3 +19,4 @@ function updateRollingText() {
 }
 
 setInterval(updateRollingText, 3500);
+
