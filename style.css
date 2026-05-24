@@ -5,11 +5,31 @@ body {
     color: #111;
 }
 
-.masthead-image {
-    height: 180px;
-    background-image: url('ChatGPT Image May 13, 2026, 10_27_13 AM.png');
-    background-size: cover;
-    background-position: center;
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    background: white;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+}
+
+.header-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .hero {
