@@ -129,9 +129,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    max-width: 1400px;
     margin: 0 auto 80px;
 }
 
@@ -140,7 +140,12 @@ body {
     padding: 35px;
     border-radius: 18px;
     width: 280px;
+    min-height: 150px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .gs-step h3 {
@@ -154,8 +159,9 @@ body {
 }
 
 .gs-arrow {
-    font-size: 40px;
+    font-size: 42px;
     color: #999;
+    flex-shrink: 0;
 }
 
 .gs-panels {
