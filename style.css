@@ -141,6 +141,43 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 55px 20px 65px;
+    }
+
+    .hero-content {
+        padding: 55px 24px 60px;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.08;
+        max-width: 340px;
+        margin: 0 auto 34px;
+    }
+
+    .sub {
+        font-size: 20px;
+        line-height: 1.55;
+        max-width: 340px;
+        margin: 0 auto 34px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: nowrap;
+    }
+
+    .cta-buttons a {
+        margin: 0;
+        padding: 14px 20px;
+    }
+}
+
 /* Demo = Pink */
 .cta-buttons a:first-child {
     background: #E7C1E8;
