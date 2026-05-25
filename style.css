@@ -41,7 +41,7 @@ body {
 .hero-content {
     max-width: 920px;
     margin: auto;
-    padding: 88px 72px 92px;
+    padding: 78px 72px 70px;
     position: relative;
 }
 
@@ -86,9 +86,9 @@ body {
 
 .sub {
     font-size: 20px;
-    line-height: 1.85;
+    line-height: 1.72;
     color: #444;
-    max-width: 780px;
+    max-width: 860px;
     margin: 42px auto 0;
     font-weight: 400;
 }
