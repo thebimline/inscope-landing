@@ -75,10 +75,10 @@ body {
 }
 
 .tm {
-    font-size: 0.38em !important;
+    font-size: 0.42em;
     position: relative;
-    top: -0.28em !important;
-    left: -1px;
+    vertical-align: super;
+    margin-left: 1px;
     opacity: 0.65;
 }
 
