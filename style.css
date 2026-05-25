@@ -165,7 +165,7 @@ body {
         padding: 14px 20px;
     }
 
-    .site-header {
+.site-header {
     padding: 20px 24px;
 }
 
@@ -173,15 +173,23 @@ body {
     font-size: 24px;
 }
 
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+}
+
 .header-nav a {
-    display: none;
+    display: none !important;
 }
 
 .header-nav::after {
-    content: "Menu";
+    content: "☰ Menu";
+    display: block;
     font-size: 15px;
     font-weight: 500;
     color: #111;
+    cursor: pointer;
 }
     
 }
