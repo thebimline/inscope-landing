@@ -164,6 +164,26 @@ body {
         margin: 0;
         padding: 14px 20px;
     }
+
+    .site-header {
+    padding: 20px 24px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.header-nav a {
+    display: none;
+}
+
+.header-nav::after {
+    content: "Menu";
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+}
+    
 }
 
 /* Demo = Pink */
