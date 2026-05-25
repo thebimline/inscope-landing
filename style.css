@@ -72,10 +72,10 @@ body {
 }
 
 .hero h1 {
-    font-size: 42px;
-    max-width: 900px;
-    margin: 0 auto 38px;
-    line-height: 1.1;
+    font-size: 56px;
+    max-width: 1050px;
+    margin: 0 auto 42px;
+    line-height: 1.08;
 }
 
 .rolling {
