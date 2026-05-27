@@ -227,8 +227,8 @@ body {
 
 .cards {
     display: flex;
-    gap: 30px;
-    max-width: 1200px;
+    gap: 34px;
+    max-width: 1300px;
     margin: auto;
     flex-wrap: wrap;
     justify-content: center;
@@ -236,25 +236,27 @@ body {
 
 .card {
     background: white;
-    padding: 35px;
+    padding: 38px;
     border-radius: 16px;
-    width: 320px;
+    width: 420px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
 .card h3 {
     margin-top: 0;
+    margin-bottom: 18px;
     font-size: 26px;
+    line-height: 1.15;
 }
 
 .card p {
     color: #666;
+    line-height: 1.55;
 }
 
 .card ul {
     padding-left: 18px;
 }
-
 #rolling-line {
   font-weight: 400;
   text-align: center;
