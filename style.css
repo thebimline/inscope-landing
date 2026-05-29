@@ -408,10 +408,19 @@ body {
     margin-bottom: 15px;
 }
 
-.gallery-subtitle {
+.gallery-tagline {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+    margin: 12px 0 10px;
+}
+
+.gallery-intro {
     color: #666;
     max-width: 700px;
     margin: 0 auto 60px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .gallery-carousel {
