@@ -250,18 +250,19 @@ body {
 
 .cards {
     display: flex;
-    gap: 34px;
-    max-width: 1300px;
+    gap: 28px;
+    max-width: 1320px;
     margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
 }
 
 .card {
     background: #ffffff;
     padding: 28px 36px;
     border-radius: 18px;
-    width: 400px;
+    width: 360px;
     box-shadow: 0 14px 40px rgba(0,0,0,0.28);
 }
 
