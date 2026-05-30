@@ -250,7 +250,7 @@ body {
 
 .cards {
     display: flex;
-    gap: 34px;
+    gap: 24px;
     max-width: 1300px;
     margin: auto;
     flex-wrap: wrap;
