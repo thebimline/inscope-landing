@@ -302,7 +302,7 @@ body {
     display: block;
     object-fit: cover;
     object-position: center top;
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 .getting-started {
