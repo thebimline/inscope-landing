@@ -290,12 +290,11 @@ body {
     max-width: 1280px;
     width: 92%;
     height: 555px;
-    margin: 20px auto 0;
+    margin: 55px auto 0;
     border-radius: 18px 18px 0 0;
     overflow: hidden;
     box-shadow: 0 22px 60px rgba(0,0,0,0.28);
     position: relative;
-    z-index: 1;
 }
 
 .feature-screenshot img {
@@ -303,8 +302,8 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center top;
-    transform: translateY(35px);
+    object-position: center 18%;
+    transform: none;
 }
 
 .getting-started {
