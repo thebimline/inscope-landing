@@ -413,21 +413,22 @@ body {
 
 .project-thinking-copy {
     flex: 0 0 260px;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.35;
-    color: #111;
+    min-height: 560px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    min-height: 560px;
-    padding: 0 12px 0 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #111;
+
+    padding-right: 12px;
 }
 
 .project-thinking-copy p {
-    margin: 0 0 70px;
+    margin: 0 0 82px;
 }
 
 .project-thinking-copy p:last-child {
