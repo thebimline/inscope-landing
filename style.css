@@ -421,13 +421,7 @@ body {
 }
 
 .project-thinking-copy p {
-    margin: 0;
-}
-
-.project-thinking-copy p + p {
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(0,0,0,0.10);
+    margin: 0 0 12px;
 }
 
 .gallery-carousel {
