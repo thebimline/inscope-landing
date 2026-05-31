@@ -494,11 +494,11 @@ body {
 
     background: #111;
     color: rgba(255,255,255,0.78);
-    padding: 40px 60px;
+    padding: 40px 80px;
     border-top: 1px solid rgba(255,255,255,0.08);
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
@@ -506,6 +506,7 @@ body {
 
 .footer-brand {
     text-align: left;
+    margin-right: auto;
 }
 
 .footer-brand h3 {
@@ -532,6 +533,7 @@ body {
 }
 
 .footer-copy {
+    margin-left: auto;
     font-size: 14px;
     color: rgba(255,255,255,0.55);
     text-align: right;
