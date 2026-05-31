@@ -302,7 +302,7 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center 4%;
+    object-position: center 2%;
     transform: none;
 }
 
