@@ -394,20 +394,21 @@ body {
 }
 
 .gallery {
-    padding: 30px 20px 90px;
-    background: #ffffff;
-    text-align: left;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 30px 0 90px;
+    background: #fff;
+    overflow: hidden;
 }
 
 .gallery-header {
-    padding: 0 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto 24px;
+    padding: 0 40px;
+    text-align: left;
 }
 
 .gallery h2 {
     font-size: 42px;
-    margin-bottom: 6px;
+    margin: 0 0 6px;
 }
 
 .gallery-intro {
@@ -415,7 +416,6 @@ body {
     font-size: 20px;
     font-weight: 500;
     color: #333;
-    letter-spacing: -0.01em;
     line-height: 1.35;
 }
 
@@ -423,10 +423,11 @@ body {
     display: flex;
     gap: 28px;
     overflow-x: auto;
-    padding: 20px 40px;
+    padding: 20px 40px 0;
     scroll-snap-type: x mandatory;
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
     scrollbar-width: none;
 }
 
