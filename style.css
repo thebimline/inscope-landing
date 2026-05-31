@@ -394,11 +394,11 @@ body {
 }
 
 .gallery {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     padding: 20px 0 80px;
     background: #fff;
     overflow: hidden;
-    width: 100%;
-    margin: 0;
     max-width: none;
 }
 
@@ -412,12 +412,12 @@ body {
 }
 
 .project-thinking-copy {
-    flex: 0 0 240px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.45;
+    flex: 0 0 260px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35;
     color: #111;
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 .project-thinking-copy p {
@@ -453,7 +453,10 @@ body {
     object-fit: cover;
     display: block;
 }
+
 .final-cta {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     background: #E5FCD9;
     color: #111;
     text-align: center;
