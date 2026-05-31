@@ -394,24 +394,27 @@ body {
 }
 
 .gallery {
-    padding: 20px 0 90px;
+    padding: 20px 0 80px;
     background: #fff;
     overflow: hidden;
+    width: 100%;
 }
 
-.gallery-header {
-    max-width: none;
-    margin: 0 0 22px;
+.gallery-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    width: 100%;
     padding: 0 40px;
-    text-align: left;
 }
 
 .project-thinking-copy {
-    max-width: 280px;
-    font-size: 28px;
+    flex: 0 0 240px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.35;
+    line-height: 1.45;
     color: #111;
+    padding-top: 12px;
 }
 
 .project-thinking-copy p {
@@ -419,20 +422,19 @@ body {
 }
 
 .gallery-carousel {
+    flex: 1;
     display: flex;
     gap: 28px;
     overflow-x: auto;
-    padding: 20px 40px 0;
+    padding: 0;
     scroll-snap-type: x mandatory;
-    width: 100%;
-    max-width: none;
-    margin: 0;
     scrollbar-width: none;
 }
 
 .gallery-carousel::-webkit-scrollbar {
     display: none;
 }
+
 .thinking-card {
     min-width: 380px;
     height: 560px;
