@@ -412,17 +412,16 @@ body {
 }
 
 .project-thinking-copy {
-    flex: 0 0 360px;
+    flex: 0 0 260px;
     font-size: 24px;
     font-weight: 600;
-    line-height: 1.65;
+    line-height: 1.35;
     color: #111;
-    padding-top: 22px;
-    padding-right: 28px;
+    padding-top: 10px;
 }
 
 .project-thinking-copy p {
-    margin: 0 0 18px;
+    margin: 0 0 26px;
 }
 
 .gallery-carousel {
