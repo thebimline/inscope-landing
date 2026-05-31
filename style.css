@@ -309,8 +309,10 @@ body {
 .getting-started {
     position: relative;
     z-index: 2;
-    padding: 140px 20px 100px;
-    background: white;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 60px 20px 100px;
+    background: #fff;
     text-align: center;
     border-top: 1px solid rgba(0,0,0,0.08);
 }
