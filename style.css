@@ -342,9 +342,16 @@ body {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 20px;
     text-align: left;
     box-shadow: none;
+}
+
+.process-arrow {
+    font-size: 28px;
+    color: rgba(0,0,0,0.32);
+    line-height: 1;
+    margin-left: 21px;
 }
 
 .gs-step-card {
