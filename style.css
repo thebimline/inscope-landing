@@ -396,21 +396,26 @@ body {
 .gallery {
     padding: 20px 0 90px;
     background: #fff;
+    overflow: hidden;
 }
 
 .gallery-header {
-    max-width: 1400px;
-    margin: 0 auto 22px;
+    max-width: none;
+    margin: 0 0 22px;
     padding: 0 40px;
     text-align: left;
 }
 
-.gallery-kicker {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
+.project-thinking-copy {
+    max-width: 280px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.35;
     color: #111;
-    line-height: 1.3;
+}
+
+.project-thinking-copy p {
+    margin: 0 0 4px;
 }
 
 .gallery-carousel {
@@ -428,7 +433,6 @@ body {
 .gallery-carousel::-webkit-scrollbar {
     display: none;
 }
-
 .thinking-card {
     min-width: 380px;
     height: 560px;
