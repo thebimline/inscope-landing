@@ -268,8 +268,9 @@ body {
 .card h3 {
     margin-top: 0;
     margin-bottom: 14px;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.15;
+    white-space: nowrap;
 }
 
 .card p {
