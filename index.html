@@ -165,9 +165,10 @@
   </p>
 
   <div class="cta-buttons">
-    <a href="#">Book a Demo</a>
-    <a href="#">Book a Call</a>
-  </div>
+    <button id="openContact" class="contact-btn">
+        Start the conversation
+    </button>
+</div>
 
 </section>
 
@@ -190,7 +191,48 @@
   </div>
 
 </footer>
-  
+
+<div id="contactModal" class="contact-modal">
+
+  <div class="contact-box">
+
+    <button id="closeContact" class="close-modal">×</button>
+
+    <h2>Start the conversation</h2>
+
+    <p class="contact-intro">
+      Tell us a little about your project or enquiry.
+    </p>
+
+    <form class="contact-form" method="POST">
+
+      <input type="text" name="name" placeholder="Name" required>
+
+      <input type="email" name="email" placeholder="Email" required>
+
+      <input type="text" name="project" placeholder="Company / Project">
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Tell us about your project or enquiry"
+        required
+      ></textarea>
+
+      <button type="submit" class="submit-btn">
+        Send enquiry
+      </button>
+
+    </form>
+
+    <p class="contact-note">
+      We’ll respond by email to discuss your project and next steps.
+    </p>
+
+  </div>
+
+</div>
+    
 <script src="script.js"></script>
 </body>
 </html>
