@@ -599,3 +599,141 @@ body {
     display: block;
   }
 }
+
+
+/* CONTACT CTA */
+
+.contact-cta-wrap {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.contact-btn {
+    background: #7151a8;
+    color: white;
+    border: none;
+    padding: 16px 34px;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* MODAL */
+
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 24px;
+}
+
+.contact-modal.active {
+    display: flex;
+}
+
+
+/* CONTACT BOX */
+
+.contact-box {
+    background: #fff;
+    width: 100%;
+    max-width: 560px;
+    padding: 42px;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.contact-box h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 34px;
+}
+
+.contact-intro {
+    color: rgba(0,0,0,0.62);
+    margin-bottom: 26px;
+    line-height: 1.5;
+}
+
+
+/* FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #7151a8;
+}
+
+
+/* SUBMIT */
+
+.submit-btn {
+    background: #7151a8;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* NOTE */
+
+.contact-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.52);
+    text-align: center;
+}
+
+
+/* CLOSE */
+
+.close-modal {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #777;
+}
