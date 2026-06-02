@@ -610,7 +610,7 @@ body {
 
 .contact-btn {
     background: #E7C1E8;
-    color: white;
+    color: #111;
     border: none;
     padding: 16px 34px;
     border-radius: 999px;
@@ -701,7 +701,7 @@ body {
 
 .submit-btn {
     background: #E7C1E8;
-    color: white;
+    color: #111;
     border: none;
     padding: 16px;
     border-radius: 999px;
