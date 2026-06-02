@@ -609,7 +609,7 @@ body {
 }
 
 .contact-btn {
-    background: #7151a8;
+    background: #E7C1E8;
     color: white;
     border: none;
     padding: 16px 34px;
@@ -693,14 +693,14 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #7151a8;
+    border-color: #E7C1E8;
 }
 
 
 /* SUBMIT */
 
 .submit-btn {
-    background: #7151a8;
+    background: #E7C1E8;
     color: white;
     border: none;
     padding: 16px;
