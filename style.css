@@ -80,9 +80,9 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("Images/tbl-symbol-large_2.png")
+    background: url("Images/tbl-symbol-large.png")
                 left 3% bottom 8% / 380px auto no-repeat;
-    opacity: 0.28;
+    opacity: 0.60;
     z-index: 0;
     pointer-events: none;
 }
