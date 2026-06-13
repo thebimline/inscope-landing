@@ -34,7 +34,7 @@ body {
 .logo span {
     display: block;
     line-height: 1;
-    transform: translateY(12px);
+    transform: translateY(14px);
 }
 
 .header-nav {
