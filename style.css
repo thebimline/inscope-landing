@@ -18,19 +18,17 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 700;
-    color: #111;
 }
 
 .logo img {
-    height: 52px;
+    height: 44px;
     width: auto;
     display: block;
 }
 
 .logo span {
-    line-height: 1;
     position: relative;
     top: 6px;
 }
