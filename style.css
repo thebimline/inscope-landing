@@ -81,9 +81,11 @@ body {
     color: rgba(0,0,0,0.28);
 }
 .topline {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 28px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 32px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
 }
 
 .hero h1 {
