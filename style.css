@@ -271,7 +271,7 @@ body {
     display: flex;
     gap: 24px;
     max-width: 1400px;
-    margin: 0 auto 90px;
+    margin: 0 auto 80px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -302,13 +302,13 @@ body {
 .feature-carousel {
     max-width: 1280px;
     width: 92%;
-    margin: 0 auto;
+    margin: 0 auto 0;
     display: flex;
     gap: 28px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    padding: 0 0 30px;
+    padding: 0;
 }
 
 .feature-carousel::-webkit-scrollbar {
@@ -338,7 +338,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 26px auto 60px;
+    margin: 18px auto 80px;
+    font-size: 28px;
+    color: rgba(0,0,0,0.38);
 }
 
 .carousel-arrow {
