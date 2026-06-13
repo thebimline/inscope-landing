@@ -17,23 +17,24 @@ body {
 .logo {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    font-size: 30px;
+    gap: 14px;
+    font-size: 36px;
     font-weight: 700;
     color: #111;
     text-decoration: none;
 }
 
 .logo img {
-    height: 50px;
+    height: 62px;
     width: auto;
     display: block;
+    flex-shrink: 0;
 }
 
 .logo span {
-    line-height: 1;
     display: block;
-    transform: translateY(8px);
+    line-height: 1;
+    transform: translateY(12px);
 }
 
 .header-nav {
