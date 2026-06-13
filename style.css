@@ -318,15 +318,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin: 22px auto 0;
-    font-size: 14px;
-    color: rgba(0,0,0,0.48);
-    letter-spacing: 0.02em;
+    margin: 35px auto 80px;
+    font-size: 32px;
+    color: rgba(0,0,0,0.25);
+    line-height: 1;
 }
 
 .carousel-arrow {
-    font-size: 20px;
     line-height: 1;
 }
 
