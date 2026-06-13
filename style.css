@@ -41,16 +41,6 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("Images/tbl-symbol-large_2.png")
-                left 3% bottom 8% / 440px auto no-repeat;
-    opacity: 0.70;
-    z-index: 0;
-    pointer-events: none;
-}
 
 .hero-content {
     max-width: 920px;
@@ -64,7 +54,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("Images/tbl-symbol-large.png")
+    background: url("Images/tbl-symbol-large_2.png")
                 left 3% bottom 8% / 380px auto no-repeat;
     opacity: 0.60;
     z-index: 0;
