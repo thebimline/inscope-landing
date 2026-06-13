@@ -348,6 +348,27 @@ body {
     line-height: 1;
     color: rgba(0,0,0,0.38);
 }
+
+.timeline-feature {
+    max-width: 820px;
+    margin: 70px auto 90px;
+    text-align: center;
+}
+
+.timeline-feature h3 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 0 0 22px;
+    color: #111;
+}
+
+.timeline-feature p {
+    font-size: 20px;
+    line-height: 1.65;
+    color: rgba(0,0,0,0.62);
+    margin: 0;
+}
+
 .getting-started {
     position: relative;
     z-index: 2;
