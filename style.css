@@ -61,6 +61,16 @@ body {
     pointer-events: none;
 }
 
+.hero-content::before {
+    content: "+";
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    font-family: monospace;
+    font-size: 22px;
+    color: rgba(0,0,0,0.28);
+}
+
 .hero-content::after {
     content: "+";
     position: absolute;
