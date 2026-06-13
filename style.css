@@ -28,12 +28,7 @@ body {
     height: 50px;
     width: auto;
     display: block;
-}
-
-.logo span {
-    line-height: 1;
-    position: relative;
-    top: 12px;
+    margin-top: -4px;
 }
 
 .header-nav {
