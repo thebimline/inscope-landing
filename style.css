@@ -26,7 +26,8 @@ body {
 .logo img {
     height: 52px;
     width: auto;
-    display: block;
+    position: relative;
+    top: 4px;
 }
 
 .logo span {
