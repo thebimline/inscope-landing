@@ -232,13 +232,7 @@ body {
 
 .tri-factor {
     padding: 120px 40px 0;
-    background:
-        linear-gradient(
-            rgba(244,244,244,0.88),
-            rgba(244,244,244,0.88)
-        ),
-        url("Images/section2_background_2.jpeg")
-        center / cover no-repeat;
+    background: #f4f4f4;
     position: relative;
     overflow: hidden;
 }
