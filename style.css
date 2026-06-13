@@ -76,14 +76,15 @@ body {
     z-index: 1;
 }
 
-.hero-content::before {
-    content: "+";
+.hero::before {
+    content: "";
     position: absolute;
-    top: 22px;
-    left: 28px;
-    font-family: monospace;
-    font-size: 22px;
-    color: rgba(0,0,0,0.28);
+    inset: 0;
+    background: url("Images/tbl-symbol-large_2.png")
+                left 3% bottom 8% / 380px auto no-repeat;
+    opacity: 0.28;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-content::after {
