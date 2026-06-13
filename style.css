@@ -63,7 +63,7 @@ body {
     inset: 0;
     background: url("Images/tbl-symbol-large.png")
                 left 3% bottom 8% / 440px auto no-repeat;
-    opacity: 0.50;
+    opacity: 0.28;
     z-index: 0;
     pointer-events: none;
 }
@@ -71,7 +71,7 @@ body {
 .hero-content {
     max-width: 920px;
     margin: auto;
-    padding: 78px 72px 70px;
+    padding: 58px 72px 70px;
     position: relative;
     z-index: 1;
 }
@@ -83,7 +83,7 @@ body {
     left: 28px;
     font-family: monospace;
     font-size: 22px;
-    color: rgba(0, 0, 0, 0.28);
+    color: rgba(0,0,0,0.28);
 }
 
 .hero-content::after {
@@ -93,9 +93,8 @@ body {
     right: 28px;
     font-family: monospace;
     font-size: 22px;
-    color: rgba(0, 0, 0, 0.28);
+    color: rgba(0,0,0,0.28);
 }
-
 .topline {
     font-size: 14px;
     color: #777;
