@@ -314,6 +314,22 @@ body {
     transform: none;
 }
 
+.carousel-hint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 22px auto 0;
+    font-size: 14px;
+    color: rgba(0,0,0,0.48);
+    letter-spacing: 0.02em;
+}
+
+.carousel-arrow {
+    font-size: 20px;
+    line-height: 1;
+}
+
 .getting-started {
     position: relative;
     z-index: 2;
