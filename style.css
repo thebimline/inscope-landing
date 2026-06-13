@@ -101,6 +101,15 @@ body {
     margin-bottom: 10px;
 }
 
+.hero-product {
+    display: block;
+    margin-bottom: 0.35em;
+}
+
+.hero-descriptor {
+    display: block;
+}
+
 .sub {
     font-size: 22px;
     line-height: 1.6;
