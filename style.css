@@ -350,62 +350,75 @@ body {
     color: rgba(0,0,0,0.38);
 }
 
-
-
 .timeline-story {
     background: #f5f5f5;
     padding: 95px 40px 105px;
 }
 
 .timeline-story-inner {
-    max-width: 900px;
+    max-width: 1180px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px 1fr 180px;
+    align-items: center;
+    gap: 70px;
+}
+
+.timeline-circle {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    border: 2px solid rgba(113,81,168,0.36);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #7151a8;
+}
+
+.timeline-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 92px;
+    border-top: 2px dotted rgba(113,81,168,0.34);
+}
+
+.project-circle::after {
+    right: -92px;
+}
+
+.financial-circle::after {
+    left: -92px;
+}
+
+.circle-icon {
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+
+.circle-title {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.circle-subtitle {
+    display: none;
 }
 
 .timeline-content {
-    position: relative;
     text-align: center;
-}
-
-.timeline-motif {
-    position: absolute;
-    top: -55px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 160px;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.motif-circle {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-}
-
-.motif-outline {
-    border: 2px solid rgba(0, 0, 0, 0.06);
-    left: 15px;
-    top: 0;
-}
-
-.motif-fill {
-    background: rgba(142, 226, 193, 0.18);
-    right: 15px;
-    top: 35px;
-}
-
-.timeline-content > * {
     position: relative;
-    z-index: 1;
 }
 
 .timeline-content h2 {
-    font-size: 72px;
-    line-height: 0.98;
-    margin: 0 0 32px;
+    font-size: 62px;
+    line-height: 1.02;
+    margin: 0 0 28px;
     color: #111;
     letter-spacing: -0.03em;
 }
@@ -413,41 +426,41 @@ body {
 .quote-mark {
     position: absolute;
     color: #7151a8;
-    font-size: 46px;
+    font-size: 42px;
     line-height: 1;
     font-weight: 700;
 }
 
 .quote-open {
-    top: -22px;
+    top: -18px;
     left: 50%;
-    transform: translateX(-240px);
+    transform: translateX(-220px);
 }
 
 .quote-close {
-    top: 95px;
+    top: 78px;
     left: 50%;
-    transform: translateX(210px);
+    transform: translateX(190px);
 }
 
 .timeline-content p {
-    max-width: 720px;
+    max-width: 690px;
     margin: 0 auto;
-    font-size: 21px;
-    line-height: 1.65;
-    color: rgba(0, 0, 0, 0.64);
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.64);
 }
 
 .timeline-highlight {
-    margin-top: 12px;
-    font-size: 21px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.72);
+    color: rgba(0,0,0,0.72);
 }
 
 .timeline-benefits {
     max-width: 980px;
-    margin: 68px auto 0;
+    margin: 62px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -459,9 +472,9 @@ body {
     align-items: center;
     gap: 16px;
     padding: 0 30px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.45;
-    color: rgba(0, 0, 0, 0.66);
+    color: rgba(0,0,0,0.66);
 }
 
 .benefit-icon {
@@ -473,7 +486,7 @@ body {
 .benefit-divider {
     width: 1px;
     height: 58px;
-    background: rgba(0, 0, 0, 0.14);
+    background: rgba(0,0,0,0.14);
 }
 
 @media (max-width: 900px) {
@@ -481,19 +494,23 @@ body {
         padding: 80px 24px 90px;
     }
 
+    .timeline-story-inner {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .timeline-circle {
+        width: 145px;
+        height: 145px;
+        margin: 0 auto;
+    }
+
+    .timeline-circle::after {
+        display: none;
+    }
+
     .timeline-content h2 {
-        font-size: 48px;
-    }
-
-    .timeline-motif {
-        width: 180px;
-        height: 120px;
-        top: -35px;
-    }
-
-    .motif-circle {
-        width: 90px;
-        height: 90px;
+        font-size: 44px;
     }
 
     .quote-mark {
