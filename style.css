@@ -450,6 +450,52 @@ body {
     }
 }
 
+.timeline-benefits {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+    margin-top: 42px;
+}
+
+.timeline-benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 260px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.45;
+    color: rgba(0,0,0,0.62);
+}
+
+.timeline-benefit span {
+    font-size: 30px;
+    color: #7151a8;
+    flex-shrink: 0;
+}
+
+.timeline-benefit:nth-child(2) span {
+    color: #2eb296;
+}
+
+.timeline-benefit p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .timeline-benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .timeline-benefit {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
 .getting-started {
     position: relative;
     z-index: 2;
