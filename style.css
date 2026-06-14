@@ -350,22 +350,27 @@ body {
     color: rgba(0,0,0,0.38);
 }
 
+
 .timeline-story {
-    max-width: 1280px;
-    margin: 110px auto 120px;
-    padding: 40px 40px;
+    background: #f5f5f5;
+    padding: 140px 40px;
+}
+
+.timeline-story-inner {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
+    grid-template-columns: 280px 1fr 280px;
     align-items: center;
-    gap: 48px;
-    text-align: center;
+    gap: 60px;
 }
 
 .timeline-circle {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    margin: auto;
+    border: 3px solid #7A5BBE;
+    background: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,168 +378,115 @@ body {
     position: relative;
 }
 
-.project-circle {
-    background: transparent;
-    border: 2px solid rgba(113,81,168,0.62);
-    box-shadow: 0 0 35px rgba(113,81,168,0.10);
-    color: #7151a8;
-}
-
-.financial-circle {
-    background: rgba(204, 255, 235, 0.55);
-    border: 2px solid rgba(46,178,150,0.72);
-    box-shadow: 0 0 35px rgba(46,178,150,0.14);
-    color: #2eb296;
-}
-
-.project-circle::after,
-.financial-circle::before {
+.timeline-circle::after {
     content: "";
     position: absolute;
     top: 50%;
-    width: 85px;
-    border-top: 3px dotted currentColor;
-    opacity: 0.65;
+    width: 90px;
+    border-top: 3px dotted rgba(122, 91, 190, 0.5);
 }
 
 .project-circle::after {
-    left: 100%;
-    margin-left: 16px;
+    right: -90px;
 }
 
-.financial-circle::before {
-    right: 100%;
-    margin-right: 16px;
+.financial-circle::after {
+    left: -90px;
 }
 
 .circle-icon {
-    font-size: 42px;
-    margin-bottom: 24px;
+    font-size: 48px;
+    color: #7A5BBE;
+    margin-bottom: 20px;
 }
 
 .circle-title {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    color: #7A5BBE;
+    letter-spacing: 0.04em;
 }
 
 .circle-subtitle {
-    margin-top: 8px;
-    font-size: 18px;
-    color: rgba(0,0,0,0.62);
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: #555;
 }
 
-.timeline-story-copy {
+.timeline-content {
+    text-align: center;
     position: relative;
 }
 
-.timeline-story-copy h3 {
-    font-size: 58px;
-    line-height: 1.05;
-    margin: 0 0 28px;
-    color: #111;
-    position: relative;
-}
-
-.quote-open,
-.quote-close {
-    color: #7151a8;
-    font-size: 0.9em;
-    line-height: 0;
+.quote-mark {
+    position: absolute;
+    color: #7A5BBE;
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 700;
 }
 
 .quote-open {
-    margin-right: 8px;
-    vertical-align: 0.25em;
+    top: -30px;
+    left: 80px;
 }
 
 .quote-close {
-    margin-left: 8px;
-    vertical-align: -0.15em;
+    top: 70px;
+    right: 80px;
 }
 
-.timeline-story-copy p {
-    max-width: 620px;
+.timeline-content h2 {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    margin-bottom: 40px;
+}
+
+.timeline-content p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 700px;
     margin: 0 auto;
-    font-size: 20px;
-    line-height: 1.65;
-    color: rgba(0,0,0,0.62);
+}
+
+.timeline-highlight {
+    margin-top: 25px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #444;
 }
 
 .timeline-benefits {
-    grid-column: 1 / -1;
+    max-width: 1200px;
+    margin: 90px auto 0;
     display: flex;
     justify-content: center;
-    gap: 0;
-    margin-top: 48px;
+    align-items: center;
+    gap: 40px;
 }
 
-.timeline-benefit {
+.benefit {
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 14px;
-    max-width: 300px;
-    padding: 0 34px;
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.45;
-    color: rgba(0,0,0,0.62);
-    border-right: 1px solid rgba(0,0,0,0.18);
+    gap: 18px;
+    font-size: 1.4rem;
+    color: #444;
 }
 
-.timeline-benefit:last-child {
-    border-right: none;
-}
-
-.timeline-benefit span {
-    font-size: 30px;
-    color: #7151a8;
+.benefit-icon {
+    color: #7A5BBE;
+    font-size: 2.5rem;
     flex-shrink: 0;
 }
 
-.timeline-benefit:nth-child(2) span {
-    color: #2eb296;
+.benefit-divider {
+    width: 1px;
+    height: 80px;
+    background: rgba(0,0,0,0.12);
 }
 
-.timeline-benefit p {
-    margin: 0;
-}
-
-@media (max-width: 900px) {
-    .timeline-story {
-        grid-template-columns: 1fr;
-        gap: 36px;
-        margin: 80px auto 90px;
-    }
-
-    .timeline-circle {
-        width: 220px;
-        height: 220px;
-    }
-
-    .project-circle::after,
-    .financial-circle::before {
-        display: none;
-    }
-
-    .timeline-story-copy h3 {
-        font-size: 42px;
-    }
-
-    .timeline-benefits {
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-    }
-
-    .timeline-benefit {
-        border-right: none;
-        padding: 0;
-        text-align: center;
-        flex-direction: column;
-    }
-}
 .getting-started {
     position: relative;
     z-index: 2;
