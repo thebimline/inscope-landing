@@ -268,11 +268,11 @@ body {
 }
 
 .structure-points {
+    max-width: 1200px;   
+    margin: 0 auto 80px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    max-width: 1400px;
-    margin: 0 auto 80px;
+    gap: 56px;
 }
 
 .structure-point {
