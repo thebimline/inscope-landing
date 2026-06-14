@@ -351,78 +351,63 @@ body {
 }
 
 
+
 .timeline-story {
     background: #f5f5f5;
     padding: 95px 40px 105px;
 }
 
 .timeline-story-inner {
-    max-width: 1180px;
+    max-width: 900px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 240px 1fr 240px;
-    align-items: center;
-    gap: 52px;
-}
-
-.timeline-circle {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 2px solid rgba(113,81,168,0.62);
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: #7151a8;
-}
-
-.timeline-circle::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 58px;
-    border-top: 2px dotted rgba(113,81,168,0.42);
-}
-
-.project-circle::after {
-    right: -58px;
-}
-
-.financial-circle::after {
-    left: -58px;
-}
-
-.circle-icon {
-    font-size: 30px;
-    margin-bottom: 18px;
-}
-
-.circle-title {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.circle-subtitle {
-    margin-top: 8px;
-    font-size: 16px;
-    color: rgba(0,0,0,0.58);
 }
 
 .timeline-content {
-    text-align: center;
     position: relative;
+    text-align: center;
+}
+
+.timeline-motif {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 160px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.motif-circle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.motif-outline {
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    left: 15px;
+    top: 0;
+}
+
+.motif-fill {
+    background: rgba(142, 226, 193, 0.18);
+    right: 15px;
+    top: 35px;
+}
+
+.timeline-content > * {
+    position: relative;
+    z-index: 1;
 }
 
 .timeline-content h2 {
-    font-size: 52px;
-    line-height: 1.05;
-    margin: 0 0 28px;
+    font-size: 72px;
+    line-height: 0.98;
+    margin: 0 0 32px;
     color: #111;
+    letter-spacing: -0.03em;
 }
 
 .quote-mark {
@@ -435,32 +420,34 @@ body {
 
 .quote-open {
     top: -22px;
-    left: 78px;
+    left: 50%;
+    transform: translateX(-240px);
 }
 
 .quote-close {
-    top: 82px;
-    right: 78px;
+    top: 95px;
+    left: 50%;
+    transform: translateX(210px);
 }
 
 .timeline-content p {
-    max-width: 610px;
+    max-width: 720px;
     margin: 0 auto;
-    font-size: 19px;
+    font-size: 21px;
     line-height: 1.65;
-    color: rgba(0,0,0,0.62);
+    color: rgba(0, 0, 0, 0.64);
 }
 
 .timeline-highlight {
-    margin-top: 10px;
-    font-size: 19px;
+    margin-top: 12px;
+    font-size: 21px;
     font-weight: 500;
-    color: rgba(0,0,0,0.66);
+    color: rgba(0, 0, 0, 0.72);
 }
 
 .timeline-benefits {
     max-width: 980px;
-    margin: 58px auto 0;
+    margin: 68px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -472,9 +459,9 @@ body {
     align-items: center;
     gap: 16px;
     padding: 0 30px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.45;
-    color: rgba(0,0,0,0.64);
+    color: rgba(0, 0, 0, 0.66);
 }
 
 .benefit-icon {
@@ -486,35 +473,42 @@ body {
 .benefit-divider {
     width: 1px;
     height: 58px;
-    background: rgba(0,0,0,0.14);
+    background: rgba(0, 0, 0, 0.14);
 }
 
 @media (max-width: 900px) {
-    .timeline-story-inner {
-        grid-template-columns: 1fr;
-        gap: 34px;
-    }
-
-    .timeline-circle {
-        width: 190px;
-        height: 190px;
-    }
-
-    .timeline-circle::after {
-        display: none;
+    .timeline-story {
+        padding: 80px 24px 90px;
     }
 
     .timeline-content h2 {
-        font-size: 40px;
+        font-size: 48px;
+    }
+
+    .timeline-motif {
+        width: 180px;
+        height: 120px;
+        top: -35px;
+    }
+
+    .motif-circle {
+        width: 90px;
+        height: 90px;
     }
 
     .quote-mark {
         display: none;
     }
 
+    .timeline-content p,
+    .timeline-highlight {
+        font-size: 18px;
+    }
+
     .timeline-benefits {
         flex-direction: column;
-        gap: 22px;
+        gap: 28px;
+        margin-top: 50px;
     }
 
     .benefit {
@@ -527,6 +521,7 @@ body {
         display: none;
     }
 }
+
 .getting-started {
     position: relative;
     z-index: 2;
