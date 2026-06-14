@@ -370,19 +370,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fff;
     position: relative;
 }
 
 .project-circle {
-    border: 2px solid rgba(113,81,168,0.75);
-    box-shadow: 0 0 35px rgba(113,81,168,0.16);
+    background: transparent;
+    border: 2px solid rgba(113,81,168,0.62);
+    box-shadow: 0 0 35px rgba(113,81,168,0.10);
     color: #7151a8;
 }
 
 .financial-circle {
-    border: 2px solid rgba(46,178,150,0.75);
-    box-shadow: 0 0 35px rgba(46,178,150,0.16);
+    background: rgba(204, 255, 235, 0.55);
+    border: 2px solid rgba(46,178,150,0.72);
+    box-shadow: 0 0 35px rgba(46,178,150,0.14);
     color: #2eb296;
 }
 
