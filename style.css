@@ -321,8 +321,8 @@ body {
     max-height: 640px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 18px 45px rgba(0,0,0,0.20);
-    background: #fff;
+    box-shadow: none;
+    background: transparent;
     scroll-snap-align: start;
 }
 
@@ -333,7 +333,6 @@ body {
     object-fit: contain;
     object-position: center center;
     border-radius: 24px;
-    transform: none;
 }
 
 .carousel-hint {
