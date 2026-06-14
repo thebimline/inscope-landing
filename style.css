@@ -349,24 +349,104 @@ body {
     color: rgba(0,0,0,0.38);
 }
 
-.timeline-feature {
-    max-width: 820px;
-    margin: 70px auto 90px;
+.timeline-story {
+    max-width: 1280px;
+    margin: 110px auto 120px;
+    padding: 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    align-items: center;
+    gap: 48px;
     text-align: center;
 }
 
-.timeline-feature h3 {
-    font-size: 38px;
-    line-height: 1.15;
-    margin: 0 0 22px;
+.timeline-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.project-circle {
+    border: 2px solid rgba(113,81,168,0.75);
+    box-shadow: 0 0 35px rgba(113,81,168,0.16);
+    color: #7151a8;
+}
+
+.financial-circle {
+    border: 2px solid rgba(46,178,150,0.75);
+    box-shadow: 0 0 35px rgba(46,178,150,0.16);
+    color: #2eb296;
+}
+
+.circle-icon {
+    font-size: 42px;
+    margin-bottom: 24px;
+}
+
+.circle-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.circle-subtitle {
+    margin-top: 8px;
+    font-size: 18px;
+    color: rgba(0,0,0,0.62);
+}
+
+.timeline-story-copy {
+    position: relative;
+}
+
+.quote-mark {
+    font-size: 76px;
+    line-height: 0.7;
+    color: #7151a8;
+    margin-bottom: 8px;
+}
+
+.timeline-story-copy h3 {
+    font-size: 58px;
+    line-height: 1.05;
+    margin: 0 0 28px;
     color: #111;
 }
 
-.timeline-feature p {
+.timeline-story-copy h3 br + * {
+    color: #2eb296;
+}
+
+.timeline-story-copy p {
+    max-width: 620px;
+    margin: 0 auto;
     font-size: 20px;
     line-height: 1.65;
     color: rgba(0,0,0,0.62);
-    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .timeline-story {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin: 80px auto 90px;
+    }
+
+    .timeline-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .timeline-story-copy h3 {
+        font-size: 42px;
+    }
 }
 
 .getting-started {
