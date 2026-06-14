@@ -267,36 +267,47 @@ body {
     color: #111;
 }
 
-.cards {
-    display: flex;
-    gap: 24px;
+.structure-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
     max-width: 1400px;
     margin: 0 auto 80px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.card {
-    background: #ffffff;
-    padding: 34px 40px;
-    border-radius: 20px;
-    width: 420px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+.structure-point {
+    border-top: 1px solid rgba(0,0,0,0.14);
+    padding-top: 28px;
 }
 
-.card h3 {
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 21px;
+.structure-number {
+    display: block;
+    margin-bottom: 22px;
+    color: rgba(113,81,168,0.75);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.structure-point h3 {
+    margin: 0 0 18px;
+    font-size: 28px;
     line-height: 1.2;
     color: #111;
 }
 
-.card p {
+.structure-point p {
     margin: 0;
     color: #5f5f5f;
     font-size: 18px;
     line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+    .structure-points {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 .feature-carousel {
