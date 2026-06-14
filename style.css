@@ -230,90 +230,19 @@ body {
     background: #BFDDF3;
 }
 
-.tri-factor {
-    padding: 120px 40px 0;
+/* FEATURE SHOWCASE */
+
+.feature-showcase {
     background: #f4f4f4;
+    padding: 0 40px 70px;
     position: relative;
     overflow: hidden;
-}
-
-.tri-factor::before,
-.tri-factor::after {
-    content: "+";
-    position: absolute;
-    color: rgba(113,81,168,0.18);
-    font-size: 34px;
-    font-weight: 300;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.tri-factor::before {
-    top: 16%;
-    left: 10%;
-}
-
-.tri-factor::after {
-    bottom: 22%;
-    right: 12%;
-}
-
-.tri-factor h2 {
-    text-align: center;
-    font-size: 54px;
-    line-height: 1.15;
-    max-width: 1200px;
-    margin: 0 auto 72px;
-    color: #111;
-}
-
-.structure-points {
-    max-width: 1200px;   
-    margin: 0 auto 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 56px;
-}
-
-.structure-point {
-    border-top: 1px solid rgba(0,0,0,0.14);
-    padding-top: 28px;
-}
-
-.structure-number {
-    display: block;
-    margin-bottom: 22px;
-    color: rgba(113,81,168,0.75);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-}
-
-.structure-point h3 {
-    margin: 0 0 18px;
-    font-size: 28px;
-    line-height: 1.2;
-    color: #111;
-}
-
-.structure-point p {
-    margin: 0;
-    color: #5f5f5f;
-    font-size: 18px;
-    line-height: 1.65;
-}
-
-@media (max-width: 1100px) {
-    .structure-points {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 }
 
 .feature-carousel {
     max-width: 1280px;
     width: 92%;
-    margin: 120px auto 0;
+    margin: 0 auto;
     display: flex;
     gap: 28px;
     overflow-x: auto;
@@ -330,7 +259,7 @@ body {
     flex: 0 0 100%;
     aspect-ratio: 16 / 9;
     max-height: 640px;
-    border-radius: 24px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: none;
     background: transparent;
@@ -343,14 +272,14 @@ body {
     display: block;
     object-fit: contain;
     object-position: center center;
-    border-radius: 24px;
+    border-radius: 0;
 }
 
 .carousel-hint {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 18px auto 50px;
+    margin: 18px auto 0;
     font-size: 28px;
     color: rgba(0,0,0,0.38);
 }
@@ -361,6 +290,8 @@ body {
     color: rgba(0,0,0,0.38);
 }
 
+
+/* TIMELINE STORY */
 
 .timeline-story {
     background: #f5f5f5;
@@ -430,6 +361,92 @@ body {
     color: rgba(0,0,0,0.72);
 }
 
+
+/* STRUCTURE SECTION */
+
+.tri-factor {
+    padding: 110px 40px 110px;
+    background: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+}
+
+.tri-factor::before,
+.tri-factor::after {
+    content: "+";
+    position: absolute;
+    color: rgba(113,81,168,0.18);
+    font-size: 34px;
+    font-weight: 300;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tri-factor::before {
+    top: 16%;
+    left: 10%;
+}
+
+.tri-factor::after {
+    bottom: 22%;
+    right: 12%;
+}
+
+.tri-factor h2 {
+    text-align: center;
+    font-size: 54px;
+    line-height: 1.15;
+    max-width: 1200px;
+    margin: 0 auto 72px;
+    color: #111;
+}
+
+.structure-points {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px;
+}
+
+.structure-point {
+    border-top: 1px solid rgba(0,0,0,0.14);
+    padding-top: 28px;
+}
+
+.structure-number {
+    display: block;
+    margin-bottom: 22px;
+    color: rgba(113,81,168,0.75);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.structure-point h3 {
+    margin: 0 0 18px;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #111;
+}
+
+.structure-point p {
+    margin: 0;
+    color: #5f5f5f;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .structure-points {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 @media (max-width: 900px) {
     .timeline-story {
         padding: 80px 24px 90px;
@@ -460,7 +477,6 @@ body {
         margin-right: auto;
     }
 }
-
 .getting-started {
     position: relative;
     z-index: 2;
