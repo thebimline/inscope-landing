@@ -352,190 +352,103 @@ body {
 
 .timeline-story {
     background: #f5f5f5;
-    padding: 95px 40px 105px;
+    padding: 115px 40px 120px;
 }
 
 .timeline-story-inner {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 180px 1fr 180px;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 90px;
     align-items: center;
-    gap: 70px;
 }
 
-.timeline-circle {
-    width: 165px;
-    height: 165px;
-    border-radius: 50%;
-    border: 2px solid rgba(113,81,168,0.36);
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: #7151a8;
-}
-
-.timeline-circle::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 92px;
-    border-top: 2px dotted rgba(113,81,168,0.34);
-}
-
-.project-circle::after {
-    right: -92px;
-}
-
-.financial-circle::after {
-    left: -92px;
-}
-
-.circle-icon {
-    font-size: 26px;
-    margin-bottom: 14px;
-}
-
-.circle-title {
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.circle-subtitle {
-    display: none;
-}
-
-.timeline-content {
-    text-align: center;
+.timeline-title-block {
     position: relative;
 }
 
-.timeline-content h2 {
-    font-size: 62px;
+.timeline-title-block h2 {
+    font-size: 64px;
     line-height: 1.02;
-    margin: 0 0 28px;
-    color: #111;
+    margin: 0;
     letter-spacing: -0.03em;
+    color: #111;
 }
 
 .quote-mark {
-    position: absolute;
     color: #7151a8;
-    font-size: 42px;
-    line-height: 1;
+    font-size: 44px;
     font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 
-.quote-open {
-    top: -18px;
-    left: 50%;
-    transform: translateX(-220px);
+.quote-mark.close {
+    position: absolute;
+    right: 40px;
+    bottom: 14px;
 }
 
-.quote-close {
-    top: 78px;
-    left: 50%;
-    transform: translateX(190px);
-}
-
-.timeline-content p {
-    max-width: 690px;
-    margin: 0 auto;
-    font-size: 20px;
+.timeline-copy-block p {
+    max-width: 640px;
+    font-size: 22px;
     line-height: 1.6;
     color: rgba(0,0,0,0.64);
+    margin: 0 0 14px;
 }
 
 .timeline-highlight {
-    margin-top: 10px;
-    font-size: 20px;
     font-weight: 500;
     color: rgba(0,0,0,0.72);
 }
 
 .timeline-benefits {
-    max-width: 980px;
-    margin: 62px auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 48px;
+    display: grid;
+    gap: 24px;
 }
 
 .benefit {
-    flex: 1;
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 0 30px;
-    font-size: 17px;
+    gap: 18px;
+    font-size: 18px;
     line-height: 1.45;
     color: rgba(0,0,0,0.66);
 }
 
 .benefit-icon {
     color: #7151a8;
-    font-size: 28px;
+    font-size: 30px;
     flex-shrink: 0;
 }
 
-.benefit-divider {
-    width: 1px;
-    height: 58px;
-    background: rgba(0,0,0,0.14);
-}
-
 @media (max-width: 900px) {
-    .timeline-story {
-        padding: 80px 24px 90px;
-    }
-
     .timeline-story-inner {
         grid-template-columns: 1fr;
-        gap: 34px;
+        gap: 42px;
+        text-align: center;
     }
 
-    .timeline-circle {
-        width: 145px;
-        height: 145px;
-        margin: 0 auto;
+    .timeline-title-block h2 {
+        font-size: 46px;
     }
 
-    .timeline-circle::after {
-        display: none;
+    .quote-mark.close {
+        position: static;
+        margin-top: 8px;
     }
 
-    .timeline-content h2 {
-        font-size: 44px;
-    }
-
-    .quote-mark {
-        display: none;
-    }
-
-    .timeline-content p,
-    .timeline-highlight {
+    .timeline-copy-block p {
         font-size: 18px;
-    }
-
-    .timeline-benefits {
-        flex-direction: column;
-        gap: 28px;
-        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .benefit {
-        padding: 0;
-        text-align: center;
         flex-direction: column;
-    }
-
-    .benefit-divider {
-        display: none;
+        text-align: center;
     }
 }
 
