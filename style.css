@@ -371,6 +371,7 @@ body {
     justify-content: center;
     align-items: center;
     background: #fff;
+    position: relative;
 }
 
 .project-circle {
@@ -383,6 +384,26 @@ body {
     border: 2px solid rgba(46,178,150,0.75);
     box-shadow: 0 0 35px rgba(46,178,150,0.16);
     color: #2eb296;
+}
+
+.project-circle::after,
+.financial-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 85px;
+    border-top: 3px dotted currentColor;
+    opacity: 0.65;
+}
+
+.project-circle::after {
+    left: 100%;
+    margin-left: 16px;
+}
+
+.financial-circle::before {
+    right: 100%;
+    margin-right: 16px;
 }
 
 .circle-icon {
@@ -407,22 +428,29 @@ body {
     position: relative;
 }
 
-.quote-mark {
-    font-size: 76px;
-    line-height: 0.7;
-    color: #7151a8;
-    margin-bottom: 8px;
-}
-
 .timeline-story-copy h3 {
     font-size: 58px;
     line-height: 1.05;
     margin: 0 0 28px;
     color: #111;
+    position: relative;
 }
 
-.timeline-story-copy h3 br + * {
-    color: #2eb296;
+.quote-open,
+.quote-close {
+    color: #7151a8;
+    font-size: 0.9em;
+    line-height: 0;
+}
+
+.quote-open {
+    margin-right: 8px;
+    vertical-align: 0.25em;
+}
+
+.quote-close {
+    margin-left: 8px;
+    vertical-align: -0.15em;
 }
 
 .timeline-story-copy p {
@@ -433,40 +461,29 @@ body {
     color: rgba(0,0,0,0.62);
 }
 
-@media (max-width: 900px) {
-    .timeline-story {
-        grid-template-columns: 1fr;
-        gap: 36px;
-        margin: 80px auto 90px;
-    }
-
-    .timeline-circle {
-        width: 220px;
-        height: 220px;
-    }
-
-    .timeline-story-copy h3 {
-        font-size: 42px;
-    }
-}
-
 .timeline-benefits {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
-    gap: 42px;
-    margin-top: 42px;
+    gap: 0;
+    margin-top: 48px;
 }
 
 .timeline-benefit {
     display: flex;
     align-items: center;
     gap: 14px;
-    max-width: 260px;
+    max-width: 300px;
+    padding: 0 34px;
     text-align: left;
     font-size: 16px;
     line-height: 1.45;
     color: rgba(0,0,0,0.62);
+    border-right: 1px solid rgba(0,0,0,0.18);
+}
+
+.timeline-benefit:last-child {
+    border-right: none;
 }
 
 .timeline-benefit span {
@@ -484,18 +501,39 @@ body {
 }
 
 @media (max-width: 900px) {
+    .timeline-story {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin: 80px auto 90px;
+    }
+
+    .timeline-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .project-circle::after,
+    .financial-circle::before {
+        display: none;
+    }
+
+    .timeline-story-copy h3 {
+        font-size: 42px;
+    }
+
     .timeline-benefits {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 22px;
     }
 
     .timeline-benefit {
+        border-right: none;
+        padding: 0;
         text-align: center;
         flex-direction: column;
     }
 }
-
 .getting-started {
     position: relative;
     z-index: 2;
