@@ -304,11 +304,12 @@ body {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 90px;
-    align-items: center;
+   align-items: start;
 }
 
 .timeline-title-block {
     position: relative;
+     padding-top: 85px;
 }
 
 .timeline-title-block h2 {
@@ -317,6 +318,24 @@ body {
     margin: 0;
     letter-spacing: -0.03em;
     color: #111;
+    position: relative;
+}
+
+.opening-quote,
+.closing-quote {
+    color: #7151a8;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: top;
+}
+
+.opening-quote {
+    margin-right: 8px;
+}
+
+.closing-quote {
+    margin-left: 6px;
 }
 
 .quote-mark {
