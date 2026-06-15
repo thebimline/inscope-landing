@@ -327,19 +327,27 @@ body {
     margin-bottom: 12px;
 }
 
+.timeline-intro {
+    max-width: 660px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.62);
+    margin: 0 0 36px;
+}
+
 .timeline-benefits {
     display: grid;
     gap: 24px;
-    margin-bottom: 44px;
+    margin-bottom: 36px;
 }
 
-.benefit {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    font-size: 18px;
-    line-height: 1.45;
-    color: rgba(0,0,0,0.66);
+.timeline-highlight {
+    max-width: 660px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: rgba(0,0,0,0.72);
 }
 
 .benefit-icon {
@@ -348,13 +356,6 @@ body {
     flex-shrink: 0;
 }
 
-.timeline-copy-block p {
-    max-width: 660px;
-    font-size: 20px;
-    line-height: 1.6;
-    color: rgba(0,0,0,0.62);
-    margin: 0 0 14px;
-}
 
 .timeline-highlight {
     font-weight: 500;
