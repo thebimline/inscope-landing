@@ -331,13 +331,13 @@ body {
 }
 
 .quote-open {
-    top: 8px;
-    left: -42px;
+    top: 40px;
+    left: -20px;
 }
 
 .quote-close {
-    top: 98px;
-    left: 345px;
+    top: 145px;
+    left: 390px;
 }
 
 .timeline-copy-block {
