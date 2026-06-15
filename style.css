@@ -333,44 +333,43 @@ body {
 
 .timeline-intro {
     max-width: 660px;
-    margin: 0 0 34px;
-    font-size: 20px;
-    line-height: 1.55;
-    color: rgba(0,0,0,0.70);
+    margin: 0 0 28px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.68);
 }
 
 .timeline-benefits {
     display: grid;
-    gap: 26px;
-    margin: 0 0 36px;
+    gap: 18px;
+    margin: 0 0 28px;
 }
 
 .benefit {
     display: flex;
     align-items: center;
-    gap: 18px;
-    font-size: 20px;
-    line-height: 1.45;
-    color: rgba(0,0,0,0.75);
+    gap: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(0,0,0,0.72);
 }
 
 .benefit-icon {
     color: #7151a8;
-    font-size: 30px;
+    font-size: 28px;
     flex-shrink: 0;
 }
 
 .timeline-highlight {
     max-width: 660px;
     margin: 0;
-    padding-top: 28px;
+    padding-top: 22px;
     border-top: 1px solid rgba(0,0,0,0.10);
-    font-size: 20px;
-    line-height: 1.55;
+    font-size: 18px;
+    line-height: 1.5;
     font-weight: 500;
     color: rgba(0,0,0,0.72);
 }
-
 @media (max-width: 900px) {
     .timeline-story {
         padding: 80px 24px 90px;
