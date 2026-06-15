@@ -310,6 +310,7 @@ body {
 .timeline-title-block {
     position: relative;
     padding-top: 82px;
+    padding-left: 0;
 }
 
 .timeline-title-block h2 {
@@ -318,27 +319,26 @@ body {
     margin: 0;
     letter-spacing: -0.03em;
     color: #111;
-    position: relative;
 }
 
-.quote-mark {
+.quote-open,
+.quote-close {
     position: absolute;
     color: #7151a8;
     font-size: 44px;
     font-weight: 700;
     line-height: 1;
-    margin: 0;
     pointer-events: none;
 }
 
 .quote-open {
-    top: 48px;
-    left: 0;
+    top: 74px;
+    left: -55px;   /* move OUTSIDE the title block */
 }
 
 .quote-close {
-    top: 118px;
-    right: 52px;
+    top: 148px;
+    left: 355px;   /* position after "story." */
 }
 
 .quote-mark {
