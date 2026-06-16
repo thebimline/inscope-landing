@@ -411,6 +411,32 @@ body {
     color: #111;
 }
 
+.timeline-outcomes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 32px;
+}
+
+.timeline-outcome-card {
+    text-align: left;
+}
+
+.timeline-outcome-heading {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111;
+}
+
+.timeline-outcome-copy {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.68);
+}
+
 .timeline-loop-block {
     grid-area: loop;
     display: flex;
@@ -570,6 +596,16 @@ body {
         height: 78px;
         font-size: 11px;
     }
+
+    .timeline-outcomes-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.timeline-outcome-card {
+    text-align: center;
+}
+    
 }
 
 }/* STRUCTURE SECTION */
