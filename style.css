@@ -669,13 +669,13 @@ body {
     font-size: 54px;
     line-height: 1.15;
     max-width: 1220px;
-    margin: 0 auto 72px;
+    margin: 0 auto 68px;
     color: #111;
 }
 
 .tri-factor-intro {
-     max-width: 1180px;
-    margin: 0 auto 56px;
+    max-width: 1180px;
+    margin: 0 auto 76px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
@@ -699,44 +699,47 @@ body {
 }
 
 .icc-note {
-    border-left: 3px solid rgba(113,81,168,0.4);
-    padding-left: 28px;
-    max-width: 460px;
+    border-left: 2px solid rgba(113,81,168,0.28);
+    padding-left: 30px;
+    max-width: 500px;
     align-self: center;
 }
 
 .icc-note h3 {
     margin: 0 0 14px;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
     color: #111;
 }
 
 .icc-principle {
     margin: 0 0 22px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
     font-style: italic;
-    color: rgba(0,0,0,0.65);
+    color: rgba(0,0,0,0.62);
 }
 
 .icc-features {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    padding-left: 18px;
 }
 
 .icc-features li {
-    margin-bottom: 10px;
+    padding: 7px 0;
     font-size: 16px;
-    line-height: 1.5;
-    color: rgba(0,0,0,0.78);
+    line-height: 1.45;
+    color: rgba(0,0,0,0.76);
 }
+
 .structure-points {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 44px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 52px;
 }
 
 .structure-point {
@@ -756,11 +759,11 @@ body {
 
 .structure-number {
     display: block;
-    margin-bottom: 18px;
     color: rgba(113,81,168,0.85);
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.08em;
+    line-height: 1;
 }
 
 .structure-line {
@@ -772,8 +775,8 @@ body {
 .structure-lead {
     margin: 0 0 26px;
     color: #111;
-    font-size: 20px;
-    line-height: 1.35;
+    font-size: 18px;
+    line-height: 1.4;
     font-weight: 800;
 }
 
@@ -792,6 +795,7 @@ body {
     line-height: 1.45;
     font-weight: 500;
 }
+
 .structure-list li:last-child {
     border-bottom: none;
 }
@@ -800,23 +804,21 @@ body {
     display: none;
 }
 
-.structure-point h3 {
-    margin: 0;
-    padding-top: 0;
-    border-top: none;
-    font-size: 18px;
-    line-height: 1.65;
-    font-style: italic;
-    font-weight: 400;
-    color: rgba(0,0,0,0.55);
-}
-
-/* RESPONSIVE */
 
 @media (max-width: 1100px) {
-    .structure-points {
+    .tri-factor-intro {
         grid-template-columns: 1fr;
         gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .icc-note {
+        max-width: none;
+    }
+
+    .structure-points {
+        grid-template-columns: 1fr;
+        gap: 44px;
     }
 }
 
