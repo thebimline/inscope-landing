@@ -668,7 +668,7 @@ body {
     text-align: center;
     font-size: 54px;
     line-height: 1.15;
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 0 auto 72px;
     color: #111;
 }
@@ -682,44 +682,84 @@ body {
 }
 
 .structure-point {
-    border-top: 1px solid rgba(0,0,0,0.14);
-    padding-top: 28px;
+    padding-top: 0;
     background: transparent;
     border-radius: 0;
     box-shadow: none;
+    position: relative;
+}
+
+.structure-heading-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
 }
 
 .structure-number {
     display: block;
-    margin-bottom: 22px;
-    color: rgba(113,81,168,0.75);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    color: #7151a8;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.structure-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(113,81,168,0.22);
+}
+
+.structure-lead {
+    margin: 0 0 34px;
+    color: #111;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 800;
+}
+
+.structure-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px;
+}
+
+.structure-list li {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(113,81,168,0.14);
+    color: #242136;
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.structure-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: rgba(113,81,168,0.10);
+    color: #7151a8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    line-height: 1;
 }
 
 .structure-point h3 {
-    margin: 6px 0 0;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(113,81,168,0.22);
     font-size: 18px;
     line-height: 1.65;
     font-style: italic;
     font-weight: 400;
     color: rgba(0,0,0,0.55);
 }
-
-.structure-point p {
-    margin: 0 0 18px;
-    color: #5f5f5f;
-    font-size: 18px;
-    line-height: 1.65;
-}
-
-.structure-point p strong {
-    color: #111;
-    font-weight: 700;
-}
-
-
 /* RESPONSIVE */
 
 @media (max-width: 1100px) {
