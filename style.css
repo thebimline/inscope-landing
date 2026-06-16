@@ -419,12 +419,16 @@ body {
 .timeline-outcomes-row {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
+    gap: 18px;
     margin-top: 32px;
 }
 
 .timeline-outcome-card {
     text-align: left;
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(113,81,168,0.12);
+    border-radius: 16px;
+    padding: 22px 18px;
 }
 
 .timeline-outcome-heading {
