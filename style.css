@@ -685,7 +685,7 @@ body {
 .tri-factor-copy {
     max-width: 620px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.65;
     color: rgba(0,0,0,0.78);
 }
 
@@ -801,10 +801,10 @@ body {
     padding: 8px 0 8px 16px;
     border-bottom: 1px solid rgba(113,81,168,0.14);
     color: #242136;
-    font-size: 19px;
-    line-height: 1.35;
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 500;
 }
-
 .structure-list li:last-child {
     border-bottom: none;
 }
