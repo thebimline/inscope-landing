@@ -233,7 +233,7 @@ body {
 /* FEATURE SHOWCASE */
 
 .feature-showcase {
-    background: #0d0d0f;
+    background: #f4f4f4;
     padding: 0 40px 70px;
     position: relative;
     overflow: hidden;
@@ -289,8 +289,6 @@ body {
     line-height: 1;
     color: rgba(0,0,0,0.38);
 }
-
-
 
 /* TIMELINE STORY */
 
@@ -618,7 +616,7 @@ body {
 
 .tri-factor {
     padding: 110px 40px 110px;
-    background: #0d0d0f !important;
+    background: #f4f4f4;
     position: relative;
     overflow: hidden;
 }
@@ -627,7 +625,7 @@ body {
 .tri-factor::after {
     content: "+";
     position: absolute;
-    color: rgba(255,255,255,0.12);
+    color: rgba(113,81,168,0.18);
     font-size: 34px;
     font-weight: 300;
     pointer-events: none;
@@ -650,7 +648,7 @@ body {
     line-height: 1.15;
     max-width: 1200px;
     margin: 0 auto 72px;
-    color: #ffffff;
+    color: #111;
 }
 
 .structure-points {
@@ -662,19 +660,17 @@ body {
 }
 
 .structure-point {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 32px 32px 36px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-    border-top: none;
-    position: relative;
-    z-index: 2;
+    border-top: 1px solid rgba(0,0,0,0.14);
+    padding-top: 28px;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .structure-number {
     display: block;
     margin-bottom: 22px;
-     color: rgba(113,81,168,0.85);
+    color: rgba(113,81,168,0.75);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -691,13 +687,13 @@ body {
 
 .structure-point p {
     margin: 0 0 18px;
-    color: rgba(0,0,0,0.72);
+    color: #5f5f5f;
     font-size: 18px;
     line-height: 1.65;
 }
 
 .structure-point p strong {
-   color: #111;
+    color: #111;
     font-weight: 700;
 }
 
