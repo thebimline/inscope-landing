@@ -391,7 +391,7 @@ body {
     text-align: left;
     max-width: 780px;
     grid-column: 1;
-    margin-right: -120px;
+    margin-right: -50px;
     position: relative; 
     z-index: 2;
 }
