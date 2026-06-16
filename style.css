@@ -618,7 +618,7 @@ body {
 
 .tri-factor {
     padding: 110px 40px 110px;
-    background: #f4f4f4;
+    background: #0d0d0f;
     position: relative;
     overflow: hidden;
 }
@@ -627,7 +627,7 @@ body {
 .tri-factor::after {
     content: "+";
     position: absolute;
-    color: rgba(113,81,168,0.18);
+    color: rgba(255,255,255,0.12);
     font-size: 34px;
     font-weight: 300;
     pointer-events: none;
@@ -650,7 +650,7 @@ body {
     line-height: 1.15;
     max-width: 1200px;
     margin: 0 auto 72px;
-    color: #111;
+    color: #ffffff;
 }
 
 .structure-points {
@@ -662,14 +662,14 @@ body {
 }
 
 .structure-point {
-    border-top: 1px solid rgba(0,0,0,0.14);
+    border-top: 1px solid rgba(255,255,255,0.14);
     padding-top: 28px;
 }
 
 .structure-number {
     display: block;
     margin-bottom: 22px;
-    color: rgba(113,81,168,0.75);
+    color: rgba(177,152,224,0.9);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -681,22 +681,20 @@ body {
     line-height: 1.65;
     font-style: italic;
     font-weight: 400;
-    color: rgba(0,0,0,0.55);
+    color: rgba(255,255,255,0.60);
 }
 
 .structure-point p {
     margin: 0 0 18px;
-    color: #5f5f5f;
+    color: rgba(255,255,255,0.78);
     font-size: 18px;
     line-height: 1.65;
 }
 
 .structure-point p strong {
-    color: #111;
+    color: #ffffff;
     font-weight: 700;
 }
-
-
 /* RESPONSIVE */
 
 @media (max-width: 1100px) {
