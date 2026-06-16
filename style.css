@@ -735,11 +735,13 @@ body {
 }
 
 .structure-points {
+    width: 100%;
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 52px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 56px;
+    align-items: start;
 }
 
 .structure-point {
@@ -748,6 +750,7 @@ body {
     border-radius: 0;
     box-shadow: none;
     position: relative;
+      width: 100%;
 }
 
 .structure-heading-row {
