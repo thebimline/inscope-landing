@@ -292,29 +292,19 @@ body {
 
 .section-divider {
     width: 100%;
-    max-width: 1180px;
-    margin: 24px auto;
-    height: 18px;
-    position: relative;
-    background: #ffffff;
-}
-
-.section-divider::before,
-.section-divider::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: rgba(0,0,0,0.12);
+    padding: 42px 0;
+    background: #f4f4f4;
 }
 
 .section-divider::before {
-    top: 6px;
-}
-
-.section-divider::after {
-    top: 12px;
+    content: "";
+    display: block;
+    max-width: 1180px;
+    height: 18px;
+    margin: 0 auto;
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,0.10);
+    border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 
 /* TIMELINE STORY */
