@@ -293,9 +293,10 @@ body {
 .section-divider {
     width: 100%;
     max-width: 1180px;
-    margin: 40px auto;
+    margin: 24px auto;
     height: 18px;
     position: relative;
+    background: #ffffff;
 }
 
 .section-divider::before,
@@ -320,7 +321,7 @@ body {
 
 .timeline-story {
     background: #ffffff;
-    padding: 140px 40px 160px;
+    padding: 90px 40px 160px;
 }
 
 .timeline-story-inner {
