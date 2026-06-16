@@ -698,11 +698,11 @@ body {
 
 .structure-number {
     display: block;
-    color: #7151a8;
-    font-size: 38px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1;
+    margin-bottom: 18px;
+    color: rgba(113,81,168,0.85);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .structure-line {
@@ -726,11 +726,8 @@ body {
 }
 
 .structure-list li {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    align-items: center;
-    gap: 14px;
-    padding: 10px 0;
+    display: block;
+    padding: 13px 0;
     border-bottom: 1px solid rgba(113,81,168,0.14);
     color: #242136;
     font-size: 19px;
@@ -738,16 +735,7 @@ body {
 }
 
 .structure-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 14px;
-    background: rgba(113,81,168,0.10);
-    color: #7151a8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    line-height: 1;
+    display: none;
 }
 
 .structure-point h3 {
