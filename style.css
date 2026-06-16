@@ -618,7 +618,7 @@ body {
 
 .tri-factor {
     padding: 110px 40px 110px;
-    background: #0d0d0f;
+    background: #0d0d0f !important;
     position: relative;
     overflow: hidden;
 }
