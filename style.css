@@ -698,52 +698,39 @@ body {
     font-weight: 800;
 }
 
-.icc-card {
-    background: #111;
-    color: #fff;
-    border-radius: 22px;
-    padding: 28px 32px;
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 28px;
-    box-shadow: 0 24px 50px rgba(0,0,0,0.18);
+.icc-note {
+    border-left: 3px solid rgba(113,81,168,0.4);
+    padding-left: 28px;
+    max-width: 460px;
+    align-self: center;
 }
 
-.icc-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: #fff;
+.icc-note h3 {
+    margin: 0 0 14px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
 }
 
-.icc-card h3 {
-    margin: 0 0 12px;
-    font-size: 22px;
-    line-height: 1.2;
-    color: #fff;
+.icc-principle {
+    margin: 0 0 22px;
+    font-size: 18px;
+    line-height: 1.6;
+    font-style: italic;
+    color: rgba(0,0,0,0.65);
 }
 
-.icc-card p {
-    margin: 0 0 26px;
+.icc-features {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.icc-features li {
+    margin-bottom: 10px;
     font-size: 16px;
     line-height: 1.5;
-    font-style: italic;
-    color: rgba(255,255,255,0.78);
+    color: rgba(0,0,0,0.78);
 }
-
-.icc-card ul {
-    margin: 0;
-    padding-left: 20px;
-   font-size: 16px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.88);
-}
-
 .structure-points {
     max-width: 1180px;
     margin: 0 auto;
