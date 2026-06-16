@@ -233,7 +233,7 @@ body {
 /* FEATURE SHOWCASE */
 
 .feature-showcase {
-    background: #f4f4f4;
+     background: #ffffff;
     padding: 0 40px 70px;
     position: relative;
     overflow: hidden;
@@ -290,10 +290,36 @@ body {
     color: rgba(0,0,0,0.38);
 }
 
+.section-divider {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 18px;
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0,0,0,0.12);
+}
+
+.section-divider::before {
+    top: 6px;
+}
+
+.section-divider::after {
+    top: 12px;
+}
+
 /* TIMELINE STORY */
 
 .timeline-story {
-   background: #F8F7F3;
+    background: #ffffff;
     padding: 140px 40px 160px;
 }
 
@@ -616,7 +642,7 @@ body {
 
 .tri-factor {
     padding: 110px 40px 110px;
-    background: #f4f4f4;
+    background: #ffffff;
     position: relative;
     overflow: hidden;
 }
