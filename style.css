@@ -303,8 +303,12 @@ body {
     height: 18px;
     margin: 0 auto;
     background: #ffffff;
-    border-top: 1px solid rgba(0,0,0,0.10);
-    border-bottom: 1px solid rgba(0,0,0,0.10);
+    background-image:
+        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
+        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10));
+    background-size: 100% 1px, 100% 1px;
+    background-position: 0 6px, 0 12px;
+    background-repeat: no-repeat;
 }
 
 /* TIMELINE STORY */
