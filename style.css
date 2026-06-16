@@ -296,7 +296,7 @@ body {
 
 .timeline-story {
     background: #f5f5f5;
-    padding: 95px 40px 105px;
+    padding: 140px 40px 160px;
 }
 
 .timeline-story-inner {
@@ -386,14 +386,14 @@ body {
 
 .timeline-solution-block {
     grid-area: solution;
-    padding-top: 28px;
+    padding-top: 40px;
     border-top: 1px solid rgba(0,0,0,0.10);
     text-align: left;
-    max-width: 780px;
     grid-column: 1;
     margin-right: -50px;
     position: relative; 
     z-index: 2;
+    
 }
 
 .timeline-highlight {
