@@ -637,7 +637,7 @@ body {
 /* STRUCTURE SECTION */
 
 .tri-factor {
-    padding: 110px 40px 110px;
+    padding: 90px 40px 95px;
     background: #ffffff;
     position: relative;
     overflow: hidden;
@@ -674,8 +674,8 @@ body {
 }
 
 .tri-factor-intro {
-    max-width: 1180px;
-    margin: 0 auto 72px;
+     max-width: 1180px;
+    margin: 0 auto 56px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
@@ -749,7 +749,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 52px;
+    gap: 44px;
 }
 
 .structure-point {
@@ -764,7 +764,7 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
 .structure-number {
@@ -783,7 +783,7 @@ body {
 }
 
 .structure-lead {
-    margin: 0 0 34px;
+    margin: 0 0 26px;
     color: #111;
     font-size: 20px;
     line-height: 1.35;
