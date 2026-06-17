@@ -674,7 +674,12 @@ body {
 
 .icc-principle {
     font-style: italic;
-    color: rgba(0,0,0,0.62);
+    color:color: #555;
+}
+
+.icc-principle {
+    border-left: 3px solid #b39ddb;
+    padding-left: 16px;
 }
 
 .structure-points {
