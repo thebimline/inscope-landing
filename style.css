@@ -417,7 +417,7 @@ body {
 }
 
 .timeline-highlight {
-    max-width: 520px;
+    max-width: 650px;
     margin: 0;
     font-size: 18px;
     line-height: 1.6;
@@ -440,7 +440,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 40px;
-    margin-top: 32px;
+    margin-top: 48px;
 }
 
 .timeline-outcome-card {
