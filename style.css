@@ -405,6 +405,15 @@ body {
     text-align: center;
 }
 
+.timeline-result {
+    margin-top: 28px;
+    padding: 18px 22px;
+    border-left: 3px solid #7b55b7;
+    background: rgba(123, 85, 183, 0.06);
+    font-weight: 600;
+    line-height: 1.45;
+}
+
 .timeline-solution-block {
     grid-area: solution;
     padding-top: 40px;
