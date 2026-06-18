@@ -320,11 +320,14 @@ body {
 }
 
 .timeline-solution-row {
+    grid-area: solution;
     display: grid;
     grid-template-columns: 1.25fr 0.9fr;
     gap: 60px;
     align-items: center;
     margin-top: 10px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.10);
 }
 
 .timeline-story-inner {
@@ -336,7 +339,6 @@ body {
         "title copy"
         "solution solution"
         "outcomes outcomes"
-        "loop loop"
         "better better";
     gap: 46px 90px;
     align-items: start;
@@ -450,11 +452,12 @@ body {
 }
 
 .timeline-outcomes-row {
+    grid-area: outcomes;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 48px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 10px;
+    margin-bottom: 28px;
 }
 
 .timeline-outcome-card {
