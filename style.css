@@ -411,11 +411,22 @@ body {
 }
 
 .benefit-icon {
-    color: #7151a8;
-    font-size: 28px;
     flex-shrink: 0;
     width: 34px;
-    text-align: center;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #111;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .timeline-result {
