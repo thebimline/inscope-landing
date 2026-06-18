@@ -895,6 +895,42 @@ body {
     justify-content: center;
 }
 
+.gs-fragment-visual {
+    margin-top: 46px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: rgba(0,0,0,0.42);
+}
+
+.gs-fragment-items {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.gs-fragment-items span,
+.gs-inscope-mark {
+    padding: 10px 14px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.42);
+    background: rgba(0,0,0,0.015);
+}
+
+.gs-fragment-arrow {
+    font-size: 24px;
+    color: rgba(113,81,168,0.55);
+}
+
+.gs-inscope-mark {
+    color: #7151a8;
+    border-color: rgba(113,81,168,0.22);
+    background: rgba(113,81,168,0.045);
+}
+
 .phone-frame {
     width: 245px;
     background: #4a4b52;
