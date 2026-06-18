@@ -156,14 +156,18 @@
 
     <div class="timeline-loop-block">
 
-        <div class="timeline-loop">
+        <defs>
+    <marker
+        id="arrowhead"
+        markerWidth="14"
+        markerHeight="14"
+        refX="7"
+        refY="7"
+        orient="auto">
 
-            <svg class="loop-svg" viewBox="0 0 360 360">
-                <defs>
-                    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                        <path d="M0,0 L8,4 L0,8 Z" fill="#7151a8" />
-                    </marker>
-                </defs>
+        <path d="M0,0 L14,7 L0,14 Z" fill="#7151a8" />
+    </marker>
+</defs>
 
                 <path d="M190 40 A140 140 0 0 1 300 150" />
                 <path d="M320 190 A140 140 0 0 1 210 300" />
