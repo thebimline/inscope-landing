@@ -316,7 +316,7 @@ body {
 
 .timeline-story {
     background: #ffffff;
-    padding: 90px 40px 160px;
+    padding: 90px 40px 90px;
 }
 
 .timeline-story-inner {
@@ -327,7 +327,9 @@ body {
     grid-template-areas:
         "title copy"
         "solution solution"
-        "outcomes outcomes";
+        "outcomes outcomes"
+        "loop loop"
+        "better better";
     gap: 46px 90px;
     align-items: start;
 }
@@ -417,10 +419,10 @@ body {
 
 .timeline-solution-block {
     grid-area: solution;
+    grid-column: 1 / -1;
     padding-top: 40px;
     border-top: 1px solid rgba(0,0,0,0.10);
     text-align: left;
-    grid-column: 1 / -1;
     margin-right: 0;
     position: relative;
     z-index: 2;
@@ -452,7 +454,7 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 48px;
     margin-top: 18px;
-    margin-bottom: 28px;
+    margin-bottom: 34px;
     padding-top: 0;
     border-top: none;
 }
@@ -481,7 +483,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 28px;
     border-top: none;
 }
 
@@ -566,6 +568,18 @@ body {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+}
+
+.timeline-better-outcomes {
+    grid-area: better;
+    max-width: 620px;
+    margin: 24px auto 0;
+    padding: 18px 22px;
+    border-left: 3px solid #7b55b7;
+    background: rgba(123, 85, 183, 0.06);
+    font-weight: 700;
+    line-height: 1.45;
+    text-align: left;
 }
 
 /* RESPONSIVE */
@@ -658,18 +672,6 @@ body {
     font-weight: 500;
     line-height: 1.5;
     color: #7151a8;
-}
-
-.feature-slide-loop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-}
-
-.feature-slide-loop .timeline-loop {
-    width: 520px;
-    height: 520px;
 }
 
 /* TRI FACTOR */
