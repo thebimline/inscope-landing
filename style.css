@@ -326,7 +326,9 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "title copy"
-        "solution loop";
+        "solution solution"
+        "loop loop"
+        "outcomes outcomes";
     gap: 46px 90px;
     align-items: start;
 }
@@ -447,6 +449,7 @@ body {
 }
 
 .timeline-outcomes-row {
+    grid-area: outcomes;
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
