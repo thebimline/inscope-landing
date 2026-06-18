@@ -327,8 +327,8 @@ body {
     grid-template-areas:
         "title copy"
         "solution solution"
-        "loop loop"
-        "outcomes outcomes";
+        "outcomes outcomes"
+        "loop loop";
     gap: 46px 90px;
     align-items: start;
 }
@@ -450,12 +450,11 @@ body {
 
 .timeline-outcomes-row {
     grid-area: outcomes;
-    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 60px;
-    margin-top: 90px;
-    margin-bottom: 90px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .timeline-outcome-card {
@@ -482,7 +481,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 28px;
+    padding-top: 70px;
     border-top: 1px solid rgba(0,0,0,0.10);
 }
 
@@ -654,9 +653,10 @@ body {
     margin: 0 0 28px;
     padding-left: 20px;
     border-left: 3px solid #7151a8;
-    font-size: 30px;
+    font-size: 18px;
     font-style: italic;
-    line-height: 1.4;
+    font-weight: 500;
+    line-height: 1.5;
     color: #7151a8;
 }
 
