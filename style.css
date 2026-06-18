@@ -641,7 +641,24 @@ body {
 .timeline-outcome-card {
     text-align: center;
 }
-    
+
+.timeline-quote-text {
+    margin: 0 0 28px;
+    padding-left: 20px;
+    border-left: 3px solid #7151a8;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1.4;
+    color: #7151a8;
+}
+
+.timeline-outcomes-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 40px;
 }
 
 /* TRI FACTOR */
