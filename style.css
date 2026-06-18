@@ -327,6 +327,7 @@ body {
     align-items: center;
     margin-top: 10px;
     padding-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.10);
 }
 
 .timeline-story-inner {
@@ -571,7 +572,7 @@ body {
 .timeline-better-outcomes {
     grid-area: better;
     max-width: 620px;
-    margin: 24px 0 0;
+    margin: 8px 0 0;
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
     background: rgba(123, 85, 183, 0.06);
