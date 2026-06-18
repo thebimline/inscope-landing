@@ -897,17 +897,13 @@ body {
 
 .gs-fragment-visual {
     margin-top: 46px;
-    max-width: 620px;
-}
-
-.gs-fragment-top {
     display: flex;
     align-items: center;
     gap: 16px;
     color: rgba(0,0,0,0.42);
 }
 
-.gs-fragment-top span {
+.gs-fragment-visual span {
     font-size: 14px;
 }
 
@@ -922,20 +918,6 @@ body {
     color: #7151a8;
     font-weight: 700;
 }
-
-.gs-fragment-svg {
-    display: block;
-    width: 100%;
-    height: 34px;
-    margin-top: 4px;
-}
-
-.gs-fragment-svg path {
-    fill: none;
-    stroke: rgba(0,0,0,0.14);
-    stroke-width: 1;
-}
-
 .phone-frame {
     width: 245px;
     background: #4a4b52;
