@@ -319,6 +319,14 @@ body {
     padding: 90px 40px 90px;
 }
 
+.timeline-solution-row {
+    display: grid;
+    grid-template-columns: 1.25fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 10px;
+}
+
 .timeline-story-inner {
     max-width: 1180px;
     margin: 0 auto;
@@ -418,14 +426,7 @@ body {
 }
 
 .timeline-solution-block {
-    grid-area: solution;
-    grid-column: 1 / -1;
-    padding-top: 40px;
-    border-top: 1px solid rgba(0,0,0,0.10);
     text-align: left;
-    margin-right: 0;
-    position: relative;
-    z-index: 2;
 }
 
 .timeline-highlight {
@@ -449,14 +450,11 @@ body {
 }
 
 .timeline-outcomes-row {
-    grid-area: outcomes;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 48px;
-    margin-top: 18px;
-    margin-bottom: 34px;
-    padding-top: 0;
-    border-top: none;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .timeline-outcome-card {
@@ -479,18 +477,15 @@ body {
 }
 
 .timeline-loop-block {
-    grid-area: loop;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 28px;
-    border-top: none;
 }
 
 .timeline-loop {
     position: relative;
-    width: 430px;
-    height: 430px;
+    width: 360px;
+    height: 360px;
 }
 
 .loop-svg {
