@@ -452,11 +452,12 @@ body {
 }
 
 .timeline-outcomes-row {
+    grid-area: outcomes;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 22px;
-    margin-top: 42px;
-    max-width: 620px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px;
+    margin-top: 10px;
+    margin-bottom: 28px;
 }
 
 .timeline-outcome-card {
@@ -480,8 +481,9 @@ body {
 
 .timeline-loop-block {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
 }
 
 .timeline-loop {
@@ -574,7 +576,7 @@ body {
 .timeline-better-outcomes {
     grid-area: better;
     max-width: 620px;
-    margin: -10px 0 0;
+    margin: 8px 0 0;
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
     background: rgba(123, 85, 183, 0.06);
