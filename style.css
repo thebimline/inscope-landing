@@ -875,18 +875,18 @@ body {
 }
 
 .gs-subtitle {
-    font-size: 22px;
+    font-size: 18px;
     color: #7151a8;
-    margin: 0 0 48px;
+    margin: 0 0 42px;
     font-weight: 500;
 }
 
 .gs-copy-simple p:not(.gs-subtitle) {
     max-width: 620px;
-    margin: 0 0 30px;
-    font-size: 24px;
-    line-height: 1.5;
-    color: rgba(0,0,0,0.78);
+    margin: 0 0 26px;
+    font-size: 19px;
+    line-height: 1.75;
+    color: rgba(0,0,0,0.72);
 }
 
 .gs-mobile {
