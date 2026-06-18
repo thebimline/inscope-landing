@@ -447,10 +447,12 @@ body {
 }
 
 .timeline-outcomes-row {
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
-    margin-top: 48px;
+    gap: 60px;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 .timeline-outcome-card {
@@ -654,16 +656,6 @@ body {
     line-height: 1.4;
     color: #7151a8;
 }
-
-.timeline-outcomes-row {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-    padding-top: 40px;
-}
-    
 
 
 /* TRI FACTOR */
