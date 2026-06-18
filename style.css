@@ -684,14 +684,10 @@ body {
 
 .icc-principle {
     font-style: italic;
-    color:color: #555;
-}
-
-.icc-principle {
+    color: #555;
     border-left: 3px solid #b39ddb;
-    padding-left: 16px;
-     margin-top: 60px;
-    margin-bottom: 80px;
+    padding: 8px 0 8px 16px;
+    margin: 70px 0 70px;
 }
 
 .structure-points {
