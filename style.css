@@ -915,9 +915,16 @@ body {
 }
 
 .gs-inscope-mark {
+    padding: 10px 14px;
+    border: 1px solid rgba(113,81,168,0.22);
+    border-radius: 999px;
+    background: rgba(113,81,168,0.045);
+
     color: #7151a8;
+    font-size: 14px;
     font-weight: 700;
 }
+
 .phone-frame {
     width: 245px;
     background: #4a4b52;
