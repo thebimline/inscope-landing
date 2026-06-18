@@ -327,8 +327,7 @@ body {
     grid-template-areas:
         "title copy"
         "solution solution"
-        "outcomes outcomes"
-        "loop loop";
+        "outcomes outcomes";
     gap: 46px 90px;
     align-items: start;
 }
@@ -662,6 +661,17 @@ body {
     color: #7151a8;
 }
 
+.feature-slide-loop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.feature-slide-loop .timeline-loop {
+    width: 520px;
+    height: 520px;
+}
 
 /* TRI FACTOR */
 
