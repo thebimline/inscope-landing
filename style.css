@@ -897,38 +897,76 @@ body {
 
 .gs-fragment-visual {
     margin-top: 46px;
+    max-width: 620px;
+}
+
+.gs-fragment-top {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 16px;
     color: rgba(0,0,0,0.42);
 }
 
-.gs-fragment-items {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.gs-fragment-items span,
-.gs-inscope-mark {
-    padding: 10px 14px;
-    border: 1px solid rgba(0,0,0,0.12);
-    border-radius: 999px;
+.gs-fragment-top span {
     font-size: 14px;
-    font-weight: 600;
-    color: rgba(0,0,0,0.42);
-    background: rgba(0,0,0,0.015);
 }
 
 .gs-fragment-arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #7151a8;
     font-size: 24px;
-    color: rgba(113,81,168,0.55);
 }
 
 .gs-inscope-mark {
     color: #7151a8;
-    border-color: rgba(113,81,168,0.22);
-    background: rgba(113,81,168,0.045);
+    font-weight: 600;
+}
+
+.gs-fragment-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.gs-fragment-group {
+    width: 290px;
+    text-align: center;
+}
+
+.gs-inscope-group {
+    width: 130px;
+    text-align: center;
+}
+
+.gs-bracket {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    height: 10px;
+    position: relative;
+}
+
+.gs-bracket:before,
+.gs-bracket:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 10px;
+    background: rgba(0,0,0,0.15);
+}
+
+.gs-bracket:before {
+    left: 0;
+}
+
+.gs-bracket:after {
+    right: 0;
+}
+
+.gs-caption {
+    margin-top: 8px;
+    font-size: 11px;
+    color: rgba(0,0,0,0.45);
 }
 
 .phone-frame {
