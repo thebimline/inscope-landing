@@ -22,6 +22,10 @@ modal.addEventListener('click', (e) => {
 
 const lightbox = document.getElementById('imageLightbox');
 const lightboxImage = document.getElementById('lightboxImage');
+const lightboxCounter = document.getElementById('lightboxCounter');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxThumbs = document.getElementById('lightboxThumbs');
+
 const closeButton = document.querySelector('.image-lightbox-close');
 const prevButton = document.querySelector('.image-lightbox-prev');
 const nextButton = document.querySelector('.image-lightbox-next');
@@ -30,10 +34,23 @@ const lightboxTriggers = Array.from(document.querySelectorAll('.lightbox-trigger
 
 let currentLightboxIndex = 0;
 
+function updateLightbox() {
+    const currentImage = lightboxTriggers[currentLightboxIndex];
+
+    lightboxImage.src = currentImage.src;
+    lightboxImage.alt = currentImage.alt;
+
+    lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${lightboxTriggers.length}`;
+    lightboxTitle.textContent = currentImage.alt;
+
+    document.querySelectorAll('.image-lightbox-thumb').forEach((thumb, index) => {
+        thumb.classList.toggle('active', index === currentLightboxIndex);
+    });
+}
+
 function openLightbox(index) {
     currentLightboxIndex = index;
-    lightboxImage.src = lightboxTriggers[currentLightboxIndex].src;
-    lightboxImage.alt = lightboxTriggers[currentLightboxIndex].alt;
+    updateLightbox();
     lightbox.classList.add('active');
 }
 
@@ -43,16 +60,14 @@ function closeLightbox() {
 
 function showNextImage() {
     currentLightboxIndex = (currentLightboxIndex + 1) % lightboxTriggers.length;
-    lightboxImage.src = lightboxTriggers[currentLightboxIndex].src;
-    lightboxImage.alt = lightboxTriggers[currentLightboxIndex].alt;
+    updateLightbox();
 }
 
 function showPreviousImage() {
     currentLightboxIndex =
         (currentLightboxIndex - 1 + lightboxTriggers.length) % lightboxTriggers.length;
 
-    lightboxImage.src = lightboxTriggers[currentLightboxIndex].src;
-    lightboxImage.alt = lightboxTriggers[currentLightboxIndex].alt;
+    updateLightbox();
 }
 
 if (lightbox && lightboxImage && lightboxTriggers.length > 0) {
@@ -63,25 +78,34 @@ if (lightbox && lightboxImage && lightboxTriggers.length > 0) {
             openLightbox(index);
         });
 
+        const thumb = document.createElement('div');
+        thumb.className = 'image-lightbox-thumb';
+        thumb.innerHTML = `
+            <img src="${img.src}" alt="${img.alt}">
+            <span>${img.alt}</span>
+        `;
+
+        thumb.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentLightboxIndex = index;
+            updateLightbox();
+        });
+
+        lightboxThumbs.appendChild(thumb);
+
     });
 
-    if (closeButton) {
-        closeButton.addEventListener('click', closeLightbox);
-    }
+    closeButton.addEventListener('click', closeLightbox);
 
-    if (nextButton) {
-        nextButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showNextImage();
-        });
-    }
+    nextButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNextImage();
+    });
 
-    if (prevButton) {
-        prevButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showPreviousImage();
-        });
-    }
+    prevButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPreviousImage();
+    });
 
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
@@ -92,17 +116,9 @@ if (lightbox && lightboxImage && lightboxTriggers.length > 0) {
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
 
-        if (e.key === 'Escape') {
-            closeLightbox();
-        }
-
-        if (e.key === 'ArrowRight') {
-            showNextImage();
-        }
-
-        if (e.key === 'ArrowLeft') {
-            showPreviousImage();
-        }
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNextImage();
+        if (e.key === 'ArrowLeft') showPreviousImage();
     });
 
 }
