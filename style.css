@@ -668,14 +668,6 @@ body {
     height: 420px;
 }
 
-.loop-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: none;
-}
 
 .loop-svg path {
     fill: none;
@@ -693,16 +685,12 @@ body {
     left: 50%;
     width: 170px;
     transform: translate(-50%, -50%);
-    background: transparent;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    line-height: 1.25;
-    font-weight: 500;
+    color: #888780;
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
     z-index: 3;
+    line-height: 1.4;
 }
 
 .loop-node {
