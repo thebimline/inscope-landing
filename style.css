@@ -1538,14 +1538,14 @@ body {
     display: block;
     max-width: 1180px;
     height: 1px;
-    margin: 0 auto 42px;
+    margin: 0 auto 24px;
     background: rgba(0,0,0,0.10);
 }
 
 .faq-wrap {
     max-width: 980px;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 0;
 }
 
 .faq-wrap h2 {
@@ -1640,6 +1640,7 @@ body {
         padding: 0 20px;
     }
 }
+
 
 .final-cta {
     width: 100vw;
