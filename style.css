@@ -955,9 +955,9 @@ body {
 }
 
 .real-example-card {
-    max-width: 1120px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 34px;
+    padding: 28px;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 28px;
     background: #243140;
@@ -965,8 +965,8 @@ body {
 }
 
 .real-example-card-header {
-    max-width: 760px;
-    margin-bottom: 28px;
+    max-width: 960px;
+    margin-bottom: 22px;
 }
 
 .real-example-label {
@@ -1012,7 +1012,7 @@ body {
     background: #fff;
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 20px;
-    padding: 22px;
+    padding: 18px;
     min-width: 0;
 }
 
@@ -1045,7 +1045,7 @@ body {
 
 .real-example-before-images img {
     width: 100%;
-    height: 205px;
+    height: 175px;
     display: block;
     border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.08);
@@ -1102,7 +1102,7 @@ body {
 
 .real-example-slide img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     display: block;
     border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.08);
@@ -1126,8 +1126,8 @@ body {
 }
 
 .real-example-result {
-    margin-top: 22px;
-    padding: 22px 24px;
+   margin-top: 18px;
+    padding: 18px 22px;
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 20px;
     background: #fafafa;
