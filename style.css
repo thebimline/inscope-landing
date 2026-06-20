@@ -677,6 +677,8 @@ body {
     stroke-linejoin: round;
     marker-end: url(#arrowhead);
     opacity: 0.55;
+      fill: none;
+    stroke: unset;
 }
 
 .loop-centre {
@@ -731,47 +733,7 @@ body {
     transform: translateY(-50%);
 }
 
-.loop-arc {
-    position: absolute;
-    width: 316px;
-    height: 316px;
-    border: 2px solid rgba(138,124,240,0.42);
-    border-radius: 50%;
-    z-index: 1;
-    pointer-events: none;
-}
 
-.loop-arc-1 {
-    top: 52px;
-    left: 52px;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    transform: rotate(-38deg);
-}
-
-.loop-arc-2 {
-    top: 52px;
-    left: 52px;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    transform: rotate(50deg);
-}
-
-.loop-arc-3 {
-    top: 52px;
-    left: 52px;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    transform: rotate(142deg);
-}
-
-.loop-arc-4 {
-    top: 52px;
-    left: 52px;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    transform: rotate(230deg);
-}
 
 .timeline-better-outcomes {
     grid-area: better;
