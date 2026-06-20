@@ -827,6 +827,49 @@ body {
     color: #7151a8;
 }
 
+/* DELIVERY TIMELINE FEATURE */
+
+.delivery-timeline-feature {
+    margin-top: 80px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+.delivery-timeline-copy {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.delivery-kicker {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-style: italic;
+    color: #7151a8;
+}
+
+.delivery-timeline-copy h3 {
+    margin: 0;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #111;
+}
+
+.delivery-timeline-image {
+    max-width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.10);
+    background: #ffffff;
+}
+
+.delivery-timeline-image img {
+    width: 100%;
+    display: block;
+}
+
 /* TRI FACTOR */
 
 .tri-factor {
