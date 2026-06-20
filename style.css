@@ -1571,12 +1571,12 @@ body {
 
 .thinking-card span {
     display: block;
-    color: #ffffff;
+    color: #2f2f2f;
     font-size: 28px;
     line-height: 1.45;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 .thinking-card:hover {
@@ -1585,19 +1585,19 @@ body {
 }
 
 .thinking-card-golden {
-    background: linear-gradient(145deg, #d8d1ec, #eeeaf7);
+    background: linear-gradient(145deg, #e8d49a, #f2e4bb);
 }
 
 .thinking-card-control {
-    background: linear-gradient(145deg, #9f96bf, #cbc5dc);
+    background: linear-gradient(145deg, #d7dbe0, #eceff2);
 }
 
 .thinking-card-sight {
-    background: linear-gradient(145deg, #9eafbf, #c7d2dc);
+    background: linear-gradient(145deg, #b8c7d8, #d5e0ea);
 }
 
 .thinking-card-succeed {
-    background: linear-gradient(145deg, #d2ccc9, #eee9e6);
+    background: linear-gradient(145deg, #e4c3ae, #efd8cb);
 }
 
 /* THINKING LIGHTBOX */
