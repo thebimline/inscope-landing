@@ -267,7 +267,7 @@ body {
 .sub-section-divider::before {
     content: "";
     display: block;
-    max-width: 1180px;
+    max-width: 1320px;
     height: 1px;
     margin: 0 auto;
     background: rgba(0,0,0,0.10);
