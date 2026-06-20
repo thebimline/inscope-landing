@@ -1517,7 +1517,7 @@ body {
 .gallery {
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    padding: 110px 40px 120px;
+    padding: 90px 40px 70px;
     background: #ffffff;
 }
 
@@ -1532,9 +1532,9 @@ body {
 
 .project-thinking-copy h2 {
     margin: 0 0 22px;
-    font-size: 34px;
-    line-height: 1.05;
-    letter-spacing: -0.04em;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     color: #111;
 }
 
@@ -1549,15 +1549,32 @@ body {
     color: #7151a8;
 }
 
+/* CAROUSEL */
+
 .gallery-carousel {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 28px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 12px;
+    scroll-behavior: smooth;
 }
 
+.gallery-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-carousel::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+/* CARDS */
+
 .thinking-card {
+    flex: 0 0 360px;
+    height: 430px;
     border: 0;
-    min-height: 420px;
     border-radius: 22px;
     padding: 34px;
     cursor: pointer;
@@ -1571,12 +1588,12 @@ body {
 
 .thinking-card span {
     display: block;
-    color: #2f2f2f;
-    font-size: 28px;
+    color: rgba(255,255,255,0.92);
+    font-size: 24px;
     line-height: 1.45;
     font-weight: 600;
-    letter-spacing: 0;
-    text-transform: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .thinking-card:hover {
@@ -1584,20 +1601,22 @@ body {
     box-shadow: 0 26px 60px rgba(0,0,0,0.12);
 }
 
+/* COLOURS */
+
 .thinking-card-golden {
     background: linear-gradient(145deg, #e8d49a, #f2e4bb);
 }
 
 .thinking-card-control {
-    background: linear-gradient(145deg, #d7dbe0, #eceff2);
+    background: linear-gradient(145deg, #b6bcc5, #d9dde2);
 }
 
 .thinking-card-sight {
-    background: linear-gradient(145deg, #b8c7d8, #d5e0ea);
+    background: linear-gradient(145deg, #a8bbcf, #ccd9e4);
 }
 
 .thinking-card-succeed {
-    background: linear-gradient(145deg, #e4c3ae, #efd8cb);
+    background: linear-gradient(145deg, #d8b6a3, #e8d2c6);
 }
 
 /* THINKING LIGHTBOX */
