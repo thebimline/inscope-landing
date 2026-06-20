@@ -955,19 +955,27 @@ body {
 .real-example-section {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 100px 40px;
+    padding: 90px 40px 105px;
+    border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .real-example-header {
-    max-width: 900px;
+    max-width: 880px;
     margin-bottom: 48px;
 }
 
 .real-example-header h2 {
-    font-size: 42px;
-    line-height: 1.12;
+    font-size: 46px;
+    line-height: 1.1;
     margin: 0 0 22px;
     color: #111;
+}
+
+.real-example-kicker {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.68);
+    margin-bottom: 20px !important;
 }
 
 .real-example-header p {
@@ -977,63 +985,55 @@ body {
     margin: 0 0 12px;
 }
 
-/* MAIN BEFORE / AFTER LAYOUT */
-
-.real-example-grid {
+.real-example-panel {
     background: #f7f4ef;
     border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 24px;
-    padding: 32px;
+    border-radius: 26px;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 30px;
+    align-items: stretch;
 }
-
-/* SHARED COLUMN TEXT */
 
 .real-example-before,
 .real-example-after {
     background: #fff;
     border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 18px;
+    border-radius: 20px;
     padding: 28px;
+    min-width: 0;
 }
 
-.real-example-card-title {
-    margin-bottom: 22px;
+.real-example-label {
+    margin: 0 0 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #7151a8;
 }
 
-.real-example-card-title span {
-    display: block;
-    font-size: 16px;
-    color: rgba(0,0,0,0.65);
-    margin-bottom: 14px;
-}
-
-.real-example-card-title h3 {
-    font-size: 21px;
+.real-example-before h3,
+.real-example-after h3 {
+    font-size: 22px;
     line-height: 1.25;
     margin: 0 0 12px;
     color: #111;
 }
 
-.real-example-card-title p {
+.real-example-before p,
+.real-example-after p {
     font-size: 16px;
     line-height: 1.55;
     color: rgba(0,0,0,0.68);
-    margin: 0;
+    margin: 0 0 22px;
 }
-
-/* HIDE OLD ARROW IF IT EXISTS IN HTML */
-
-.real-example-arrow {
-    display: none;
-}
-
-/* BEFORE IMAGES */
 
 .real-example-before-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
-    align-items: start;
 }
 
 .real-example-before-images figure {
@@ -1042,9 +1042,9 @@ body {
 
 .real-example-before-images img {
     width: 100%;
-    height: 260px;
+    height: 265px;
     display: block;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.08);
     background: #fff;
     object-fit: cover;
@@ -1053,77 +1053,82 @@ body {
 
 .real-example-before-images figure:nth-child(2) img {
     object-fit: contain;
-    object-position: center center;
     padding: 10px;
 }
 
 .real-example-before-images figcaption {
+    margin-top: 9px;
     font-size: 14px;
-    color: rgba(0,0,0,0.65);
-    margin-top: 8px;
+    color: rgba(0,0,0,0.62);
 }
 
-/* AFTER SCREENSHOT GRID */
-
-.real-example-screenshot-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.real-example-carousel {
+    display: flex;
     gap: 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 2px 2px 10px;
 }
 
-.real-example-screenshot-grid figure {
+.real-example-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.real-example-slide {
+    flex: 0 0 74%;
     margin: 0;
-    min-width: 0;
-    overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .screenshot-label {
     display: flex;
-    gap: 6px;
+    gap: 8px;
     align-items: baseline;
-    margin-bottom: 8px;
-    font-size: 15px;
-    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .screenshot-label strong {
-    font-size: 15px;
+    font-size: 16px;
     color: #111;
 }
 
 .screenshot-label span {
     font-size: 15px;
-    color: rgba(0,0,0,0.72);
+    color: rgba(0,0,0,0.64);
 }
 
-.real-example-screenshot-grid img {
+.real-example-slide img {
     width: 100%;
-    height: 260px;
+    height: 390px;
     display: block;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.08);
     background: #fff;
     object-fit: cover;
     object-position: left top;
 }
 
-/* CONNECTION LINE */
-
-.real-example-connection {
-    margin: 28px 0 0;
-    max-width: 760px;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(0,0,0,0.78);
+.real-example-scroll-hint {
+    margin: 12px 0 0 !important;
+    font-size: 14px !important;
+    color: rgba(0,0,0,0.42) !important;
 }
 
-/* RESULT BAR */
+.real-example-connection {
+    margin: 24px 0 0 !important;
+    max-width: 760px;
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    color: rgba(0,0,0,0.78) !important;
+}
 
 .real-example-result {
-    max-width: 1320px;
-    margin: 46px auto 0;
-    padding-top: 28px;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    margin-top: 34px;
+    padding: 28px 32px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 20px;
+    background: #fff;
 
     display: grid;
     grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 1fr;
@@ -1140,7 +1145,7 @@ body {
 
 .real-example-stat strong {
     display: block;
-    font-size: 36px;
+    font-size: 38px;
     line-height: 1;
     color: #111;
     margin-bottom: 8px;
@@ -1162,26 +1167,32 @@ body {
 @media (max-width: 980px) {
 
     .real-example-section {
-        padding: 80px 24px;
+        padding: 75px 24px 85px;
     }
 
     .real-example-header h2 {
         font-size: 34px;
     }
 
-    .real-example-grid {
+    .real-example-panel {
         grid-template-columns: 1fr;
-        gap: 54px;
+        padding: 22px;
     }
 
-    .real-example-before-images,
-    .real-example-screenshot-grid {
+    .real-example-before-images {
         grid-template-columns: 1fr;
     }
 
-    .real-example-before-images img,
-    .real-example-screenshot-grid img {
+    .real-example-before-images img {
         height: 260px;
+    }
+
+    .real-example-slide {
+        flex: 0 0 92%;
+    }
+
+    .real-example-slide img {
+        height: 300px;
     }
 
     .real-example-result {
@@ -1194,7 +1205,6 @@ body {
         border-top: 1px solid rgba(0,0,0,0.08);
     }
 }
-
 .gallery-row {
     display: flex;
     align-items: flex-start;
