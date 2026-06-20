@@ -952,6 +952,174 @@ body {
     border-top: 1px solid rgba(0,0,0,0.08);
 }
 
+/* =========================
+   REAL EXAMPLE / CASE STUDY
+========================= */
+
+.real-example-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+.real-example-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.real-example-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.real-example-header h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.real-example-header p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(0,0,0,0.7);
+    margin: 0;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.real-example-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* =========================
+   SOURCE IMAGES
+========================= */
+
+.real-example-source {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.real-example-source img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   INSCOPE SCREENSHOTS
+========================= */
+
+.real-example-output {
+    display: flex;
+    flex-direction: column;
+}
+
+.real-example-output-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #111;
+}
+
+.real-example-screenshot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.real-example-screenshot-grid img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    transition: transform 0.25s ease;
+}
+
+.real-example-screenshot-grid img:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   STATS BAR
+========================= */
+
+.real-example-results {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.real-example-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.real-example-stat-number {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    color: #111;
+}
+
+.real-example-stat-label {
+    font-size: 14px;
+    color: rgba(0,0,0,0.65);
+    margin-top: 6px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .real-example-section {
+        padding: 80px 24px;
+    }
+
+    .real-example-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .real-example-header h2 {
+        font-size: 32px;
+    }
+
+    .real-example-screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .real-example-results {
+        gap: 24px;
+    }
+
+    .real-example-stat-number {
+        font-size: 28px;
+    }
+}
+
 .project-thinking-copy {
     flex: 0 0 260px;
     min-height: 560px;
