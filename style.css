@@ -261,7 +261,7 @@ body {
     max-width: 1180px;
     margin: 70px auto;
     height: 1px;
-    background: rgba(0,0,0,0.10);
+    background: red;
 }
 
 
