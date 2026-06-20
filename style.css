@@ -259,9 +259,9 @@ body {
 
 .sub-section-divider {
     max-width: 1180px;
-    margin: 0 auto;
     height: 1px;
-    background: rgba(0,0,0,0.10);
+    margin: 0 auto;
+    background: #d8d8d8;
 }
 
 /* SYSTEM SUPPORT CARDS */
