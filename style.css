@@ -1136,7 +1136,6 @@ body {
     max-width: 1240px;
     margin: 0 auto;
     padding: 28px;
-    border-top: 1px solid rgba(0,0,0,0.10);
     border-radius: 28px;
     background: #AAB5C5;
 }
@@ -1530,7 +1529,6 @@ body {
 .faq-wrap {
     max-width: 980px;
     margin: 0 auto;
-    border-top: 1px solid rgba(0,0,0,0.10);
     padding-top: 70px;
 }
 
