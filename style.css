@@ -952,217 +952,94 @@ body {
     border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-/* =========================
-   REAL EXAMPLE / CASE STUDY
-========================= */
-
-.real-example-section {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 100px 40px;
-}
-
-.real-example-header {
-    max-width: 760px;
-    margin-bottom: 60px;
-}
-
-.real-example-header h2 {
-    font-size: 56px;
-    line-height: 1.1;
-    margin-bottom: 24px;
-    color: #111;
-}
-
-.real-example-header p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(0,0,0,0.72);
-    margin: 0;
-}
-
-/* =========================
-   BEFORE / AFTER LAYOUT
-========================= */
 
 .real-example-grid {
     display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    gap: 64px;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 56px;
     align-items: start;
 }
 
-/* =========================
-   COLUMN HEADINGS
-========================= */
+/* BEFORE IMAGES — shrink them */
 
-.real-example-column-number {
-    font-size: 24px;
-    margin-bottom: 12px;
-    color: rgba(0,0,0,0.8);
+.real-example-before-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
 }
 
-.real-example-column-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #111;
-}
-
-.real-example-column-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(0,0,0,0.7);
-    margin-bottom: 24px;
-}
-
-/* =========================
-   BEFORE IMAGES
-========================= */
-
-.real-example-source {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.real-example-source figure {
-    margin: 0;
-}
-
-.real-example-source img {
+.real-example-before-images img {
     width: 100%;
-    display: block;
+    height: 260px;
+    object-fit: cover;
+    object-position: center center;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.08);
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* NOTEBOOK IMAGE */
+/* Fire plan needs different crop */
 
-.real-example-source figure:first-child img {
-    max-height: 320px;
+.real-example-before-images figure:nth-child(2) img {
+    object-fit: contain;
+    background: #fff;
 }
 
-/* FIRE PLAN IMAGE */
-
-.real-example-source figure:last-child img {
-    max-height: 420px;
-}
-
-/* CAPTIONS */
-
-.real-example-source figcaption {
-    font-size: 14px;
-    color: rgba(0,0,0,0.6);
-    margin-top: 8px;
-}
-
-/* =========================
-   AFTER SECTION
-========================= */
-
-.real-example-output {
-    display: flex;
-    flex-direction: column;
-}
-
-.real-example-output-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #111;
-}
-
-.real-example-output-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(0,0,0,0.7);
-    margin-bottom: 24px;
-}
-
-/* =========================
-   SCREENSHOT GRID
-========================= */
+/* AFTER SCREENSHOTS — fixed readable cards */
 
 .real-example-screenshot-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 22px;
 }
 
-.real-example-screenshot-card {
-    display: flex;
-    flex-direction: column;
+.real-example-screenshot-grid figure {
+    margin: 0;
+    overflow: hidden;
 }
 
-.real-example-screenshot-card h4 {
-    font-size: 15px;
-    margin: 0 0 10px;
-    font-weight: 700;
-    color: #111;
-}
-
-.real-example-screenshot-card img {
+.real-example-screenshot-grid img {
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: left top;
     display: block;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.25s ease;
 }
 
-.real-example-screenshot-card img:hover {
-    transform: translateY(-3px);
+/* If the whole image is still too wide, zoom it in slightly */
+.real-example-screenshot-grid figure img {
+    transform: scale(1.15);
+    transform-origin: top left;
 }
 
-/* =========================
-   SUMMARY LINE
-========================= */
-
-.real-example-summary {
-    margin-top: 32px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(0,0,0,0.08);
-
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(0,0,0,0.8);
+/* Prevent scaled image spilling visually */
+.real-example-screenshot-grid figure {
+    border-radius: 12px;
+    background: #fff;
 }
 
-.real-example-summary strong {
-    color: #111;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
+/* MOBILE */
 @media (max-width: 900px) {
-
-    .real-example-section {
-        padding: 80px 24px;
-    }
-
-    .real-example-header h2 {
-        font-size: 40px;
-    }
-
     .real-example-grid {
         grid-template-columns: 1fr;
-        gap: 56px;
     }
 
+    .real-example-before-images,
     .real-example-screenshot-grid {
         grid-template-columns: 1fr;
     }
 
-    .real-example-source figure:first-child img,
-    .real-example-source figure:last-child img {
-        max-height: none;
+    .real-example-before-images img {
+        height: 260px;
+    }
+
+    .real-example-screenshot-grid img {
+        height: 260px;
     }
 }
+
 .project-thinking-copy {
     flex: 0 0 260px;
     min-height: 560px;
