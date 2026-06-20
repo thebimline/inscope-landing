@@ -957,7 +957,7 @@ body {
 ========================= */
 
 .real-example-section {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 100px 40px;
 }
@@ -967,43 +967,57 @@ body {
     margin-bottom: 60px;
 }
 
-.real-example-tag {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #666;
-    margin-bottom: 12px;
-}
-
 .real-example-header h2 {
-    font-size: 42px;
-    line-height: 1.15;
-    margin-bottom: 20px;
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 24px;
     color: #111;
 }
 
 .real-example-header p {
     font-size: 18px;
     line-height: 1.7;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0,0,0,0.72);
     margin: 0;
 }
 
 /* =========================
-   MAIN LAYOUT
+   BEFORE / AFTER LAYOUT
 ========================= */
 
 .real-example-grid {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 48px;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 64px;
     align-items: start;
 }
 
 /* =========================
-   SOURCE IMAGES
+   COLUMN HEADINGS
+========================= */
+
+.real-example-column-number {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: rgba(0,0,0,0.8);
+}
+
+.real-example-column-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.real-example-column-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 24px;
+}
+
+/* =========================
+   BEFORE IMAGES
 ========================= */
 
 .real-example-source {
@@ -1012,17 +1026,41 @@ body {
     gap: 24px;
 }
 
+.real-example-source figure {
+    margin: 0;
+}
+
 .real-example-source img {
     width: 100%;
     display: block;
-    border-radius: 14px;
+    border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.08);
-    background: #fff;
+    object-fit: cover;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+/* NOTEBOOK IMAGE */
+
+.real-example-source figure:first-child img {
+    max-height: 320px;
+}
+
+/* FIRE PLAN IMAGE */
+
+.real-example-source figure:last-child img {
+    max-height: 420px;
+}
+
+/* CAPTIONS */
+
+.real-example-source figcaption {
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+    margin-top: 8px;
+}
+
 /* =========================
-   INSCOPE SCREENSHOTS
+   AFTER SECTION
 ========================= */
 
 .real-example-output {
@@ -1032,61 +1070,69 @@ body {
 
 .real-example-output-title {
     font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
     color: #111;
 }
+
+.real-example-output-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 24px;
+}
+
+/* =========================
+   SCREENSHOT GRID
+========================= */
 
 .real-example-screenshot-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 24px;
 }
 
-.real-example-screenshot-grid img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.08);
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    transition: transform 0.25s ease;
-}
-
-.real-example-screenshot-grid img:hover {
-    transform: translateY(-3px);
-}
-
-/* =========================
-   STATS BAR
-========================= */
-
-.real-example-results {
-    margin-top: 36px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(0,0,0,0.08);
-
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.real-example-stat {
+.real-example-screenshot-card {
     display: flex;
     flex-direction: column;
 }
 
-.real-example-stat-number {
-    font-size: 34px;
+.real-example-screenshot-card h4 {
+    font-size: 15px;
+    margin: 0 0 10px;
     font-weight: 700;
-    line-height: 1;
     color: #111;
 }
 
-.real-example-stat-label {
-    font-size: 14px;
-    color: rgba(0,0,0,0.65);
-    margin-top: 6px;
+.real-example-screenshot-card img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease;
+}
+
+.real-example-screenshot-card img:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SUMMARY LINE
+========================= */
+
+.real-example-summary {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(0,0,0,0.8);
+}
+
+.real-example-summary strong {
+    color: #111;
 }
 
 /* =========================
@@ -1099,27 +1145,24 @@ body {
         padding: 80px 24px;
     }
 
-    .real-example-grid {
-        grid-template-columns: 1fr;
+    .real-example-header h2 {
+        font-size: 40px;
     }
 
-    .real-example-header h2 {
-        font-size: 32px;
+    .real-example-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
     }
 
     .real-example-screenshot-grid {
         grid-template-columns: 1fr;
     }
 
-    .real-example-results {
-        gap: 24px;
-    }
-
-    .real-example-stat-number {
-        font-size: 28px;
+    .real-example-source figure:first-child img,
+    .real-example-source figure:last-child img {
+        max-height: none;
     }
 }
-
 .project-thinking-copy {
     flex: 0 0 260px;
     min-height: 560px;
