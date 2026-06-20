@@ -257,6 +257,13 @@ body {
     background-repeat: no-repeat;
 }
 
+.sub-section-divider {
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 1px;
+    background: rgba(0,0,0,0.10);
+}
+
 /* SYSTEM SUPPORT CARDS */
 
 .system-support-section {
