@@ -1593,7 +1593,6 @@ body {
     line-height: 1.45;
     font-weight: 600;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
 }
 
 .thinking-card:hover {
