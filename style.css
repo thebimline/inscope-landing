@@ -948,6 +948,7 @@ body {
     padding-top: 90px;
 }
 
+
 /* =========================
    REAL EXAMPLE / CASE STUDY
 ========================= */
@@ -1076,7 +1077,7 @@ body {
 }
 
 .real-example-slide {
-    flex: 0 0 78%;
+    flex: 0 0 90%;
     margin: 0;
     scroll-snap-align: start;
 }
@@ -1096,6 +1097,12 @@ body {
 .screenshot-label span {
     font-size: 14px;
     color: rgba(0,0,0,0.64);
+}
+
+.real-example-slide a {
+    display: block;
+    cursor: zoom-in;
+    text-decoration: none;
 }
 
 .real-example-slide img {
