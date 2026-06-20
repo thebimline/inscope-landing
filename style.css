@@ -265,6 +265,15 @@ body {
     padding: 40px 40px 90px;
 }
 
+.system-support-section::before {
+    content: "";
+    display: block;
+    max-width: 1180px;
+    height: 1px;
+    margin: 0 auto 48px;
+    background: rgba(0,0,0,0.10);
+}
+
 .system-support-grid {
     max-width: 1400px;
     width: 100%;
