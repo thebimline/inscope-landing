@@ -830,8 +830,8 @@ body {
 /* DELIVERY TIMELINE FEATURE */
 
 .delivery-timeline-feature {
-    margin-top: 80px;
-    padding-top: 80px;
+  margin-top: 50px;
+    padding-top: 50px;
     border-top: 1px solid rgba(0,0,0,0.10);
 }
 
@@ -850,15 +850,15 @@ body {
 
 .delivery-timeline-copy h3 {
     margin: 0;
-    font-size: 24px;
-    line-height: 1.35;
-    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
     color: #111;
 }
 
 .delivery-timeline-image {
-     max-width: 1180px;
-    height: 260px;
+    max-width: 1180px;
+    height: 420px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
@@ -871,7 +871,7 @@ body {
     display: block;
     object-fit: cover;
     object-position: left top;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 
 /* TRI FACTOR */
