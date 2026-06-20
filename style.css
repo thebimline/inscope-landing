@@ -261,21 +261,37 @@ body {
 }
 
 .system-support-grid {
-    max-width: 1180px;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 36px;
 }
 
 .system-support-card {
     position: relative;
     overflow: hidden;
-    min-height: 310px;
+    min-height: 460px;
     border-radius: 22px;
     padding: 38px 42px;
     color: #fff;
     box-shadow: 0 22px 55px rgba(0,0,0,0.14);
+}
+
+.system-support-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 460px;
+    border-radius: 22px;
+    padding: 38px 42px;
+    color: #fff;
+    box-shadow: 0 22px 55px rgba(0,0,0,0.14);
+
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 32px;
+    align-items: center;
 }
 
 .labs-card {
@@ -304,6 +320,84 @@ body {
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.labs-visual,
+.templates-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LABS */
+
+.planning-notice {
+    width: 230px;
+    background: #ffffff;
+    color: #111;
+    border-radius: 18px;
+    padding: 22px;
+    transform: rotate(-5deg);
+    box-shadow: 0 20px 55px rgba(0,0,0,0.25);
+}
+
+.planning-notice-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #7b55b7;
+    margin-bottom: 14px;
+}
+
+.planning-notice-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.planning-notice-lines {
+    height: 110px;
+
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.10) 0px,
+            rgba(0,0,0,0.10) 2px,
+            transparent 2px,
+            transparent 16px
+        );
+}
+
+/* TEMPLATES */
+
+.template-stack {
+    width: 220px;
+}
+
+.template-layer {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px;
+    border-radius: 14px;
+    margin-top: -6px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.template-purple {
+    background: #8a5cf6;
+}
+
+.template-green {
+    background: #15b89a;
+}
+
+.template-orange {
+    background: #ff8b3d;
+}
+
+.template-blue {
+    background: #3c8df5;
 }
 
 .system-support-card h3 {
