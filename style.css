@@ -1132,14 +1132,6 @@ body {
     border-top: 1px solid rgba(0,0,0,0.10);
 }
 
-.real-example-section {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 48px 40px 72px;
-    background: #ffffff;
-    box-shadow: inset 0 1px 0 rgba(0,0,0,0.10);
-}
-
 .real-example-card {
     max-width: 1240px;
     margin: 0 auto;
