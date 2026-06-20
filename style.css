@@ -1230,8 +1230,8 @@ body {
 }
 
 .image-lightbox img {
-    max-width: 92vw;
-    max-height: 88vh;
+    max-width: 66vw;
+    max-height: 72vh;
     border-radius: 16px;
     box-shadow: 0 24px 70px rgba(0,0,0,0.18);
     background: #fff;
