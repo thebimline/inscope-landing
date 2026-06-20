@@ -669,18 +669,6 @@ body {
 }
 
 
-.loop-svg path {
-    fill: none;
-    stroke: #8a7cf0;
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    marker-end: url(#arrowhead);
-    opacity: 0.55;
-      fill: none;
-    stroke: unset;
-}
-
 .loop-centre {
     position: absolute;
     top: 50%;
