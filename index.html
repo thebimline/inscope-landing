@@ -525,7 +525,7 @@
 
 </section>  
   
-  <section class="project-thinking-section">
+  <section class="gallery" id="gallery">
 
     <div class="project-thinking-layout">
 
@@ -534,29 +534,37 @@
             <p>Find the gaps.</p>
         </div>
 
-        <div class="project-thinking-grid">
+        <div class="gallery-carousel">
 
-            <div class="thinking-card golden-thread">
-                <span>The golden thread</span>
-            </div>
+            <button class="thinking-card thinking-card-golden" data-thinking-image="project-thinking/Sistine.png">
+                <span>The<br>Golden<br>Thread</span>
+            </button>
 
-            <div class="thinking-card under-control">
-                <span>Under control</span>
-            </div>
+            <button class="thinking-card thinking-card-control" data-thinking-image="project-thinking/Pyramids.png">
+                <span>Under<br>Control</span>
+            </button>
 
-            <div class="thinking-card line-of-sight">
-                <span>Line of sight</span>
-            </div>
+            <button class="thinking-card thinking-card-sight" data-thinking-image="project-thinking/Waterloo.png">
+                <span>Line of<br>Sight</span>
+            </button>
 
-            <div class="thinking-card did-we-succeed">
-                <span>Did we succeed?</span>
-            </div>
+            <button class="thinking-card thinking-card-succeed" data-thinking-image="project-thinking/Greek.png">
+                <span>Did We<br>Succeed?</span>
+            </button>
 
         </div>
 
     </div>
 
 </section>
+
+<div class="thinking-lightbox" id="thinkingLightbox">
+    <div class="thinking-lightbox-panel">
+        <button class="thinking-lightbox-close" id="thinkingLightboxClose">×</button>
+        <img id="thinkingLightboxImage" src="" alt="">
+    </div>
+</div>
+
   
   <section class="final-cta" id="contact">
 
