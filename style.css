@@ -953,14 +953,83 @@ body {
 }
 
 
+/* =========================
+   REAL EXAMPLE / CASE STUDY
+========================= */
+
+.real-example-section {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+.real-example-header {
+    max-width: 900px;
+    margin-bottom: 48px;
+}
+
+.real-example-header h2 {
+    font-size: 42px;
+    line-height: 1.12;
+    margin: 0 0 22px;
+    color: #111;
+}
+
+.real-example-header p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(0,0,0,0.72);
+    margin: 0 0 12px;
+}
+
+/* MAIN BEFORE / AFTER LAYOUT */
+
 .real-example-grid {
     display: grid;
-    grid-template-columns: 0.65fr 1.35fr;
+    grid-template-columns: 0.72fr 1.28fr;
     gap: 56px;
     align-items: start;
 }
 
-/* BEFORE IMAGES — shrink them */
+/* SHARED COLUMN TEXT */
+
+.real-example-before,
+.real-example-after {
+    min-width: 0;
+}
+
+.real-example-card-title {
+    margin-bottom: 22px;
+}
+
+.real-example-card-title span {
+    display: block;
+    font-size: 16px;
+    color: rgba(0,0,0,0.65);
+    margin-bottom: 14px;
+}
+
+.real-example-card-title h3 {
+    font-size: 21px;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.real-example-card-title p {
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(0,0,0,0.68);
+    margin: 0;
+}
+
+/* HIDE OLD ARROW IF IT EXISTS IN HTML */
+
+.real-example-arrow {
+    display: none;
+}
+
+/* BEFORE IMAGES */
 
 .real-example-before-images {
     display: grid;
@@ -969,23 +1038,34 @@ body {
     align-items: start;
 }
 
+.real-example-before-images figure {
+    margin: 0;
+}
+
 .real-example-before-images img {
     width: 100%;
     height: 260px;
-    object-fit: cover;
-    object-position: center center;
+    display: block;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.08);
+    background: #fff;
+    object-fit: cover;
+    object-position: center center;
 }
-
-/* Fire plan needs different crop */
 
 .real-example-before-images figure:nth-child(2) img {
     object-fit: contain;
-    background: #fff;
+    object-position: center center;
+    padding: 10px;
 }
 
-/* AFTER SCREENSHOTS — fixed readable cards */
+.real-example-before-images figcaption {
+    font-size: 14px;
+    color: rgba(0,0,0,0.65);
+    margin-top: 8px;
+}
+
+/* AFTER SCREENSHOT GRID */
 
 .real-example-screenshot-grid {
     display: grid;
@@ -995,35 +1075,105 @@ body {
 
 .real-example-screenshot-grid figure {
     margin: 0;
+    min-width: 0;
     overflow: hidden;
+}
+
+.screenshot-label {
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.screenshot-label strong {
+    font-size: 15px;
+    color: #111;
+}
+
+.screenshot-label span {
+    font-size: 15px;
+    color: rgba(0,0,0,0.72);
 }
 
 .real-example-screenshot-grid img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: left top;
+    height: 260px;
     display: block;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.08);
-}
-
-/* If the whole image is still too wide, zoom it in slightly */
-.real-example-screenshot-grid figure img {
-    transform: scale(1.15);
-    transform-origin: top left;
-}
-
-/* Prevent scaled image spilling visually */
-.real-example-screenshot-grid figure {
-    border-radius: 12px;
     background: #fff;
+    object-fit: cover;
+    object-position: left top;
+}
+
+/* CONNECTION LINE */
+
+.real-example-connection {
+    margin: 28px 0 0;
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.78);
+}
+
+/* RESULT BAR */
+
+.real-example-result {
+    max-width: 1320px;
+    margin: 46px auto 0;
+    padding-top: 28px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.real-example-result p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: rgba(0,0,0,0.76);
+}
+
+.real-example-stat strong {
+    display: block;
+    font-size: 36px;
+    line-height: 1;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.real-example-stat span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.35;
+    color: rgba(0,0,0,0.68);
+}
+
+.real-example-close {
+    font-weight: 650;
 }
 
 /* MOBILE */
-@media (max-width: 900px) {
+
+@media (max-width: 980px) {
+
+    .real-example-section {
+        padding: 80px 24px;
+    }
+
+    .real-example-header h2 {
+        font-size: 34px;
+    }
+
     .real-example-grid {
         grid-template-columns: 1fr;
+        gap: 54px;
     }
 
     .real-example-before-images,
@@ -1031,12 +1181,19 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .real-example-before-images img {
+    .real-example-before-images img,
+    .real-example-screenshot-grid img {
         height: 260px;
     }
 
-    .real-example-screenshot-grid img {
-        height: 260px;
+    .real-example-result {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .real-example-stat {
+        padding-top: 16px;
+        border-top: 1px solid rgba(0,0,0,0.08);
     }
 }
 
