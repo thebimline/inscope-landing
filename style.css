@@ -959,7 +959,8 @@ body {
     margin: 0 auto;
     padding: 28px;
     border-radius: 28px;
-    background: #456EA8;
+    background: #ffffff;
+    border: 2px solid #111;
     box-shadow: 0 24px 70px rgba(0,0,0,0.12);
 }
 
