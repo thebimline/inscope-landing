@@ -985,17 +985,20 @@ body {
 /* MAIN BEFORE / AFTER LAYOUT */
 
 .real-example-grid {
-    display: grid;
-    grid-template-columns: 0.72fr 1.28fr;
-    gap: 56px;
-    align-items: start;
+    background: #f7f4ef;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 24px;
+    padding: 32px;
 }
 
 /* SHARED COLUMN TEXT */
 
 .real-example-before,
 .real-example-after {
-    min-width: 0;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 18px;
+    padding: 28px;
 }
 
 .real-example-card-title {
