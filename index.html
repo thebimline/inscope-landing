@@ -684,5 +684,27 @@
 </div>
     
 <script src="script.js"></script>
+  <script>
+document.querySelectorAll('[data-thinking-image]').forEach(card => {
+    card.addEventListener('click', () => {
+        const lightbox = document.getElementById('thinkingLightbox');
+        const image = document.getElementById('thinkingLightboxImage');
+
+        image.src = card.getAttribute('data-thinking-image');
+        lightbox.classList.add('active');
+    });
+});
+
+document.getElementById('thinkingLightboxClose').addEventListener('click', () => {
+    document.getElementById('thinkingLightbox').classList.remove('active');
+});
+
+document.getElementById('thinkingLightbox').addEventListener('click', (event) => {
+    if (event.target.id === 'thinkingLightbox') {
+        event.currentTarget.classList.remove('active');
+    }
+});
+</script>
+  
 </body>
 </html>
