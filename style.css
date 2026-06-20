@@ -259,9 +259,9 @@ body {
 
 .sub-section-divider {
     max-width: 1180px;
-    margin: 70px auto;
     height: 1px;
-    background: red;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.10);
 }
 
 
