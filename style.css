@@ -969,15 +969,6 @@ body {
     margin-bottom: 22px;
 }
 
-.real-example-label {
-    margin: 0 0 10px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-    color: rgba(255,255,255,0.58);
-}
-
 .real-example-card-header h2 {
     font-size: 38px;
     line-height: 1.1;
@@ -992,12 +983,12 @@ body {
     margin: 0 0 16px;
 }
 
-.real-example-card-header p:not(.real-example-label):not(.real-example-kicker) {
+.real-example-card-header p:not(.real-example-kicker)
+{
     max-width: 720px;
     margin: 0;
     font-size: 16px;
     line-height: 1.55;
-    color: rgba(255,255,255,0.72);
 }
 
 .real-example-panel {
