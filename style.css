@@ -969,7 +969,7 @@ body {
 }
 
 .real-example-label {
-    margin: 0 0 10px;
+    margin: 0 0 14px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1018,22 +1018,6 @@ body {
 .real-example-before .real-example-label,
 .real-example-after .real-example-label {
     color: rgba(0,0,0,0.55);
-}
-
-.real-example-before h3,
-.real-example-after h3 {
-    font-size: 20px;
-    line-height: 1.2;
-    margin: 0 0 10px;
-    color: #111;
-}
-
-.real-example-before p,
-.real-example-after p {
-    font-size: 15px;
-    line-height: 1.45;
-    color: rgba(0,0,0,0.68);
-    margin: 0 0 16px;
 }
 
 .real-example-before-images {
