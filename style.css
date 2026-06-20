@@ -942,16 +942,11 @@ body {
     border-radius: 30px;
 }
 
-.gallery-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 36px;
-    width: 100%;
-    padding: 64px 40px 0;
-    background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.08);
-}
 
+.real-example-section {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 90px;
+}
 
 /* =========================
    REAL EXAMPLE / CASE STUDY
@@ -1198,6 +1193,16 @@ body {
         padding-top: 16px;
         border-top: 1px solid rgba(0,0,0,0.08);
     }
+}
+
+.gallery-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    width: 100%;
+    padding: 64px 40px 0;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .project-thinking-copy {
