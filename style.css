@@ -943,12 +943,6 @@ body {
 }
 
 
-.real-example-section {
-    max-width: 1180px;
-    margin: 80px auto 0;
-    padding: 80px 40px 80px;
-    border-top: 1px solid rgba(0,0,0,0.08);
-}
 
 
 /* =========================
@@ -989,7 +983,7 @@ body {
 }
 
 .real-example-panel {
-    background: #f7f4ef;
+    background: #ffffff;
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 26px;
     padding: 24px;
@@ -1215,6 +1209,49 @@ body {
     }
 }
 
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(245,245,245,0.92);
+    backdrop-filter: blur(3px);
+}
+
+.image-lightbox.active {
+    display: flex;
+}
+
+.image-lightbox img {
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 16px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.18);
+    background: #fff;
+}
+
+.image-lightbox-close {
+    position: fixed;
+    top: 26px;
+    right: 32px;
+    border: none;
+    background: #fff;
+    color: #111;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
 
 .gallery-row {
     display: flex;
