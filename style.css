@@ -1145,21 +1145,20 @@ body {
 
 .gs-phone-frame {
     position: absolute;
-    right: -30px;   /* moved further right */
-    bottom: 10px;
-
     width: 165px;
-    height: 330px;
 
-    padding: 6px;   /* thinner frame */
+    /* moved further right */
+    right: -70px;
+    bottom: -65px;
 
-    border-radius: 34px;
-
-    background: #2a2a34;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.14);
-
+    background: #ffffff;
+    border: 7px solid #2e2e3f;
+    border-radius: 42px;
+    padding: 8px;
     overflow: hidden;
-    z-index: 2;
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+    z-index: 3;
 }
 
 .gs-phone-frame img {
