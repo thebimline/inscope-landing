@@ -1104,20 +1104,52 @@ body {
     font-size: 14px;
     font-weight: 700;
 }
-
-.gs-device-visual {
-    width: 100%;
-    min-height: 430px;
-    background-image: url("Images/screenshot_6.png");
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 72% center;
+.gs-device-stack {
+    position: relative;
+    width: 520px;
+    height: 460px;
+    margin: 0 auto;
 }
 
-.gs-device-visual img {
+.gs-tablet-frame {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 410px;
+    height: 285px;
+    background: #2f2f35;
+    border-radius: 28px;
+    padding: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    z-index: 1;
+}
+
+.gs-tablet-frame img {
     width: 100%;
-    max-width: 610px;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+}
+
+.gs-phone-frame {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 165px;
+    height: 330px;
+    background: #2f2f35;
+    border-radius: 34px;
+    padding: 9px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.14);
+    z-index: 2;
+}
+
+.gs-phone-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 
