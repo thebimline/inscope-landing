@@ -1074,11 +1074,6 @@ body {
     color: rgba(0,0,0,0.72);
 }
 
-.gs-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .gs-fragment-visual {
     margin-top: 46px;
@@ -1110,22 +1105,18 @@ body {
     font-weight: 700;
 }
 
-.phone-frame {
-    width: 245px;
-    background: #4a4b52;
-    border-radius: 33px;
-    padding: 3px;
-    border: 1.2px solid rgba(70,70,78,0.50);
-    box-shadow:
-        0 5px 14px rgba(0,0,0,0.07),
-        0 1px 2px rgba(0,0,0,0.03);
+.gs-device-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.phone-frame img {
+.gs-device-visual img {
     width: 100%;
+    max-width: 610px;
     display: block;
-    border-radius: 30px;
 }
+
 
 /* =========================
    REAL EXAMPLE / CASE STUDY
