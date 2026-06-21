@@ -1106,9 +1106,12 @@ body {
 }
 
 .gs-device-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    min-height: 430px;
+    background-image: url("Images/screenshot_6.png");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 72% center;
 }
 
 .gs-device-visual img {
