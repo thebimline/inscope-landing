@@ -1108,6 +1108,7 @@ body {
 
 .gs-device-stack {
     position: relative;
+    left: -15px;
     width: 650px;
     height: 430px;
     margin: 0 auto;
