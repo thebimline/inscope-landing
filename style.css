@@ -567,7 +567,7 @@ body {
 
 .benefit {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     font-size: 18px;
     line-height: 1.4;
@@ -582,6 +582,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2px;
 }
 
 .benefit-icon svg {
