@@ -634,7 +634,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 48px;
-   margin-top: 56px;
+    margin-top: 20px;
     margin-bottom: 28px;
 }
 
@@ -670,7 +670,7 @@ body {
     position: relative;
     width: 360px;
     height: 360px;
-    margin: 0 auto;
+    margin: 45px auto 75px;
 }
 
 
