@@ -666,8 +666,9 @@ body {
 
 .timeline-loop {
     position: relative;
-    width: 420px;
-    height: 420px;
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
 }
 
 
@@ -687,7 +688,7 @@ body {
 
 .loop-node {
     position: absolute;
-    width: 180px;
+    width: 150px;
     text-align: center;
     background: transparent;
     border: none;
@@ -712,7 +713,7 @@ body {
 
 .loop-operate {
     top: 50%;
-    right: -70px;
+    right: -55px;
     transform: translateY(-50%);
 }
 
@@ -724,7 +725,7 @@ body {
 
 .loop-report {
     top: 50%;
-    left: -70px;
+    left: -55px;
     transform: translateY(-50%);
 }
 
