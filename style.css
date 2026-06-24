@@ -487,16 +487,16 @@ body {
 .timeline-solution-row {
     grid-area: solution;
     display: grid;
-    grid-template-columns: 1.25fr 0.9fr;
-    gap: 60px;
+    grid-template-columns: minmax(0, 540px) 390px;
+    gap: 28px;
     align-items: start;
+    justify-content: center;
     margin-top: 10px;
     padding-top: 72px;
     border-top: 1px solid rgba(0,0,0,0.10);
 }
-
 .timeline-story-inner {
-    max-width: 1180px;
+    max-width: 1080px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -505,7 +505,7 @@ body {
         "solution solution"
         "outcomes outcomes"
         "better better";
-    gap: 46px 90px;
+    gap: 46px 70px;
     align-items: start;
 }
 
@@ -715,7 +715,7 @@ body {
 
 .loop-operate {
     top: 50%;
-    right: -20px;
+    right:  5px;
     transform: translateY(-50%);
 }
 
@@ -727,7 +727,7 @@ body {
 
 .loop-report {
     top: 50%;
-    left: -20px;
+    left: 5px;
     transform: translateY(-50%);
 }
 
