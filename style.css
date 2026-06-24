@@ -710,7 +710,7 @@ body {
 }
 
 .loop-plan {
-    top: -10px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 220px;
@@ -718,14 +718,14 @@ body {
 
 .loop-operate {
     top: 50%;
-    right: -120px;
+    right: -100px;
     transform: translateY(-50%);
     width: 140px;
     text-align: left;
 }
 
 .loop-update {
-    bottom: -55px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     width: 220px;
@@ -733,7 +733,7 @@ body {
 
 .loop-report {
     top: 50%;
-    left: -120px;
+    left: -100px;
     transform: translateY(-50%);
     width: 140px;
     text-align: right;
