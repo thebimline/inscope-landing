@@ -489,9 +489,9 @@ body {
     display: grid;
     grid-template-columns: 1.25fr 0.9fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
     margin-top: 10px;
-    padding-top: 40px;
+    padding-top: 72px;
     border-top: 1px solid rgba(0,0,0,0.10);
 }
 
@@ -634,7 +634,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 48px;
-    margin-top: 10px;
+   margin-top: 56px;
     margin-bottom: 28px;
 }
 
@@ -660,8 +660,9 @@ body {
 .timeline-loop-block {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 0;
+    padding-top: 0;
     overflow: visible;
 }
 
