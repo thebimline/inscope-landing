@@ -710,27 +710,33 @@ body {
 }
 
 .loop-plan {
-    top: -12px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
+    width: 220px;
 }
 
 .loop-operate {
     top: 50%;
-    right:  5px;
+    right: -120px;
     transform: translateY(-50%);
+    width: 140px;
+    text-align: left;
 }
 
 .loop-update {
-    bottom: -12px;
+    bottom: -55px;
     left: 50%;
     transform: translateX(-50%);
+    width: 220px;
 }
 
 .loop-report {
     top: 50%;
-    left: 5px;
+    left: -120px;
     transform: translateY(-50%);
+    width: 140px;
+    text-align: right;
 }
 
 
