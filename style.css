@@ -743,7 +743,7 @@ body {
     grid-area: better;
     width: 760px;
   margin: 40px auto 120px;
-    transform: translateX(-180px);
+    transform: translateX(-160px);
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
     background: rgba(123, 85, 183, 0.06);
