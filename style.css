@@ -635,10 +635,11 @@ body {
     grid-area: outcomes;
     display: grid;
     grid-template-columns: repeat(3, 320px);
-    justify-content: center;
+    justify-content: start;
     gap: 50px;
     margin-top: 40px;
     margin-bottom: 28px;
+    margin-left: 130px;
 }
 
 .timeline-outcome-card {
@@ -740,11 +741,10 @@ body {
     text-align: right;
 }
 
-
 .timeline-better-outcomes {
     grid-area: better;
-    width: 68%;
-    margin: 8px 0 0;
+    width: 760px;
+    margin: 8px 0 0 130px;
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
     background: rgba(123, 85, 183, 0.06);
