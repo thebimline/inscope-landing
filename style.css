@@ -487,10 +487,10 @@ body {
 .timeline-solution-row {
     grid-area: solution;
     display: grid;
-    grid-template-columns: 700px 420px;
-    gap: 10px;
+    grid-template-columns: 620px 420px;
+    gap: 100px;
     align-items: start;
-    justify-content: center;
+    justify-content: start;
     margin-top: 10px;
     padding-top: 30px;
     border-top: 1px solid rgba(0,0,0,0.10);
@@ -632,10 +632,10 @@ body {
 }
 
 .timeline-outcomes-row {
+    grid-area: outcomes;
     display: grid;
-    grid-template-columns: repeat(3, 320px);
-    justify-content: center;
-    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
     margin-top: 40px;
     margin-bottom: 28px;
 }
@@ -742,8 +742,8 @@ body {
 
 .timeline-better-outcomes {
     grid-area: better;
-    max-width: 620px;
-    margin: 8px 0 0 130px;
+    width: 100%;
+    margin: 8px 0 0;
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
     background: rgba(123, 85, 183, 0.06);
