@@ -1371,10 +1371,10 @@ body {
 .real-example-transformation {
     margin: 0;
     max-width: 720px;
-    font-size: 22px;
-    line-height: 1.35;
-    font-weight: 700;
-    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 600;
+    color: rgba(255,255,255,0.92);
 }
 
 .real-example-stat strong {
