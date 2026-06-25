@@ -742,7 +742,7 @@ body {
 .timeline-better-outcomes {
     grid-area: better;
     width: 760px;
-  margin: 40px auto 60px;
+  margin: 40px auto 120px;
     transform: translateX(-220px);
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
