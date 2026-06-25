@@ -490,7 +490,7 @@ body {
     grid-template-columns: 620px 420px;
     gap: 100px;
     align-items: start;
-    justify-content: start;
+    justify-content: center;
     margin-top: 10px;
     padding-top: 30px;
     border-top: 1px solid rgba(0,0,0,0.10);
