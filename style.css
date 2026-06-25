@@ -17,7 +17,6 @@ body {
     background: white;
     border-bottom: 1px solid #E5E5E5;
 }
-
 .logo {
     font-size: 36px;
     font-weight: 700;
@@ -744,7 +743,7 @@ body {
     grid-area: better;
     width: 760px;
     margin: 40px auto 0;
-    transform: translateX(-190px);
+    transform: translateX(-220px);
     padding: 18px 22px;
     border-left: 3px solid #7b55b7;
     background: rgba(123, 85, 183, 0.06);
