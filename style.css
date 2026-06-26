@@ -320,6 +320,10 @@ body {
     text-transform: none;
 }
 
+.labs-card .support-pill {
+    transform: translateY(4px);
+}
+
 .system-support-card h3 {
     margin: 0 0 24px;
     font-size: 24px;
