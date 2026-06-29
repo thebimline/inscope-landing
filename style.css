@@ -521,7 +521,7 @@ body {
 }
 
 .timeline-title-block h2 {
-    font-size: 52px;
+    font-size: 56px;
    line-height: 1.08;
     margin: 0;
     letter-spacing: -0.04em;
@@ -540,9 +540,10 @@ body {
 }
 
 .quote-open {
-    top: -8px;
-    left: -16px;
+    top: 18px;
+    left: -34px;
     font-size: 44px;
+    line-height: 1;
 }
 
 .quote-close {
