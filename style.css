@@ -546,8 +546,8 @@ body {
 }
 
 .quote-close {
-    bottom: 4px;
-    right: 6px;
+    bottom: -2px;
+    right: 40px;
     font-size: 44px;
 }
 
