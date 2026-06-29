@@ -516,16 +516,17 @@ body {
 .timeline-title-block {
     grid-area: title;
     position: relative;
-    padding-top: 95px;
+    padding-top: 25px;
     text-align: left;
 }
 
 .timeline-title-block h2 {
     font-size: 64px;
-    line-height: 1.02;
+    line-height: 1.08;
     margin: 0;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     color: #111;
+    max-width: 520px;
 }
 
 .quote-open,
@@ -539,13 +540,15 @@ body {
 }
 
 .quote-open {
-    top: 56px;
-    left: -10px;
+    top: -12px;
+    left: -18px;
+    font-size: 54px;
 }
 
 .quote-close {
-    top: 172px;
-    left: 330px;
+    top: 210px;
+    left: 320px;
+    font-size: 54px;
 }
 
 .timeline-copy-block {
