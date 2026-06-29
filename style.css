@@ -521,8 +521,8 @@ body {
 }
 
 .timeline-title-block h2 {
-    font-size: 64px;
-    line-height: 1.08;
+    font-size: 56px;
+   line-height: 1.08;
     margin: 0;
     letter-spacing: -0.04em;
     color: #111;
@@ -540,15 +540,15 @@ body {
 }
 
 .quote-open {
-    top: -12px;
-    left: -18px;
-    font-size: 54px;
+    top: -8px;
+    left: -16px;
+    font-size: 44px;
 }
 
 .quote-close {
-    top: 210px;
-    left: 320px;
-    font-size: 54px;
+    bottom: 4px;
+    right: 6px;
+    font-size: 44px;
 }
 
 .timeline-copy-block {
