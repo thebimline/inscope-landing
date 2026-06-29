@@ -546,9 +546,10 @@ body {
 }
 
 .quote-close {
-    bottom: -2px;
-    right: 40px;
+    top: 150px;
+    right: 145px;
     font-size: 44px;
+    line-height: 1;
 }
 
 .timeline-copy-block {
