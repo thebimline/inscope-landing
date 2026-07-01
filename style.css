@@ -585,7 +585,7 @@ body {
     color: rgba(0,0,0,0.72);
     text-align: left;
 
-    margin-bottom: 10px;               /* tighter vertical spacing */
+    margin-bottom: 12px;               /* tighter vertical spacing */
 }
 
 .benefit span {
