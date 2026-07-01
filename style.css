@@ -575,13 +575,16 @@ body {
 }
 
 .benefit {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    display: block;
+    margin-bottom: 24px;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.45;
     color: rgba(0,0,0,0.72);
     text-align: left;
+}
+
+.benefit span {
+    display: block;
 }
 
 .benefit-icon {
