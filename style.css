@@ -575,24 +575,30 @@ body {
 }
 
 .benefit {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 22px 1fr;   /* keep the left gutter */
+    column-gap: 12px;                  /* was effectively ~16px */
+    align-items: start;
+
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.35;                 /* tighter */
     color: rgba(0,0,0,0.72);
     text-align: left;
-    margin-bottom: 20px;
+
+    margin-bottom: 14px;               /* tighter vertical spacing */
 }
 
 .benefit span {
     display: block;
 }
 
+.benefit::before {
+    content: "";
+    width: 22px;
+}
+
 .benefit-icon {
-    width: 20px;      /* keeps the indentation */
-    flex-shrink: 0;
-    visibility: hidden;
+    display: none;
 }
 
 .benefit-icon svg {
