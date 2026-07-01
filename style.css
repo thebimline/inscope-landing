@@ -576,7 +576,7 @@ body {
 
 .benefit {
     display: grid;
-    grid-template-columns: 22px 1fr;   /* keep the left gutter */
+    grid-template-columns: 26px 1fr;   /* keep the left gutter */
     column-gap: 12px;                  /* was effectively ~16px */
     align-items: start;
 
@@ -585,7 +585,7 @@ body {
     color: rgba(0,0,0,0.72);
     text-align: left;
 
-    margin-bottom: 14px;               /* tighter vertical spacing */
+    margin-bottom: 12px;               /* tighter vertical spacing */
 }
 
 .benefit span {
