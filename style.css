@@ -575,12 +575,14 @@ body {
 }
 
 .benefit {
-    display: block;
-    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     font-size: 18px;
-    line-height: 1.45;
+    line-height: 1.4;
     color: rgba(0,0,0,0.72);
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .benefit span {
@@ -588,13 +590,9 @@ body {
 }
 
 .benefit-icon {
+    width: 20px;      /* keeps the indentation */
     flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
+    visibility: hidden;
 }
 
 .benefit-icon svg {
