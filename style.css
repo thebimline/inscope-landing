@@ -1731,28 +1731,20 @@ body {
     color: #111;
     text-align: center;
 
-    padding-top: 70px;
+    padding-top: 85px;
     padding-right: 20px;
-    padding-bottom: 120px;
+    padding-bottom: 110px;
     padding-left: 20px;
 }
 
 .final-cta h2 {
     font-size: 56px;
-    margin-top: -20px;
-    margin-bottom: 50px;
-}
-
-.final-cta-text {
-    max-width: 720px;
-    margin: 0 auto 40px;
-    font-size: 22px;
-    color: rgba(0,0,0,0.65);
-    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 40px;
 }
 
 .final-cta .cta-buttons {
-    margin-top: 65px;
+    margin-top: 0;
 }
 
 .footer {
