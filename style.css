@@ -1746,6 +1746,10 @@ body {
     line-height: 1.5;
 }
 
+.final-cta .cta-buttons {
+    margin-top: 42px;
+}
+
 .footer {
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -1919,14 +1923,8 @@ body {
 
 .contact-box h2 {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 28px;
     font-size: 30px;
-}
-
-.contact-intro {
-    color: rgba(0,0,0,0.62);
-    margin-bottom: 26px;
-    line-height: 1.5;
 }
 
 
@@ -1967,6 +1965,7 @@ body {
     color: #111;
     border: none;
     padding: 14px;
+    margin-top: 18px;
     border-radius: 999px;
     font-size: 16px;
     cursor: pointer;
