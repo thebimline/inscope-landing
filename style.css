@@ -1989,3 +1989,60 @@ body {
     cursor: pointer;
     color: rgba(0,0,0,0.45);
 }
+
+/* TERMS OF SERVICE */
+
+.terms-page {
+    background: #ffffff;
+    padding: 80px 40px;
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terms-container h1 {
+    margin-bottom: 16px;
+}
+
+.terms-date {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.terms-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.terms-divider {
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    margin: 40px 0;
+}
+
+.terms-container h2 {
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+.terms-container h3 {
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.terms-container p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.terms-container ul {
+    margin: 16px 0 24px 24px;
+}
+
+.terms-container li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
