@@ -1,9 +1,12 @@
 const modal = document.getElementById('contactModal');
-const openBtn = document.getElementById('openContact');
+const openBtns = document.querySelectorAll('#openContact, #openContactHero');
 const closeBtn = document.getElementById('closeContact');
 
-openBtn.addEventListener('click', () => {
-  modal.classList.add('active');
+openBtns.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('active');
+  });
 });
 
 closeBtn.addEventListener('click', () => {
