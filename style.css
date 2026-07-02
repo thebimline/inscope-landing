@@ -1730,12 +1730,12 @@ body {
     background: #E5FCD9;
     color: #111;
     text-align: center;
-    padding: 110px 20px;
+    padding: 80px 20px 140px;
 }
 
 .final-cta h2 {
     font-size: 56px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .final-cta-text {
