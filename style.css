@@ -2046,3 +2046,13 @@ body {
     margin-bottom: 10px;
     line-height: 1.7;
 }
+
+.logo a {
+    color: #111;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #111;
+    text-decoration: none;
+}
