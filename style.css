@@ -1767,6 +1767,19 @@ body {
     text-align: left;
 }
 
+
+/* Footer circles */
+
+.footer-circles {
+    position: absolute;
+    left: -25px;
+    top: -20px;
+
+    opacity: 0.12;
+    transform: scale(0.35);
+    pointer-events: none;
+}
+
 .footer-brand h3 {
     margin: 0 0 6px;
     color: white;
