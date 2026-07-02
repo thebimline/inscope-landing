@@ -1796,6 +1796,17 @@ body {
     text-align: right;
 }
 
+.footer-logo {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-logo:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
 @media (max-width: 900px) {
     .site-header {
         padding: 20px 24px;
