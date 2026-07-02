@@ -1739,7 +1739,8 @@ body {
 
 .final-cta h2 {
     font-size: 56px;
-    margin-bottom: 40px;
+    margin-top: -20px;
+    margin-bottom: 50px;
 }
 
 .final-cta-text {
@@ -1751,7 +1752,7 @@ body {
 }
 
 .final-cta .cta-buttons {
-    margin-top: 42px;
+    margin-top: 65px;
 }
 
 .footer {
