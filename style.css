@@ -2132,18 +2132,22 @@ body {
         margin-bottom: 24px;
     }
 
-    .sub {
-        font-size: 18px;
-        line-height: 1.55;
-        margin: 0 auto 26px;
-    }
+.sub {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 auto 22px;
+}
 
-    .readiness,
-    .support {
-        font-size: 18px;
-        line-height: 1.45;
-        margin: 4px 0;
-    }
+.readiness,
+.support {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.readiness + .support {
+    margin-top: 4px;
+}
 
     .cta-buttons {
         display: flex;
