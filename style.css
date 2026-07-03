@@ -2712,3 +2712,17 @@ body {
         font-size: 34px;
     }
 }
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 38px !important;
+        padding-bottom: 105px !important;
+    }
+
+    .hero-content {
+        padding-top: 24px !important;
+        padding-bottom: 76px !important;
+    }
+
+}
