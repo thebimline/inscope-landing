@@ -2078,3 +2078,233 @@ body {
     color: #111;
     text-decoration: none;
 }
+
+/* =========================
+   MOBILE V1 FIXES
+========================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .timeline-story,
+    .tri-factor,
+    .getting-started,
+    .real-example-section,
+    .faq-section,
+    .final-cta,
+    .footer {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+
+    /* Section 2 */
+
+    .timeline-story {
+        padding: 70px 24px 80px;
+    }
+
+    .timeline-story-inner {
+        display: block;
+        max-width: 100%;
+    }
+
+    .timeline-title-block h2 {
+        font-size: 48px;
+        line-height: 1.08;
+        text-align: center;
+        margin: 0 auto 48px;
+    }
+
+    .timeline-copy-block {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .timeline-intro {
+        font-size: 24px;
+        line-height: 1.35;
+        margin: 0 auto 42px;
+    }
+
+    .timeline-benefits {
+        gap: 34px;
+    }
+
+    .benefit {
+        display: block;
+        font-size: 24px;
+        line-height: 1.35;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .benefit::before {
+        display: none;
+    }
+
+    .timeline-result,
+    .timeline-better-outcomes {
+        width: 100%;
+        transform: none;
+        margin: 46px 0 80px;
+        font-size: 24px;
+        line-height: 1.45;
+        text-align: center;
+    }
+
+    .timeline-solution-row {
+        display: block;
+        padding-top: 70px;
+        margin-top: 70px;
+    }
+
+    .timeline-solution-block {
+        padding-top: 0;
+        text-align: left;
+    }
+
+    .timeline-loop-block,
+    .timeline-loop {
+        display: none;
+    }
+
+    .timeline-outcomes-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 38px;
+        margin: 70px 0 60px;
+    }
+
+    .timeline-outcome-card {
+        text-align: center;
+    }
+
+    /* Delivery timeline */
+
+    .delivery-timeline-feature {
+        margin-top: 70px;
+        padding-top: 70px;
+    }
+
+    .delivery-timeline-copy h3 {
+        font-size: 46px;
+        line-height: 1.12;
+    }
+
+    .delivery-timeline-image {
+        height: auto;
+        border-radius: 18px;
+    }
+
+    .delivery-timeline-image img {
+        transform: none;
+        object-fit: contain;
+    }
+
+    /* Tri factor */
+
+    .tri-factor {
+        padding: 80px 24px 70px;
+    }
+
+    .tri-factor h2 {
+        font-size: 48px;
+        line-height: 1.12;
+        text-align: left;
+    }
+
+    .tri-factor-intro {
+        margin-bottom: 60px;
+    }
+
+    .tri-factor-copy {
+        font-size: 24px;
+        line-height: 1.65;
+    }
+
+    .icc-principle {
+        margin: 50px 0;
+    }
+
+    .structure-points {
+        grid-template-columns: 1fr;
+        gap: 64px;
+    }
+
+    .structure-lead {
+        font-size: 26px;
+    }
+
+    .structure-list li {
+        font-size: 25px;
+        padding: 14px 0 14px 16px;
+    }
+
+    /* Getting Started */
+
+    .getting-started {
+        padding: 80px 24px 70px;
+    }
+
+    .gs-layout-simple {
+        display: block;
+    }
+
+    .gs-copy-simple h2 {
+        font-size: 42px;
+    }
+
+    .gs-copy-simple p:not(.gs-subtitle) {
+        font-size: 22px;
+        line-height: 1.65;
+    }
+
+    .gs-device-stack {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .gs-tablet-frame,
+    .gs-phone-frame {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .gs-phone-frame {
+        display: none;
+    }
+
+    /* Footer */
+
+    .footer {
+        display: block;
+        padding: 42px 24px;
+        text-align: left;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 28px 0;
+    }
+
+    .footer-copy {
+        text-align: left;
+    }
+}
