@@ -2572,37 +2572,41 @@ body {
 
 @media (max-width: 768px) {
 
-    /* HERO - slightly tighter */
+   /* HERO - more spacious */
 
-    .hero {
-        padding: 46px 20px 54px;
-    }
+.hero {
+    padding: 76px 20px 105px;
+}
 
-    .hero-content {
-        padding: 38px 14px 46px;
-    }
+.hero-content {
+    padding: 58px 14px 76px;
+}
 
-    .hero h1 {
-        font-size: 26px;
-        line-height: 1.14;
-        margin-bottom: 24px;
-    }
+.hero h1 {
+    font-size: 26px;
+    line-height: 1.14;
+    margin-bottom: 36px;
+}
 
- .hero .sub,
+.hero .sub,
 .hero .rolling {
     font-size: 17px;
     line-height: 1.5;
 }
 
 .hero .rolling {
-    margin-top: 18px;
+    margin-top: 24px;
     margin-bottom: 0;
 }
 
-    .cta-buttons a {
-        padding: 13px 18px;
-        font-size: 15px;
-    }
+.cta-buttons {
+    margin-top: 38px;
+}
+
+.cta-buttons a {
+    padding: 13px 18px;
+    font-size: 15px;
+}
 
     /* SECTION 2 - pain points less oversized */
 
