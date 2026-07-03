@@ -2328,9 +2328,9 @@ body {
 
     /* TRI FACTOR */
 
-    .tri-factor {
-        padding: 82px 24px 76px;
-    }
+   .tri-factor {
+    padding: 82px 24px 36px;
+}
 
     .tri-factor h2 {
         font-size: 38px;
