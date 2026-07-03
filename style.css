@@ -2679,11 +2679,11 @@ body {
         line-height: 1.35;
     }
 
-    .structure-list li {
-        font-size: 18px;
-        line-height: 1.4;
-        padding: 14px 0 14px 12px;
-    }
+ .structure-list li {
+    font-size: 18px;
+    line-height: 1.35;
+    padding: 10px 0 10px 12px;
+}
 
     /* GETTING STARTED */
 
