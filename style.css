@@ -2139,14 +2139,21 @@ body {
 }
 
 .readiness,
-.support {
+.support,
+.cta-line {
     font-size: 17px;
     line-height: 1.5;
     margin: 0;
 }
 
+    .cta-line {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 18px;
+}
+
 .readiness + .support {
-    margin-top: 4px;
+    margin-top: 0px;
 }
 
     .cta-buttons {
