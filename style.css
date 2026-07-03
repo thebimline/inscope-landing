@@ -2685,6 +2685,16 @@ body {
     padding: 10px 0 10px 12px;
 }
 
+/* SUPPORT CARDS - reduce gap after tri-factor */
+
+.system-support-section {
+    padding-top: 36px;
+}
+
+.system-support-section::before {
+    margin: 0 auto 42px;
+}
+    
     /* GETTING STARTED */
 
     .gs-copy-simple h2 {
