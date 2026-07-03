@@ -2078,6 +2078,7 @@ body {
     color: #111;
     text-decoration: none;
 }
+
 /* =========================
    MOBILE V1 FIXES
 ========================= */
@@ -2557,5 +2558,134 @@ body {
 
     .footer-copy {
         text-align: left;
+    }
+}
+
+/* =========================
+   MOBILE V1 TUNING
+========================= */
+
+@media (max-width: 768px) {
+
+    /* HERO - slightly tighter */
+
+    .hero {
+        padding: 46px 20px 54px;
+    }
+
+    .hero-content {
+        padding: 38px 14px 46px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+        line-height: 1.14;
+        margin-bottom: 24px;
+    }
+
+    .sub,
+    .readiness,
+    .support {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .cta-buttons a {
+        padding: 13px 18px;
+        font-size: 15px;
+    }
+
+    /* SECTION 2 - pain points less oversized */
+
+    .timeline-title-block h2 {
+        font-size: 34px;
+    }
+
+    .timeline-intro {
+        font-size: 16px;
+    }
+
+    .benefit {
+        font-size: 16px;
+        line-height: 1.45;
+        padding: 16px 0;
+    }
+
+    .timeline-result {
+        font-size: 17px;
+        padding: 18px 18px;
+    }
+
+    .timeline-quote-text {
+        font-size: 18px;
+    }
+
+    .timeline-highlight {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .timeline-outcome-heading {
+        font-size: 20px;
+    }
+
+    .timeline-outcome-copy {
+        font-size: 16px;
+    }
+
+    .timeline-better-outcomes {
+        font-size: 18px;
+        padding: 20px 18px;
+    }
+
+    /* DELIVERY TIMELINE */
+
+    .delivery-timeline-copy h3 {
+        font-size: 34px;
+        line-height: 1.14;
+    }
+
+    .delivery-kicker {
+        font-size: 18px;
+    }
+
+    /* TRI FACTOR - main issue */
+
+    .tri-factor h2 {
+        font-size: 34px;
+        line-height: 1.12;
+    }
+
+    .tri-factor-copy {
+        font-size: 18px;
+        line-height: 1.65;
+    }
+
+    .structure-lead {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+
+    .structure-list li {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 14px 0 14px 12px;
+    }
+
+    /* GETTING STARTED */
+
+    .gs-copy-simple h2 {
+        font-size: 34px;
+    }
+
+    .gs-copy-simple p:not(.gs-subtitle) {
+        font-size: 18px;
+        line-height: 1.65;
+    }
+
+    /* FAQ */
+
+    .faq-wrap h2 {
+        font-size: 34px;
     }
 }
