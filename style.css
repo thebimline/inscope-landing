@@ -2206,6 +2206,12 @@ body {
         max-width: 520px;
     }
 
+    /* Mobile - shorten pain point list */
+.timeline-benefits .benefit:nth-child(5),
+.timeline-benefits .benefit:nth-child(6) {
+    display: none;
+}
+
     .timeline-benefits {
         margin-top: 34px;
         display: block;
