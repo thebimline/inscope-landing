@@ -2246,8 +2246,9 @@ body {
 
 .benefit span {
     display: block;
+    margin-top: -4px;
     font-size: 17px;
-    line-height: 1.48;
+    line-height: 1.42;
     color: rgba(0,0,0,0.78);
 }
 
