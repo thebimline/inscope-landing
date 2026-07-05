@@ -2720,12 +2720,43 @@ body {
 
 /* SUPPORT CARDS - reduce gap after tri-factor */
 
+/* SUPPORT CARDS - tighter mobile cards */
+
 .system-support-section {
     padding-top: 36px;
+    padding-bottom: 56px;
 }
 
 .system-support-section::before {
-    margin: 0 auto 42px;
+    margin: 0 auto 34px;
+}
+
+.system-support-grid {
+    gap: 26px;
+}
+
+.system-support-card {
+    padding: 24px 24px;
+}
+
+.system-support-card h3 {
+    font-size: 24px;
+    line-height: 1.15;
+}
+
+.system-support-card p {
+    font-size: 17px;
+    line-height: 1.52;
+}
+
+.system-support-card li {
+    font-size: 17px;
+}
+
+.planning-notice,
+.template-stack {
+    max-width: 320px;
+    margin: 14px auto 0;
 }
     
     /* GETTING STARTED */
