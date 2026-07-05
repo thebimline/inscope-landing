@@ -2450,6 +2450,15 @@ body {
         font-size: 18px;
     }
 
+    .system-support-card ul {
+    margin-bottom: 10px;
+}
+
+.system-support-card-visual {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
     .planning-notice,
     .template-stack {
         width: 100%;
