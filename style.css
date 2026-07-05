@@ -2301,8 +2301,8 @@ body {
     .timeline-outcomes-row {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 34px;
-        margin: 54px 0 62px;
+        gap: 28px;
+        margin: 34px 0 42px;
     }
 
     .timeline-outcome-card {
@@ -2323,7 +2323,7 @@ body {
     .timeline-better-outcomes {
         width: 100%;
         transform: none;
-        margin: 46px 0 80px;
+        margin: 30px 0 58px;
         padding: 22px 20px;
         font-size: 20px;
         line-height: 1.45;
