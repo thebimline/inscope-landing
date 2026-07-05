@@ -64,6 +64,8 @@ body {
     pointer-events: none;
 }
 
+@media (min-width: 769px) {
+
 .hero-content::before {
     content: "+";
     position: absolute;
@@ -83,6 +85,9 @@ body {
     font-size: 22px;
     color: rgba(0,0,0,0.28);
 }
+
+}
+
 .topline {
     font-size: 14px;
     color: rgba(0,0,0,0.58);
