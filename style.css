@@ -16,6 +16,7 @@ body {
     padding: 24px 60px;
     background: white;
     border-bottom: 1px solid #E5E5E5;
+    position: relative;
 }
 .logo {
     font-size: 36px;
