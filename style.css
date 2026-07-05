@@ -1190,7 +1190,7 @@ body {
     width: 100vw;
     margin-left: calc(50% - 50vw);
       padding: 1px 24px 80px;
-    background: #ffffff;
+    background: #1E1E1E;
 }
 
 .real-example-section::before {
