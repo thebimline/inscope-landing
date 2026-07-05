@@ -25,6 +25,10 @@ body {
     line-height: 1;
 }
 
+.mobile-menu-toggle {
+    display: none;
+}
+
 .header-nav {
     display: flex;
     gap: 28px;
@@ -207,26 +211,7 @@ body {
 .logo {
     font-size: 24px;
 }
-
-.header-nav {
-    display: flex;
-    justify-content: flex-end;
-    width: auto;
-}
-
-.header-nav a {
-    display: none !important;
-}
-
-.header-nav::after {
-    content: "☰ Menu";
-    display: block;
-    font-size: 15px;
-    font-weight: 500;
-    color: #111;
-    cursor: pointer;
-}
-    
+ 
 }
 
 /* Demo = Pink */
@@ -1806,31 +1791,7 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 900px) {
-    .site-header {
-        padding: 20px 24px;
-    }
 
-    .logo {
-        font-size: 24px;
-    }
-
-    .header-nav {
-        display: block !important;
-    }
-
-    .header-nav a {
-        display: none !important;
-    }
-
-    .header-nav::after {
-        content: "☰ Menu";
-        display: block;
-        font-size: 15px;
-        font-weight: 500;
-        color: #111;
-    }
-}
 
 @media (max-width: 768px) {
 
