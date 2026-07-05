@@ -2237,7 +2237,7 @@ body {
 
 .benefit strong {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     font-size: 18px;
     line-height: 1.25;
     font-weight: 800;
@@ -2248,7 +2248,7 @@ body {
     display: block;
     font-size: 17px;
     line-height: 1.48;
-    color: rgba(0,0,0,0.72);
+    color: rgba(0,0,0,0.78);
 }
 
     .timeline-benefits .benefit span {
