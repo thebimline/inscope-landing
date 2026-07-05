@@ -2220,15 +2220,20 @@ body {
 
 
     .benefit {
-        display: block;
-        margin: 0;
-        padding: 18px 0;
-        border-bottom: 1px solid rgba(113,81,168,0.18);
-        font-size: 18px;
-        line-height: 1.48;
-        color: rgba(0,0,0,0.74);
-        text-align: left;
-    }
+    display: block;
+    margin: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(113,81,168,0.18);
+    font-size: 17px;
+    line-height: 1.58;
+    color: rgba(0,0,0,0.74);
+    text-align: left;
+}
+
+    .timeline-benefits .benefit span {
+    display: block;
+    max-width: 92%;
+}
 
     .benefit::before {
         display: none;
