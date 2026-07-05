@@ -7,6 +7,7 @@
   <title>InScope | TheBIMLine</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  
 <body>
 
   <header class="site-header">
@@ -775,6 +776,15 @@
     
 <script src="script.js"></script>
 
+<script>
+const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+const headerNav = document.getElementById("headerNav");
+
+mobileMenuToggle.addEventListener("click", () => {
+    headerNav.classList.toggle("is-open");
+});
+</script>
+  
 <script>
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
