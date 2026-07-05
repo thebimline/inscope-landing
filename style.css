@@ -2780,7 +2780,6 @@ body {
         background: transparent !important;
         border: 0 !important;
         padding: 0 !important;
-        margin: 0 !important;
         color: #111 !important;
         -webkit-text-fill-color: #111 !important;
         font: inherit;
@@ -2791,31 +2790,34 @@ body {
         -webkit-appearance: none;
     }
 
-    .site-header {
-        flex-wrap: wrap;
-    }
-
     .header-nav {
         display: none;
-        width: 100%;
-        padding: 20px 0 0;
+        position: absolute;
+        top: 100%;
+        right: 24px;
+        width: auto;
+        min-width: 190px;
         background: #ffffff;
-        border-top: 1px solid rgba(0,0,0,0.08);
-        margin-top: 20px;
+        padding: 18px 22px;
+        border: 1px solid rgba(0,0,0,0.10);
+        border-radius: 12px;
+        box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+        z-index: 1000;
         text-align: right;
     }
 
     .header-nav.is-open {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 16px;
         align-items: flex-end;
     }
 
     .header-nav a {
         display: block;
-        font-size: 18px;
+        font-size: 17px;
         color: #111;
         text-decoration: none;
+        white-space: nowrap;
     }
 }
