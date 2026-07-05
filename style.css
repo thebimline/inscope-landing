@@ -2227,15 +2227,28 @@ body {
     }
 
 
-    .benefit {
+.benefit {
     display: block;
     margin: 0;
     padding: 18px 0;
     border-bottom: 1px solid rgba(113,81,168,0.18);
-    font-size: 17px;
-    line-height: 1.58;
-    color: rgba(0,0,0,0.74);
     text-align: left;
+}
+
+.benefit strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #111;
+}
+
+.benefit span {
+    display: block;
+    font-size: 17px;
+    line-height: 1.48;
+    color: rgba(0,0,0,0.72);
 }
 
     .timeline-benefits .benefit span {
