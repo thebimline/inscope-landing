@@ -2803,9 +2803,17 @@ body {
 /* MOBILE - remove hero circles */
 
 @media (max-width: 768px) {
+
     .hero::before {
         content: none !important;
         display: none !important;
         background: none !important;
     }
+
+    .hero-content::before,
+    .hero-content::after {
+        content: none !important;
+        display: none !important;
+    }
+
 }
