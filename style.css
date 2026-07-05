@@ -2226,7 +2226,6 @@ body {
         border-top: 1px solid rgba(113,81,168,0.18);
     }
 
-
 .benefit {
     display: block;
     margin: 0;
@@ -2237,16 +2236,16 @@ body {
 
 .benefit strong {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     font-size: 18px;
-    line-height: 1.25;
+    line-height: 1.05;
     font-weight: 800;
     color: #111;
 }
 
 .benefit span {
     display: block;
-    margin-top: 2px;
+    margin-top: 0;
     font-size: 17px;
     line-height: 1.42;
     color: rgba(0,0,0,0.78);
