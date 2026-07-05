@@ -2772,45 +2772,50 @@ body {
     }
 
 }
+
 @media (max-width: 768px) {
 
     .mobile-menu-toggle {
-        display: block;
-        background: none;
-        border: 0;
-        padding: 0;
-        color: #111;
+        display: block !important;
+        background: transparent !important;
+        border: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #111 !important;
+        -webkit-text-fill-color: #111 !important;
         font: inherit;
         font-size: 18px;
+        font-weight: 500;
         cursor: pointer;
-        -webkit-appearance: none;
         appearance: none;
+        -webkit-appearance: none;
+    }
+
+    .site-header {
+        flex-wrap: wrap;
     }
 
     .header-nav {
         display: none;
-        position: absolute;
-        top: 100%;
-        right: 24px;
-        width: auto;
+        width: 100%;
+        padding: 20px 0 0;
         background: #ffffff;
-        padding: 18px 22px;
-        border: 1px solid rgba(0,0,0,0.08);
-        border-radius: 12px;
-        z-index: 1000;
-        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        border-top: 1px solid rgba(0,0,0,0.08);
+        margin-top: 20px;
+        text-align: right;
     }
 
     .header-nav.is-open {
         display: flex;
         flex-direction: column;
-        gap: 14px;
-        align-items: flex-start;
+        gap: 18px;
+        align-items: flex-end;
     }
 
     .header-nav a {
         display: block;
-        font-size: 17px;
-        white-space: nowrap;
+        font-size: 18px;
+        color: #111;
+        text-decoration: none;
     }
 }
