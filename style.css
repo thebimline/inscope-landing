@@ -1222,20 +1222,20 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 700;
-    color: rgba(0,0,0,0.42);
+    color:  rgba(255,255,255,0.58);
 }
 
 .real-example-card-header h2 {
     font-size: 38px;
     line-height: 1.1;
     margin: 0 0 12px;
-    color:  #111111;
+    color:  #ffffff;
 }
 
 .real-example-kicker {
     font-size: 16px;
     font-weight: 500;
-    color: rgba(0,0,0,0.62);
+    color: rgba(255,255,255,0.72);
     margin: 0 0 14px;
 }
 
@@ -1244,7 +1244,7 @@ body {
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
-    color: rgba(0,0,0,0.72);
+    color: rgba(255,255,255,0.76);
 }
 
 .real-example-panel {
@@ -1358,7 +1358,7 @@ body {
 .real-example-result {
     margin-top: 28px;
     padding-top: 24px;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    border-top: 1px solid rgba(255,255,255,0.25);
     background: transparent;
 }
 
