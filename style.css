@@ -2079,6 +2079,10 @@ body {
     text-decoration: none;
 }
 
+.mobile-break {
+    display: none;
+}
+
 /* =========================
    MOBILE V1 FIXES
 ========================= */
@@ -2096,6 +2100,10 @@ body {
         max-width: 100%;
         height: auto;
     }
+
+    .mobile-break {
+    display: inline;
+}
 
     .timeline-story,
     .tri-factor,
