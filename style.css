@@ -1130,13 +1130,13 @@ body {
 
 .gs-tablet-frame {
     position: absolute;
-     top: 0;
+    top: 0;
     left: -20px;
 
-      width: 650px;
+    width: 650px;
     height: 430px;
 
-    padding: 0px;
+    padding: 8px;
     border-radius: 30px;
 
     background: #2f2f3b;
@@ -1146,13 +1146,15 @@ body {
 }
 
 .gs-tablet-frame img {
-    width: calc(100% + 6px);
-    height: 100%;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
     object-fit: cover;
-    object-position: top left;
-    transform: translateX(-3px);
+    object-position: left top;
 
-    border-radius: 20px;
+    margin-left: -4px;
+    margin-top: -4px;
+
+    border-radius: 22px;
     display: block;
 }
 
