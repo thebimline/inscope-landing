@@ -2043,6 +2043,133 @@ body {
 }
 
 /* =========================
+   TABLET FIXES
+========================= */
+
+@media (min-width: 769px) and (max-width: 1180px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .timeline-story,
+    .tri-factor,
+    .getting-started,
+    .real-example-section,
+    .faq-section,
+    .final-cta,
+    .footer {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+
+    /* PROJECT REQUIREMENTS / CIRCLE */
+
+    .timeline-story-inner {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "copy"
+            "solution"
+            "outcomes"
+            "better";
+        gap: 42px;
+    }
+
+    .timeline-title-block,
+    .timeline-copy-block {
+        text-align: center;
+    }
+
+    .timeline-title-block h2,
+    .timeline-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .timeline-solution-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        justify-items: center;
+    }
+
+    .timeline-solution-block {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .timeline-loop-block {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .timeline-loop {
+        transform: scale(0.82);
+        transform-origin: center;
+        margin: 20px auto 30px;
+    }
+
+    .timeline-outcomes-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 34px;
+        max-width: 100%;
+    }
+
+    .timeline-better-outcomes {
+        width: 100%;
+        max-width: 760px;
+        transform: none;
+    }
+
+    /* GETTING STARTED DEVICES */
+
+    .gs-layout-simple {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .gs-copy-simple {
+        text-align: center;
+    }
+
+    .gs-copy-simple p:not(.gs-subtitle) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gs-fragment-visual {
+        justify-content: center;
+    }
+
+    .gs-device-stack {
+        width: min(720px, 100%);
+        height: 460px;
+    }
+
+    .gs-tablet-frame {
+        left: 0;
+        width: 620px;
+        max-width: 86%;
+    }
+
+    .gs-phone-frame {
+        right: 0;
+    }
+
+    /* CASE STUDY */
+
+    .real-example-card {
+        max-width: 100%;
+    }
+}
+
+/* =========================
    MOBILE V1 FIXES
 ========================= */
 
