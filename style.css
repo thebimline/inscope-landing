@@ -1751,6 +1751,11 @@ body {
     text-align: left;
 }
 
+.footer sup {
+    font-size: 0.45em;
+    vertical-align: super;
+    line-height: 0;
+}
 
 /* Footer circles */
 
