@@ -1747,8 +1747,8 @@ body {
 
 
 .footer-brand {
-    flex: 1.4;
-    min-width: 340px;
+    flex: 1;
+    min-width: 360px;
     text-align: left;
 }
 
@@ -1794,7 +1794,7 @@ body {
 }
 
 .footer-copy {
-    flex: 0.8;
+    flex: 1;
     font-size: 14px;
     color: rgba(255,255,255,0.55);
     text-align: right;
