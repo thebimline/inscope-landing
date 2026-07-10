@@ -1212,7 +1212,7 @@ body {
     display: block;
     max-width: 1180px;
     height: 1px;
-     margin: 0 auto 12px;
+   margin: 24px auto 32px;
     background: rgba(0,0,0,0.10);
 }
 
