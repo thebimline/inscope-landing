@@ -1202,7 +1202,7 @@ body {
     display: block;
     max-width: 1180px;
     height: 1px;
-    margin: 0 auto 32px;
+     margin: 0 auto 12px;
     background: rgba(0,0,0,0.10);
 }
 
