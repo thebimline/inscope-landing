@@ -495,7 +495,7 @@ body {
 
 /* Keep the section below the case study tight */
 .timeline-story-continuation {
-    padding-top: 0;
+    padding-top: 20;
 }
 
 .timeline-solution-row {
