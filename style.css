@@ -485,7 +485,7 @@ body {
 
 .timeline-story {
     background: #ffffff;
-    padding: 90px 40px 90px;
+    padding: 0px 40px 90px;
 }
 
 .timeline-solution-row {
@@ -1193,7 +1193,7 @@ body {
 .real-example-section {
     width: 100vw;
     margin-left: calc(50% - 50vw);
-      padding: 1px 24px 80px;
+     padding: 1px 24px 80px;
     background: #ffffff;
 }
 
