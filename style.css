@@ -485,7 +485,17 @@ body {
 
 .timeline-story {
     background: #ffffff;
-    padding: 60px 40px 0px;
+    padding: 0 40px;
+}
+
+/* Space above “We’re drowning…” only */
+.timeline-story:not(.timeline-story-continuation) {
+    padding-top: 60px;
+}
+
+/* Keep the section below the case study tight */
+.timeline-story-continuation {
+    padding-top: 0;
 }
 
 .timeline-solution-row {
