@@ -1055,97 +1055,103 @@ body {
 /* CASE STUDY 02 */
 
 .case-study-two {
-    background:#fff;
-    padding:90px 40px;
-    border-top:1px solid rgba(0,0,0,.10);
-    border-bottom:1px solid rgba(0,0,0,.10);
+    background: #fff;
+    padding: 85px 40px;
+    border-top: 1px solid rgba(0,0,0,0.10);
+    border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 
-.case-study-two-inner{
-    max-width:1180px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:480px 1fr;
-    gap:70px;
-    align-items:center;
+.case-study-two-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
-.case-study-two h2{
-    margin:16px 0 32px;
-    font-size:54px;
-    line-height:1.08;
+/* Label */
+
+.case-study-two .section-label {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    color: #6B4FD3;
+    margin-bottom: 24px;
 }
 
-.case-study-points{
-    margin:0 0 36px;
-    padding:0;
-    list-style:none;
+/* Heading */
+
+.case-study-two h2 {
+    font-size: 62px;
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 0 0 42px;
 }
 
-.case-study-points li{
-    font-size:22px;
-    margin-bottom:18px;
+/* Bullet points */
+
+.case-study-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 34px;
 }
 
-.case-study-button{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
+.case-study-points li {
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
 }
 
-.case-study-preview{
+/* CTA */
 
-    position:relative;
-    height:360px;
+.case-study-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
+    color: #6B4FD3;
+    font-size: 20px;
+    font-weight: 500;
+
+    text-decoration: none;
+    transition: opacity .2s ease;
 }
 
-.case-study-preview img{
-
-    position:absolute;
-
-    width:640px;
-
-    border-radius:20px;
-
-    box-shadow:0 30px 70px rgba(0,0,0,.12);
-
-    transition:.3s;
-
+.case-study-button:hover {
+    opacity: .70;
+    text-decoration: none;
 }
 
-.cs-front{
+/* Images */
 
-    z-index:3;
-    left:0;
-    top:50px;
-
+.case-study-preview {
+    position: relative;
+    height: 470px;
 }
 
-.cs-back-1{
-
-    z-index:2;
-    left:45px;
-    top:25px;
-    opacity:.72;
-
+.case-study-preview img {
+    position: absolute;
+    border-radius: 22px;
+    box-shadow: 0 28px 70px rgba(0,0,0,.12);
 }
 
-.cs-back-2{
-
-    z-index:1;
-    left:90px;
-    top:0;
-    opacity:.45;
-
+.cs-main {
+    width: 760px;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
-.case-study-preview:hover .cs-front{
-
-    transform:translateY(-6px);
-
+.cs-record {
+    width: 340px;
+    right: -20px;
+    bottom: -25px;
+    z-index: 2;
 }
-
 /* GETTING STARTED */
 
 .getting-started {
