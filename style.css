@@ -1056,54 +1056,57 @@ body {
 
 .case-study-two {
     background: #fff;
-    padding: 85px 40px;
+    padding: 85px 40px 95px;
     border-top: 1px solid rgba(0,0,0,0.10);
     border-bottom: 1px solid rgba(0,0,0,0.10);
+    overflow: hidden;
 }
 
 .case-study-two-inner {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 460px 1fr;
-    gap: 80px;
+    grid-template-columns: 430px minmax(0, 1fr);
+    gap: 70px;
     align-items: center;
 }
 
 /* Label */
 
 .case-study-two .section-label {
-    font-size: 18px;
+    margin: 0 0 20px;
+    color: #6B4FD3;
+    font-size: 16px;
+    line-height: 1.3;
     font-style: italic;
     font-weight: 500;
-    color: #6B4FD3;
-    margin-bottom: 24px;
+    text-transform: none;
 }
 
 /* Heading */
 
 .case-study-two h2 {
-    font-size: 62px;
-    line-height: 1.08;
-    font-weight: 700;
-    letter-spacing: -0.03em;
     margin: 0 0 42px;
+    font-size: 46px;
+    line-height: 1.10;
+    letter-spacing: -0.025em;
+    font-weight: 700;
 }
 
-/* Bullet points */
+/* Key points */
 
 .case-study-points {
     list-style: none;
     padding: 0;
-    margin: 0 0 34px;
+    margin: 0 0 32px;
 }
 
 .case-study-points li {
-    font-size: 20px;
-    line-height: 1.8;
-    font-weight: 400;
+    margin: 0 0 10px;
     color: #333;
-    margin: 0;
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 400;
 }
 
 /* CTA */
@@ -1112,44 +1115,52 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     color: #6B4FD3;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.4;
     font-weight: 500;
-
     text-decoration: none;
-    transition: opacity .2s ease;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
 .case-study-button:hover {
-    opacity: .70;
+    opacity: 0.7;
     text-decoration: none;
 }
 
-/* Images */
+/* Image composition */
 
 .case-study-preview {
     position: relative;
-    height: 470px;
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
 }
 
 .case-study-preview img {
     position: absolute;
-    border-radius: 22px;
-    box-shadow: 0 28px 70px rgba(0,0,0,.12);
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.11);
 }
 
+/* Main dashboard image */
+
 .cs-main {
-    width: 760px;
+    width: 700px;
+    max-width: none;
     left: 0;
-    top: 0;
+    top: 12px;
     z-index: 1;
 }
 
+/* Optional overlapping record image */
+
 .cs-record {
-    width: 340px;
-    right: -20px;
-    bottom: -25px;
+    width: 275px;
+    right: 0;
+    bottom: 8px;
     z-index: 2;
 }
 /* GETTING STARTED */
