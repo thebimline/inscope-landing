@@ -1141,28 +1141,42 @@ body {
 .case-study-preview img {
     position: absolute;
     display: block;
+    height: auto;
+    max-width: none;
     border-radius: 18px;
     box-shadow: 0 24px 60px rgba(0,0,0,0.11);
 }
 
-/* Main dashboard image */
+/* Front screenshot */
 
-.cs-main {
-    width: 700px;
+.cs-front {
+    width: 610px;
     max-width: none;
     left: 0;
-    top: 12px;
-    z-index: 1;
+    top: 20px;
+    z-index: 3;
 }
 
-/* Optional overlapping record image */
+/* Rear screenshots */
 
-.cs-record {
-    width: 275px;
-    right: 0;
-    bottom: 8px;
+.cs-back-1 {
+    width: 610px;
+    max-width: none;
+    left: 36px;
+    top: 6px;
     z-index: 2;
+    opacity: 0.55;
 }
+
+.cs-back-2 {
+    width: 610px;
+    max-width: none;
+    left: 72px;
+    top: -8px;
+    z-index: 1;
+    opacity: 0.28;
+}
+
 /* GETTING STARTED */
 
 .getting-started {
