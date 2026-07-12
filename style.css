@@ -1160,18 +1160,18 @@ body {
 .cs-back-1 {
     width: 1200px;
     max-width: none;
-    left: 115px;
+    left: 125px;
     top: 15px;
-    opacity: 0.55;
+    opacity: 0.50;
     z-index: 2;
 }
 
 .cs-back-2 {
     width: 1200px;
     max-width: none;
-    left: 140px;
+    left: 170px;
     top: 0;
-    opacity: 0.28;
+    opacity: 0.25;
     z-index: 1;
 }
 
