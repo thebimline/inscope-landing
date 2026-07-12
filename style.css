@@ -1155,6 +1155,7 @@ body {
     left: 90px;
     top: 30px;
     z-index: 3;
+     clip-path: inset(0 55px 0 0);
 }
 
 .cs-back-1 {
@@ -1164,6 +1165,7 @@ body {
     top: 15px;
     opacity: 0.50;
     z-index: 2;
+    clip-path: inset(0 28px 0 0);
 }
 
 .cs-back-2 {
@@ -1173,6 +1175,7 @@ body {
     top: 0;
     opacity: 0.25;
     z-index: 1;
+      clip-path: inset(0);
 }
 
 /* GETTING STARTED */
