@@ -1148,16 +1148,26 @@ body {
 }
 
 .cs-front {
-    width: 820px;
-    max-width: none;
-    left: 0;
-    top: 0;
+    width: 900px;
+    left: -60px;
+    top: -10px;
     z-index: 3;
 }
 
-.cs-back-1,
+.cs-back-1 {
+    width: 900px;
+    left: -35px;
+    top: -25px;
+    opacity: .35;
+    z-index: 2;
+}
+
 .cs-back-2 {
-    display: none;
+    width: 900px;
+    left: -10px;
+    top: -40px;
+    opacity: .18;
+    z-index: 1;
 }
 
 /* GETTING STARTED */
