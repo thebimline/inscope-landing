@@ -1132,15 +1132,12 @@ body {
 
 .case-study-preview {
     position: relative;
-    width: 100%;
+    width: calc(100% + 80px);
     height: 390px;
     overflow: hidden;
 
-    margin-right: -60px;
-
-    box-shadow: 0 12px 20px -14px rgba(0,0,0,0.18);
+    box-shadow: 0 10px 18px -16px rgba(0,0,0,0.18);
 }
-
 
 .case-study-preview img {
     position: absolute;
