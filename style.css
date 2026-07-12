@@ -1150,26 +1150,26 @@ body {
 .cs-front {
     width: 1200px;
     max-width: none;
-    left: -110px;
-    top: -20px;
+    left: 35px;
+    top: 30px;
     z-index: 3;
 }
 
 .cs-back-1 {
     width: 1200px;
     max-width: none;
-    left: -65px;
-    top: 0;
-    opacity: 0.50;
+    left: 55px;
+    top: 15px;
+    opacity: 0.55;
     z-index: 2;
 }
 
 .cs-back-2 {
     width: 1200px;
     max-width: none;
-    left: -20px;
-    top: 20px;
-    opacity: 0.25;
+    left: 75px;
+    top: 0;
+    opacity: 0.28;
     z-index: 1;
 }
 
