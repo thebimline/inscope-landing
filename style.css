@@ -1150,36 +1150,32 @@ body {
 }
 
 .cs-front {
-    width: calc(100% - 70px);
-    height: 390px;
-    left: 0;
+    width: 1200px;
+    max-width: none;
+    left: 70px;
     top: 30px;
-    object-fit: cover;
-    object-position: left top;
     z-index: 3;
 }
 
 .cs-back-1 {
-    width: calc(100% - 35px);
-    height: 390px;
-    left: 18px;
+    width: 1200px;
+    max-width: none;
+    left: 120px;
     top: 15px;
-    object-fit: cover;
-    object-position: left top;
     opacity: 0.50;
     z-index: 2;
 }
 
 .cs-back-2 {
-    width: 100%;
-    height: 390px;
-    left: 36px;
+    width: 1200px;
+    max-width: none;
+    left: 170px;
     top: 0;
-    object-fit: cover;
-    object-position: left top;
     opacity: 0.25;
     z-index: 1;
 }
+
+
 /* GETTING STARTED */
 
 .getting-started {
