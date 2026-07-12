@@ -1148,25 +1148,28 @@ body {
 }
 
 .cs-front {
-    width: 900px;
-    left: -60px;
-    top: -10px;
+    width: 1200px;
+    max-width: none;
+    left: -110px;
+    top: -20px;
     z-index: 3;
 }
 
 .cs-back-1 {
-    width: 900px;
-    left: -35px;
-    top: -25px;
-    opacity: .35;
+    width: 1200px;
+    max-width: none;
+    left: -65px;
+    top: 0;
+    opacity: 0.50;
     z-index: 2;
 }
 
 .cs-back-2 {
-    width: 900px;
-    left: -10px;
-    top: -40px;
-    opacity: .18;
+    width: 1200px;
+    max-width: none;
+    left: -20px;
+    top: 20px;
+    opacity: 0.25;
     z-index: 1;
 }
 
