@@ -1057,9 +1057,17 @@ body {
 .case-study-two {
     background: #fff;
     padding: 85px 40px 95px;
-    border-top: 1px solid rgba(0,0,0,0.10);
     border-bottom: 1px solid rgba(0,0,0,0.10);
     overflow: hidden;
+}
+
+.case-study-two::before {
+    content: "";
+    display: block;
+    max-width: 1180px;
+    height: 1px;
+    margin: 0 auto 85px;
+    background: rgba(0,0,0,0.10);
 }
 
 .case-study-two-inner {
