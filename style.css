@@ -1137,26 +1137,23 @@ body {
     overflow: hidden;
 }
 
-.case-study-preview::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    pointer-events: none;
+.case-study-preview::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:5;
 
     background:
-        linear-gradient(
-            to left,
+        linear-gradient(to left,
             #fff 0,
-            rgba(255,255,255,0.92) 18px,
-            rgba(255,255,255,0) 75px
-        ),
-        linear-gradient(
-            to top,
+            rgba(255,255,255,.35) 8px,
+            transparent 14px),
+
+        linear-gradient(to top,
             #fff 0,
-            rgba(255,255,255,0.92) 18px,
-            rgba(255,255,255,0) 70px
-        );
+            rgba(255,255,255,.35) 8px,
+            transparent 14px);
 }
 
 .case-study-preview img {
