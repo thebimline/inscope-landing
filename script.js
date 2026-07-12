@@ -125,3 +125,9 @@ if (lightbox && lightboxImage && lightboxTriggers.length > 0) {
     });
 
 }
+
+document.getElementById("open-case-study-gallery").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(".case-study-two .cs-front").click();
+});
