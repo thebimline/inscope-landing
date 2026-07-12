@@ -1063,11 +1063,11 @@ body {
 }
 
 .case-study-two-inner {
-    max-width: 1180px;
+    max-width: 1260px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 390px minmax(0, 1fr);
-    gap: 50px;
+    gap: 60px;
     align-items: center;
 }
 
