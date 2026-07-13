@@ -1438,9 +1438,11 @@ body {
     display: block;
     border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.08);
-  background: #F8F8F8;
+    background: #F8F8F8;
     object-fit: contain;
     padding: 12px;
+
+    filter: brightness(0.94) saturate(0.95);
 }
 
 
@@ -1494,6 +1496,7 @@ body {
     background: #F8F8F8;
     object-fit: cover;
     object-position: left top;
+    filter: brightness(0.94) saturate(0.95);
 }
 
 .real-example-scroll-hint {
