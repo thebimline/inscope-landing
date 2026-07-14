@@ -186,3 +186,13 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') showNextImage();
     if (e.key === 'ArrowLeft') showPreviousImage();
 });
+
+const caseStudyOneGalleryButton =
+    document.getElementById('open-case-study-one-gallery');
+
+if (caseStudyOneGalleryButton) {
+    caseStudyOneGalleryButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        openLightbox(caseStudyOneImages, 0);
+    });
+}
