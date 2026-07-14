@@ -1413,7 +1413,7 @@ body {
 
 .real-example-panel-label {
     margin: 0 0 18px;
-   color: rgba(0,0,0,0.46);
+   color: rgba(0,0,0,0.42);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -1474,7 +1474,7 @@ body {
     align-items: center;
     padding: 8px 12px 8px 20px;
     border-bottom: 1px solid rgba(0,0,0,0.10);
-    color: rgba(0,0,0,0.62);
+    color: rgba(112,124,142,0.88);
     font-size: 16px;
     line-height: 1.3;
 }
