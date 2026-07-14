@@ -1572,7 +1572,7 @@ body {
     padding: 13px 20px;
     border-radius: 10px;
     background: #ffffff;
-    color: #222;
+    color: rgba(255,255,255,0.72);
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
