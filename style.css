@@ -1535,12 +1535,12 @@ body {
 .transformation-statement {
     margin: 0;
     padding: 22px 0;
-    border-top: 1px solid rgba(0,0,0,0.14);
-    border-bottom: 1px solid rgba(0,0,0,0.14);
-     color: rgba(0,0,0,0.68);
+    border-top: 1px solid rgba(0,0,0,0.10);
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    color: rgba(0,0,0,0.48);
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* BOTTOM ROW */
