@@ -1083,7 +1083,7 @@ body {
     max-width: 1240px;   /* was 1180 */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 390px minmax(0, 1fr);
+    grid-template-columns: 360px minmax(0, 1fr);
     gap: 50px;
     align-items: center;
 }
