@@ -1166,6 +1166,13 @@ body {
     box-shadow: 0 24px 60px rgba(0,0,0,0.11);
 }
 
+/* Only show three images in the website preview */
+
+.case-study-preview .cs-back-4,
+.case-study-preview .cs-back-3 {
+    display: none;
+}
+
 .cs-front {
     width: 1200px;
     max-width: none;
