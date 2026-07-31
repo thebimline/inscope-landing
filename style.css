@@ -1368,7 +1368,7 @@ body {
 .real-example-section::after {
     content: "";
     display: block;
-    max-width: 1180px;
+    width: calc(100% - 64px); 
     height: 1px;
     margin: 70px auto 0;
     background: rgba(0,0,0,0.10);
