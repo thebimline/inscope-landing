@@ -1,775 +1,487 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InScope | TheBIMLine</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InScope Editorial Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!--FONTS-->
+<style>
+:root{
+  --paper:#F3EFE7; --paper-2:#EAE4D9; --ink:#1C1B19; --muted:#6B665D;
+  --rule:rgba(28,27,25,.2); --accent:#7151a8;
+  --pink:#E7C1E8; --blue:#BFDDF3;
+  --mono:"DM Mono", ui-monospace, monospace;
+  --sans:"Inter", Arial, sans-serif;
+  --gutter:clamp(16px, 4vw, 56px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+
+/* type: two fonts, five sizes */
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.h1,.h2,.h3{font-family:var(--mono);font-weight:400;text-transform:uppercase;letter-spacing:.01em;margin:0}
+.h1{font-size:clamp(30px,4.2vw,54px);line-height:1.08}
+.h2{font-size:clamp(26px,3.2vw,40px);line-height:1.12}
+.h3{font-size:clamp(20px,2vw,24px);line-height:1.25}
+p{margin:0 0 1em}
+.lead{font-size:20px;line-height:1.55}
+.muted{color:var(--muted)}
+
+/* header */
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:22px var(--gutter);border-bottom:1px solid var(--rule)}
+.logo{font-family:var(--sans);font-weight:600;font-size:24px;letter-spacing:-.02em;text-decoration:none}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.nav a.btn{padding:10px 16px}
+
+/* buttons: V1 colours */
+.btn{display:inline-block;padding:14px 26px;border-radius:8px;text-decoration:none;font-family:var(--sans);font-size:16px;font-weight:500;color:var(--ink);background:var(--pink)}
+.btn.blue{background:var(--blue)}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+
+/* layout */
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(56px,8vw,110px) 0}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ink);padding-top:14px;margin-bottom:clamp(36px,5vw,64px)}
+figure{margin:0}
+figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:12px;display:flex;justify-content:space-between;gap:16px}
+.photo{width:100%;height:100%;object-fit:cover}
+
+/* hero: text left, photo right, circles bottom left */
+.hero{position:relative;overflow:hidden;padding:clamp(48px,7vw,96px) 0 clamp(56px,8vw,110px);border-bottom:1px solid var(--rule)}
+.hero::before{content:"";position:absolute;right:max(0px,calc((100vw - 1320px)/2 + 260px));bottom:-150px;width:560px;height:560px;background:url("img/tbl-symbol-large_3.png") left bottom/contain no-repeat;opacity:.6;mix-blend-mode:multiply;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(32px,5vw,72px);align-items:end}
+.hero-copy{position:relative;padding:44px 0 44px}
+.hero-copy::before,.hero-copy::after{content:"+";position:absolute;font-family:var(--mono);font-size:22px;color:rgba(0,0,0,.3)}
+.hero-copy::before{top:0;left:0}
+.hero-copy::after{bottom:0;right:6%}
+.hero .label{margin-bottom:28px;display:block}
+.hero .h1{font-size:clamp(30px,4.6vw,64px);line-height:1.06;margin-bottom:28px}
+.hero-photo{position:relative;z-index:1;margin:0;max-width:420px;justify-self:end;width:100%}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+/* problem */
+.problem-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,80px);align-items:start}
+.problem .h2{margin-bottom:18px}
+.spec{border-top:1px solid var(--rule);margin:36px 0 30px}
+.spec-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.spec-row dt{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.spec-row dd{margin:0}
+.named{margin-top:36px;padding:26px 0 4px;border-top:1px solid var(--ink)}
+.named .h3{margin-bottom:12px}
+.named p:last-child{margin:0}
+.problem-photo{position:static}
+.stakes{margin:28px 0 0;padding:24px 26px;background:var(--paper-2);border-left:3px solid var(--accent);font-size:19px;line-height:1.55;font-weight:400;color:var(--ink)}
+.problem-photo img{aspect-ratio:4/5;object-fit:cover;width:100%}
+
+.symptoms{margin:36px 0 30px;border-top:1px solid var(--rule)}
+.sym-row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.sym-row strong{font-weight:400;line-height:1.4;color:var(--muted)}
+.sym-row span{color:var(--muted)}
+@media (max-width:600px){.sym-row{grid-template-columns:1fr;gap:4px}}
+
+/* case study */
+.case-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,80px);align-items:start}
+.video-frame{position:relative;max-width:380px;aspect-ratio:9/16;background:#111;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(28,27,25,.18)}
+.video-frame video{width:100%;height:100%;object-fit:cover}
+.case .h2{margin-bottom:22px}
+.quote{font-family:var(--mono);text-transform:uppercase;font-size:clamp(24px,2.8vw,34px);line-height:1.2;margin:36px 0 10px;color:var(--accent)}
+.quote-cite{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mini-quote{margin-top:22px;font-size:18px}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:clamp(48px,6vw,80px)}
+.strip img{aspect-ratio:4/5;object-fit:cover;width:100%}
+
+.flag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0;text-transform:none;padding:1px 7px;border-radius:4px;background:#FDEBDD;color:#8A3D12;vertical-align:middle;margin-left:6px}
+.next{border-top:1px solid var(--ink);padding:26px 0 70px;text-align:center}
+
+
+/* guide */
+.guide-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,80px);align-items:start}
+.guide-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.guide .h2{margin-bottom:26px}
+.quotes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(20px,3vw,40px);margin:40px 0;padding-top:28px;border-top:1px solid var(--rule)}
+.quotes blockquote{margin:0}
+.quotes p{font-size:17px;line-height:1.6}
+.quotes .quote-cite{font-size:12px;line-height:1.6}
+.turn{margin-top:46px;padding:36px 0 0;border-top:1px solid var(--ink)}
+.turn .label{display:block;margin-bottom:10px}
+.turn .h1{font-size:clamp(34px,5vw,64px)}
+
+/* how it works */
+.how-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);border-top:1px solid var(--rule);padding-top:28px}
+.cols3 .label{display:block;margin-bottom:12px}
+.cols3 .h3{margin-bottom:12px}
+.print{margin:clamp(48px,6vw,80px) 0 0;padding:14px;background:#fff;box-shadow:0 24px 50px rgba(28,27,25,.12)}
+.print img{width:100%}
+.future{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);margin-top:clamp(56px,7vw,96px);padding-top:28px;border-top:1px solid var(--ink)}
+
+/* case 2 */
+.case2-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:start}
+.case2-photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto clamp(70px,7vw,110px) auto}
+.case2-photos img{width:100%;object-fit:cover;display:block}
+.case2-photos .fig-a{grid-column:1/8;grid-row:1/3}
+.case2-photos .fig-b{grid-column:3/13;grid-row:2/4;position:relative;z-index:1;align-self:start;margin-top:clamp(20px,3.4vw,52px)}
+.case2-quote{margin-top:clamp(48px,6vw,88px)}
+.case2-quote .quote{margin-top:0}
+.case2-photos .tall{aspect-ratio:1/1}
+.case2-photos .shot{background:#fff;padding:4px;box-shadow:0 24px 50px rgba(28,27,25,.18)}
+
+/* plan + pricing */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);border-top:1px solid var(--ink)}
+.steps li{padding-top:20px}
+.steps .num{font-family:var(--mono);font-size:clamp(40px,5vw,64px);line-height:1;display:block;margin-bottom:16px;color:var(--accent)}
+.plan-notes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:40px}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:clamp(56px,7vw,90px)}
+.price-card{border:1px solid var(--ink);padding:30px 32px}
+.price-card .price{font-family:var(--mono);font-size:clamp(40px,4.5vw,56px);line-height:1;margin:18px 0 14px}
+.price-card .price small{font-family:var(--sans);font-size:16px;color:var(--muted);margin-left:6px}
+.offer{grid-column:1/-1;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.offer span{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--accent);color:var(--accent);border-radius:999px}
+.offer span+span{border-color:var(--rule);color:var(--muted)}
+.price-note{grid-column:1/-1;margin:0;padding-top:8px}
+.price-note .h3{margin:0 0 10px}
+.price-note p{margin:0}
+
+/* faq */
+.faq-list{border-top:1px solid var(--ink)}
+.faq-item{border-bottom:1px solid var(--rule)}
+.faq-question{width:100%;display:flex;justify-content:space-between;gap:20px;align-items:center;background:none;border:0;padding:22px 0;text-align:left;cursor:pointer;font-family:var(--sans);font-size:19px;font-weight:500;color:var(--ink)}
+.faq-icon{font-family:var(--mono);font-size:22px}
+.faq-answer{display:none;padding:0 0 18px;max-width:820px}
+.faq-item.active .faq-answer{display:block}
+.faq-answer p{color:var(--muted)}
+
+/* closing */
+.closing{text-align:left;background:var(--paper-2)}
+.closing .h1{max-width:1000px;margin-bottom:26px}
+.closing .lead{font-weight:500}
+.footer{background:var(--ink);color:#d8d3c9;padding:48px 0;font-size:14px;line-height:1.7}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.footer .label{color:#9b958a;display:block;margin-bottom:10px}
+.footer a{display:block;text-decoration:none}
+
+/* contact modal */
+.contact-modal{position:fixed;inset:0;background:rgba(28,27,25,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.contact-modal.active{display:flex}
+.contact-box{position:relative;background:var(--paper);max-width:520px;width:100%;padding:36px}
+.contact-box h2{font-family:var(--mono);font-weight:400;text-transform:uppercase;font-size:26px;margin:0 0 20px}
+.contact-form{display:grid;gap:12px}
+.contact-form input,.contact-form textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--rule);background:#fff}
+.submit-btn{font:inherit;border:0;border-radius:8px;padding:14px;background:var(--pink);cursor:pointer}
+.close-modal{position:absolute;top:10px;right:14px;border:0;background:none;font-size:28px;cursor:pointer}
+.contact-note{font-size:14px;color:var(--muted);margin:14px 0 0}
+
+@media (max-width:900px){
+  .guide-grid,.how-intro,.future,.case2-grid,.plan-notes,.pricing,.quotes,.footer-grid{grid-template-columns:1fr}
+  .cols3,.steps{grid-template-columns:1fr}
+  .case2-photos{grid-template-rows:auto 60px auto}
+  .guide-photo img{aspect-ratio:1/1}
+}
+
+@media (max-width:900px){
+  .nav a:not(.btn){display:none}
+  .hero-grid,.problem-grid,.case-grid{grid-template-columns:1fr}
+  .problem-photo{position:static}
+  .problem-photo img{aspect-ratio:4/3}
+  .video-frame{margin:0 auto;max-width:320px}
+  .spec-row{grid-template-columns:1fr;gap:4px}
+  .strip{grid-template-columns:1fr 1fr}
+  .strip figure:nth-child(2){display:none}
+  .hero::before{width:280px;height:280px;opacity:.45}
+  .hero-photo img{aspect-ratio:4/3}
+  .hero-copy::after{right:0}
+}
+</style>
+<!-- Website analytics (Plausible). At launch, paste the script URL from Plausible's install snippet into PLAUSIBLE_SRC.
+     Visitors who opt out (Privacy Notice, section 11) never load it. -->
+<script>
+(function(){
+  var PLAUSIBLE_SRC = ''; // e.g. 'https://plausible.io/js/pa-XXXXXXXX.js'
+  function optedOut(){ try { return localStorage.getItem('plausible_ignore') === 'true'; } catch (e) { return false; } }
+  window.plausible = window.plausible || function(){ (plausible.q = plausible.q || []).push(arguments); };
+  plausible.init = plausible.init || function(i){ plausible.o = i || {}; };
+  window.tblOptedOut = optedOut;
+  window.tblTrack = function(name){ if (!optedOut()) { try { plausible(name); } catch (e) {} } };
+  if (!PLAUSIBLE_SRC || optedOut()) return;
+  var s = document.createElement('script'); s.async = true; s.src = PLAUSIBLE_SRC;
+  document.head.appendChild(s);
+  plausible.init();
+})();
+</script>
 </head>
-  
 <body>
 
-
-  <header class="site-header">
-    <div class="logo">
-        <a href="index.html">TheBIMLine</a>
-    </div>
-
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
-        ☰ Menu
-    </button>
-
-    <nav class="header-nav" id="headerNav">
-        <a href="#features">Features</a>
-        <a href="#get-started">Getting Started</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<header class="site-header">
+  <a class="logo" href="#">TheBIMLine</a>
+  <nav class="nav">
+    <a data-track="Home Nav How It Works" href="#how">How it works</a>
+    <a data-track="Home Nav Case Study" href="#case">Case study</a>
+    <a data-track="Home Nav Getting Started" href="#start">Getting started</a>
+    <a data-track="Home Nav FAQ" href="#faq">FAQ</a>
+    <a class="btn js-book" data-track="Book Call Open" href="#">Book a call</a>
+  </nav>
 </header>
 
-  <section class="hero">
-
-    <div class="hero-content">
-
-<div class="topline">
-  <p class="topline">Better • Information • Management</p>
-</div>
-
-<h1>
-  InScope — The Information Worksite<span class="tm">™</span><br>
-  for Real Estate Development
-</h1>
-
-<p class="sub">
-  Making projects clearer and easier to manage.<br>
-  Transform how you manage projects.
-</p>
-
-<div class="rolling">
-  Put your project InScope.
-</div>
-
-   <div class="cta-buttons">
-    <a href="#" id="openContactHero">Book a call</a>
-    <a href="#case-study">See a Case Study</a>
-</div>
-
-</div>
-
-</section> 
-  
-    <div class="section-divider"></div>
-
-  <section class="real-example-section" id="case-study">
-
-    <div class="real-example-card">
-
-        <div class="real-example-card-header">
-            <p class="real-example-label">Case Study 01</p>
-
-            <h2>From vision to opening day.</h2>
-
-            <p class="real-example-kicker">
-                Helping a first-time restaurant owner launch their new business.
-            </p>
-        </div>
-
-        <div class="real-example-panel">
-
-            <!-- BEFORE -->
-
-            <div class="real-example-before">
-
-                <p class="real-example-panel-label">Before</p>
-
-                <div class="before-transformation">
-
-                    <img
-                        src="case-studies/BuildingConFire2.png"
-                        alt="Hand-sketched project notes"
-                    >
-
-                    <span class="transformation-arrow">→</span>
-
-                    <p class="transformation-statement">
-                        Hand-sketched<br>project notes.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- AFTER -->
-
-            <div class="real-example-after">
-
-                <p class="real-example-panel-label">After</p>
-
-                <div class="after-transformation">
-
-                    <div class="project-roadmap">
-
-                        <div class="roadmap-item roadmap-purple">
-                            <span class="roadmap-dot"></span>
-                            <span>Phases</span>
-                        </div>
-
-                        <div class="roadmap-item roadmap-blue">
-                            <span class="roadmap-dot"></span>
-                            <span>Milestones</span>
-                        </div>
-
-                        <div class="roadmap-item roadmap-green">
-                            <span class="roadmap-dot"></span>
-                            <span>Tasks</span>
-                        </div>
-
-                        <div class="roadmap-item roadmap-yellow">
-                            <span class="roadmap-dot"></span>
-                            <span>Compliance</span>
-                        </div>
-
-                        <div class="roadmap-item roadmap-orange">
-                            <span class="roadmap-dot"></span>
-                            <span>Construction</span>
-                        </div>
-
-                        <div class="roadmap-item roadmap-red">
-                            <span class="roadmap-dot"></span>
-                            <span>Progress &amp; Updates</span>
-                        </div>
-
-                        <div class="roadmap-item roadmap-teal">
-                            <span class="roadmap-dot"></span>
-                            <span>Practical Completion</span>
-                        </div>
-
-                    </div>
-
-                    <span class="transformation-arrow">→</span>
-
-                    <p class="transformation-statement">
-                        A complete<br>project roadmap.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="real-example-result">
-
-            <p class="real-example-transformation">
-                Easy to see. A clear way forward.
-            </p>
-
-          <!--
-<a href="#" class="real-example-gallery-button" id="open-case-study-one-gallery">
-    Explore the project gallery →
-</a>
--->
-
-        </div>
-
-        <!-- Hidden images used by the existing lightbox -->
-
-        <div class="case-study-one-gallery-images" aria-hidden="true">
-
-            <img
-                src="case-studies/CS14.png"
-                alt="Milestones Roadmap"
-                class="lightbox-trigger"
-            >
-
-            <img
-                src="case-studies/CS15.png"
-                alt="Compliance Checklist"
-                class="lightbox-trigger"
-            >
-
-            <img
-                src="case-studies/CS16.png"
-                alt="Construction Tasks"
-                class="lightbox-trigger"
-            >
-
-            <img
-                src="case-studies/CS17.png"
-                alt="Using the AI Assistant to Support Planning and Task Creation"
-                class="lightbox-trigger"
-            >
-
-            <img
-                src="case-studies/CS18.png"
-                alt="From Research to Alcohol Licence Action Plan"
-                class="lightbox-trigger"
-            >
-
-        </div>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="label">Better • Information • Management</span>
+      <h1 class="h1">Making projects clearer and easier to manage.</h1>
+      <p class="lead muted">Put your project InScope: the Information Worksite® for real estate development.</p>
+      <div class="ctas">
+        <a class="btn js-book" data-track="Book Call Open" href="#">Book a call</a>
+        <a class="btn blue" data-track="Home CTA Tracker Hero" href="planning-tracker.html">Get a free Planning Tracker</a>
+      </div>
     </div>
-
-</section>
-  
-<section class="timeline-story">
-
-    <div class="timeline-story-inner">
-
-        <div class="timeline-title-block">
-      
-            <h2>
-                We're drowning<br> 
-               in documents<br>
-                and emails.
-            </h2>
-        </div>
-
-        <div class="timeline-copy-block">
-
-    <p class="timeline-intro">
-        Many projects suffer from an information structure problem.
-    </p>
-
-<div class="timeline-benefits">
-
-    <div class="benefit">
-        <strong>Valuable information</strong>
-        <span>is locked in PDF reports, emails and spreadsheets making it hard to action.</span>
-    </div>
-
-    <div class="benefit">
-        <strong>Project goals</strong>
-        <span>due diligence risks and tasks are not systematised or tracked.</span>
-    </div>
-
-    <div class="benefit">
-        <strong>Planning, budgets & cash flow</strong>
-        <span>are difficult to create and maintain.</span>
-    </div>
-
-    <div class="benefit">
-        <strong>Information gaps</strong>
-        <span>lead to delays when they block start.</span>
-    </div>
-
-    <div class="benefit">
-        <strong>Project updates</strong>
-        <span>decisions and actions are easily lost or forgotten.</span>
-    </div>
-
-</div>
-<p class="timeline-result">
-    The result is more time spent managing information and less time managing the project.
-</p>
-
-</div>
-
-</div>
-
-  </section> 
-  
-<section class="timeline-story timeline-story-continuation">
-
-
-<div class="timeline-solution-row">
-
-    <div class="timeline-solution-block">
-
-        <p class="timeline-quote-text">
-            Success is planned and managed.
-        </p>
-
-<p class="timeline-highlight">
-    The Information Worksite is the answer to the information structure problem. A platform designed specifically for the planning and management of property development projects. <strong>The aim is simple: make projects clearer and easier to manage.</strong>
-</p>
-
-    </div>
-
-    <div class="timeline-loop-block">
-
-      <div class="timeline-loop">
-
-  <svg class="loop-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-  <marker id="arrowhead" viewBox="0 0 10 10" refX="5" refY="5"
-          markerWidth="8" markerHeight="8" orient="auto">
-    <path d="M0,0 L10,5 L0,10 Z" fill="#8a7cf0" opacity="0.55"/>
-  </marker>
-</defs>
-    <path d="M 224 79 A 132 132 0 0 1 337 196" fill="none" stroke="#7F77DD" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-    <path d="M 340 224 A 132 132 0 0 1 224 341" fill="none" stroke="#7F77DD" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-    <path d="M 196 341 A 132 132 0 0 1 83 224" fill="none" stroke="#7F77DD" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-    <path d="M 83 196 A 132 132 0 0 1 196 79" fill="none" stroke="#7F77DD" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-  </svg>
-
-<div class="loop-centre">Project<br>Requirements</div>
-
-<div class="loop-node loop-plan">
-    <strong>Some things matter more than others.</strong>
-</div>
-
-<div class="loop-node loop-operate">
-    <strong>Define</strong>
-    your success criteria.
-</div>
-
-<div class="loop-node loop-update">
-    <strong>Stay focused</strong>
-</div>
-
-<div class="loop-node loop-report">
-    <strong>Keep</strong> on track<br>
-    to the goal.
-</div>
-      
-    </div>
-
-</div>
-
-</div> 
-      
-<div class="timeline-outcomes-row">
-
-    <div class="timeline-outcome-card">
-        <p class="timeline-outcome-heading">Work smarter</p>
-        <p class="timeline-outcome-copy">Move away from scattered spreadsheets and disconnected files into a clearer project environment that is easier to use.</p>
-    </div>
-
-    <div class="timeline-outcome-card">
-        <p class="timeline-outcome-heading">Stay on top</p>
-        <p class="timeline-outcome-copy">Cover all key aspects of the project, from costs and risks to tasks and compliance, so nothing slips through the cracks.</p>
-    </div>
-
-  <div class="timeline-outcome-card">
-    <p class="timeline-outcome-heading">Project intelligence</p>
-    <p class="timeline-outcome-copy">When project information is viewed side by side, it becomes easier to see what is missing, understand the consequences and take action.</p>
-</div>
-
-</div>
-
-<p class="timeline-better-outcomes">
-   Highly organised projects where information supports management, control and project success.
-</p>
-
-</div>
-
-<div class="delivery-timeline-feature">
-
-    <div class="delivery-timeline-copy">
-
-        <p class="delivery-kicker">
-            Project Requirements.
-        </p>
-
-        <h3>
-            Link tasks & project events to your success criteria to see progress.
-        </h3>
-
-    </div>
-
-    <div class="delivery-timeline-image">
-        <img src="Images/screenshot_32.png"
-             alt="InScope Delivery Timeline">
-    </div>
-
-</div>
- 
-</section>  
-
-<div class="section-divider"></div>
-
-<section class="tri-factor" id="features">
-  
-  <h2>
-    Organise your project with clearer coordination and stronger communication.
-</h2>
-
-<div class="tri-factor-intro">
-
-    <div class="tri-factor-copy">
-
-      <p class="icc-principle">
-    The challenge is not eliminating complexity. It is managing complexity in the simplest workable way.
-</p>
-      
-        <p>
-            <strong>No two projects or teams are the same.</strong>
-            InScope's flexible, modular environment is quick to set up and easy to use. Use a single section or combine several together to suit your project. Developed from real-world experience, InScope gives teams a new place and fresh perspectives to do what they have always done. The Information Worksite.
-        </p>
-
-</div>
-
-</div>
-
-<div class="structure-points">
-
-        <div class="structure-point">
-
-            <div class="structure-heading-row">
-                <span class="structure-number">01</span>
-                <span class="structure-line"></span>
-            </div>
-
-            <p class="structure-lead">
-                 Internal project management.
-            </p>
-
-            <ul class="structure-list">
-                <li><span class="structure-icon">⌁</span><span>Critical Path</span></li>
-                <li><span class="structure-icon">£</span><span>Project "North Star" Requirements</span></li>
-                <li><span class="structure-icon">▤</span><span>Team Design</span></li>
-                <li><span class="structure-icon">⌕</span><span>Due Diligence</span></li>
-                <li><span class="structure-icon">◎</span><span>Appraisal & Cost Plan Tracking</span></li>
-            </ul>
-
-        </div>
-
-        <div class="structure-point">
-
-            <div class="structure-heading-row">
-                <span class="structure-number">02</span>
-                <span class="structure-line"></span>
-            </div>
-
-            <p class="structure-lead">
-                External approvals & regulation.
-            </p>
-
-            <ul class="structure-list">
-                <li><span class="structure-icon">⌂</span><span>Planning Tracker</span></li>
-                <li><span class="structure-icon">◇</span><span>Building Control Tracker</span></li>
-                <li><span class="structure-icon">▦</span><span>Compliance Roadmap</span></li>
-               <li><span class="structure-icon">▣</span><span>EPC Impact</span></li>
-                <li><span class="structure-icon">▣</span><span>BSA Log</span></li>
-            </ul>
-
-        </div>
-
-        <div class="structure-point">
-
-            <div class="structure-heading-row">
-                <span class="structure-number">03</span>
-                <span class="structure-line"></span>
-            </div>
-
-            <p class="structure-lead">
-                Infrastructure for teams.
-            </p>
-
-            <ul class="structure-list">
-                <li><span class="structure-icon">○</span><span>Project & Update Feeds</span></li>
-                <li><span class="structure-icon">◌</span><span>Document Library</span></li>
-                <li><span class="structure-icon">□</span><span>RFIs, Minutes & Site Issues</span></li>
-                <li><span class="structure-icon">▱</span><span>Design & Specification Version Control</span></li>
-              <li><span class="structure-icon">▱</span><span>Construction Task Management</span></li>
-            </ul>
-
-        </div>
-
-    </div>
-
+    <figure class="hero-photo">
+      <img class="photo" src="img/hero_houses.jpg" alt="A terrace of new gabled homes in evening light">
+      <figcaption><span>New homes</span><span>Snagging to handover</span></figcaption>
+      <p style="margin:8px 0 0"><span class="flag" style="margin:0">Photo permission tbc</span></p>
+    </figure>
+  </div>
 </section>
 
-  <!-- CASE STUDY 02 -->
+<!-- 01 PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <div class="section-head"><span class="label">01 / The problem</span><span class="label">Information structure</span></div>
+    <div class="problem-grid">
+      <div>
+        <h2 class="h2">Your system isn’t helping you manage your project.</h2>
+        <p class="lead">And it’s costing you time, money and confidence.</p>
 
-<section class="case-study-two">
-
-    <div class="case-study-two-inner">
-
-        <div class="case-study-two-content">
-
-            <div class="section-label">
-                CASE STUDY 02
-            </div>
-
-            <h2>
-               Delivering four new build homes after contractor collapse.
-            </h2>
-
-         <ul class="case-study-points">
-    <li>Construction task management and snagging to get sales over the line and build trust with the owners.</li>
-</ul>
-
-    <!--
-<a href="#" class="case-study-button" id="open-case-study-gallery">
-    Explore Project Gallery →
-</a>
--->
-
+        <div class="named">
+          <p class="label">Chris Ward, founder</p>
+          <h3 class="h3">I call this the information structure problem.</h3>
+          <p>It stores information. It doesn’t manage the project.</p>
         </div>
 
-       <div class="case-study-preview">
-
-  <img src="case-studies/CS33.png"
-       class="cs-back-4 case-study-two-trigger"
-       alt="Instructions">
-
-  <img src="case-studies/CS34.png"
-       class="cs-back-3 case-study-two-trigger"
-       alt="Work Packages and Programming - List">
-
-  <img src="case-studies/CS35.png"
-       class="cs-back-2 case-study-two-trigger"
-       alt="Detailed Schedule of Works - Roadmap">
-
-  <img src="case-studies/CS36.png"
-       class="cs-back-1 case-study-two-trigger"
-       alt="Detailed Schedule of Works - Timeline">
-
-  <img src="case-studies/CS38.png"
-       class="cs-front case-study-two-trigger"
-       alt="Snagging Dashboard">
-
-</div>
-
-    </div>
-
-  </section>
-
-<section class="system-support-section">
-
-    <div class="system-support-grid">
-
-     <div class="system-support-card labs-card">
-
-    <div>
-        <div class="support-pill">LABS </div>
-
-        <h3>AI processing<br>to create records</h3>
-
-        <p>
-            AI processing converts documents such as building control plan checks and drawing registers into system records in minutes, saving hours of manual input.
-        </p>
-
-        <ul>
-            <li>Document captured</li>
-            <li>Records created</li>
-            <li>AI-assisted project queries</li>
-        </ul>
-    </div>
-
-    <div class="labs-visual">
-
-        <div class="planning-notice">
-
-            <div class="planning-notice-tag">
-                LPA Decision Notice
-            </div>
-
-            <div class="planning-notice-title">
-                Decision: Approved
-            </div>
-
-            <div class="planning-notice-lines"></div>
-
+        <div class="symptoms">
+          <div class="sym-row"><strong>Valuable information</strong><span>is locked in PDFs, emails and spreadsheets.</span></div>
+          <div class="sym-row"><strong>Project goals and due diligence risks</strong><span>are not systematised or tracked.</span></div>
+          <div class="sym-row"><strong>Information gaps</strong><span>lead to delays when they block start.</span></div>
+          <div class="sym-row"><strong>Project updates and decisions</strong><span>are easily lost or forgotten.</span></div>
         </div>
-
-    </div>
-
-</div>
-
-       <div class="system-support-card templates-card">
-
-    <div>
-        <div class="support-pill">Templates </div>
-
-        <h3>Templates for<br>rapid project deployment</h3>
-
-        <p>
-            Start with proven project structures and adapt them to suit the needs of your project and team.
-        </p>
-
-        <ul>
-            <li>Rapid deployment</li>
-            <li>Consistent project setup</li>
-            <li>Repeatable workflows</li>
-        </ul>
-    </div>
-
-    <div class="templates-visual">
-
-        <div class="template-stack">
-
-            <div class="template-layer template-purple">
-                Phases
-            </div>
-
-            <div class="template-layer template-green">
-                Milestones
-            </div>
-
-            <div class="template-layer template-orange">
-                Tasks
-            </div>
-
-            <div class="template-layer template-blue">
-                Compliance
-            </div>
 
       </div>
-
+      <figure class="problem-photo">
+        <img src="img/problem_stripout.jpg" alt="A restaurant mid strip-out, with materials and tools across the floor">
+        <figcaption><span>Before</span><span>Strip-out</span></figcaption>
+        <p class="stakes">Things slip, client starts chasing for updates, and you risk the project and your reputation.</p>
+      </figure>
     </div>
-
-</div>
-
-</div>
-
-
+  </div>
 </section>
 
-  <div class="section-divider"></div>
-
-<section class="getting-started" id="get-started">
-
-  <div class="gs-layout-simple">
-
-    <div class="gs-copy-simple">
-
-      <h2>Getting Started</h2>
-
-      <p class="gs-subtitle">Simplicity by default. Control by choice.</p>
-
-<p>
-  <strong>Start with the information you already have.</strong>
-  A task list, spreadsheet, compliance checklist or project notes. Build over time.
-</p>
-
-<p>
-  Accessed online on desktop, tablet and mobile. Every project includes <strong>guided onboarding</strong> to help you get organised and make the most of InScope from day one.
-</p>
-      
-<p>
-  As your project develops, <strong>add collaborators and InScope modules</strong> to match each stage.
-</p>
-
-
-      
-    
-<div class="gs-fragment-visual">
-  <span>Excel</span>
-  <span>·</span>
-  <span>WhatsApp</span>
-  <span>·</span>
-  <span>Email</span>
-  <span>·</span>
-  <span>PDF</span>
-
-  <span class="gs-fragment-arrow">→</span>
-
-  <span class="gs-inscope-mark">InScope</span>
-</div>
-
+<!-- 02 CASE STUDY -->
+<section class="case" id="case">
+  <div class="wrap">
+    <div class="section-head"><span class="label">02 / Case study</span><span class="label">Restaurant fit-out</span></div>
+    <div class="case-grid">
+      <div>
+        <div class="video-frame">
+          <video controls playsinline preload="none" poster="img/Lawson_poster.jpg">
+            <source src="img/Lawson_InScope_web_18s.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption style="max-width:380px"><span>Filmed on site</span><span>18 sec</span></figcaption>
+      </div>
+      <div>
+        <h2 class="h2">A restaurant fit-out, from strip-out to service.</h2>
+        <dl class="spec">
+          <div class="spec-row"><dt>Location</dt><dd>Harpenden</dd></div>
+          <div class="spec-row"><dt>Client</dt><dd>Owner-operator</dd></div>
+          <div class="spec-row"><dt>The work</dt><dd>Rear extension, kitchen, front counter and seating area</dd></div>
+          <div class="spec-row"><dt>InScope</dt><dd>Construction programme, compliance and business set&#8209;up</dd></div>
+        </dl>
+        <p class="quote">“I feel like I’m in control.”</p>
+        <p class="quote-cite">Lawson Conroy, owner, Cafe 6</p>
+        <p class="mini-quote">“I know where everything is, how to get things. Everything’s recorded.”</p>
+        <div class="ctas"><a class="btn js-book" data-track="Book Call Open" href="#">Book a call</a></div>
+      </div>
     </div>
 
-<div class="gs-device-stack">
-
-    <div class="gs-tablet-frame">
-        <img src="Images/screenshot_31.png"
-             alt="InScope tablet view">
+    <div class="strip">
+      <figure><img src="img/extension.jpg" alt="The rear extension under construction"><figcaption><span>01</span><span>Rear extension</span></figcaption></figure>
+      <figure><img src="img/stone_yard.jpg" alt="Checking a granite slab at the stone yard"><figcaption><span>02</span><span>Choosing the worktop</span></figcaption></figure>
+      <figure><img src="img/counter_stone.jpg" alt="The stone counter top with the pizza oven behind"><figcaption><span>03</span><span>Stone top and oven</span></figcaption></figure>
     </div>
-
-    <div class="gs-phone-frame">
-        <img src="Images/Images_Mobile_1_Purple.jpeg"
-             alt="InScope mobile view">
-    </div>
-
-</div>
-
   </div>
+</section>
 
-  </section>
 
-  <section class="faq-section" id="faq">
+<!-- 03 GUIDE -->
+<section class="guide" id="about">
+  <div class="wrap">
+    <div class="section-head"><span class="label">03 / Why TheBIMLine</span><span class="label">Information management</span></div>
+    <div class="guide-grid">
+      <figure class="guide-photo"><img src="img/chris.jpg" alt="Chris Ward, founder of TheBIMLine"><figcaption><span>Chris Ward</span><span>Founder, TheBIMLine</span></figcaption></figure>
+      <div>
+        <h2 class="h2">We understand the frustration of missing information and managing many moving parts.</h2>
+        <p class="lead">I built InScope from managing projects, and I use it on real projects today. It asks the questions a good PM asks, such as ‘Are the materials ready?’, so problems get spotted early.</p>
+        <p class="lead" style="margin-top:4px">We can’t make projects less complex, but we can make them easier to manage.</p>
+        <div class="quotes">
+          <blockquote><p>“His ability to keep all project stakeholders updated with accurate and timely information instilled a deep level of trust and confidence.”</p><p class="quote-cite">Gavin Essex MRICS, CEO &amp; Founder, GAGE Properties <span class="flag">Permission tbc</span></p></blockquote>
+          <blockquote><p>“He brought structure and accountability to what is often a challenging stage of a build.”</p><p class="quote-cite">Aden Samuels, Vice President, Hilltop Capital Partners <span class="flag">Permission tbc</span></p></blockquote>
+          <blockquote><p>“Quote to come.”</p><p class="quote-cite">Michiel van de Klooster, Property Assets London <span class="flag">Quote tbc</span></p></blockquote>
+        </div>
+        <div class="turn">
+          <span class="label">How’s the project?</span>
+          <p class="h1">Under control.</p>
+          <div class="ctas"><a class="btn js-book" data-track="Book Call Open" href="#">Book a call</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="faq-wrap">
+<!-- 04 HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head"><span class="label">04 / How it works</span><span class="label">The Information Worksite®</span></div>
+    <div class="how-intro">
+      <h2 class="h2">Most systems show who does what. InScope shows why it matters.</h2>
+      <p class="lead">InScope: the Information Worksite® is designed to save you time. With Templates and AI processing of documents, have your project set up in one session, then follow your roadmap. InScope shows you how it’s going.</p>
+    </div>
+    <div class="cols3">
+      <div><span class="label">01 / Consistency</span><h3 class="h3">Standardisation</h3><p>Every project in your company is set up and run the same way.</p></div>
+      <div><span class="label">02 / Continuity</span><h3 class="h3">Your methods, upgraded</h3><p>Your existing processes and project structure are mirrored in InScope, so the way you already work gets real visibility.</p></div>
+      <div><span class="label">03 / Adaptive</span><h3 class="h3">Future-proof</h3><p>Add new workflows as best practice and compliance change.</p></div>
+    </div>
+    <div class="future">
+      <p class="h2">Less time managing information. More time managing the project.</p>
+      <div>
+        <p class="lead">You become the PM everyone wants on their project. You’re always one step ahead, and everyone knows they can rely on you.</p>
+        <p class="label" style="margin-top:24px">Better systems. Better projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <h2>Frequently asked questions</h2>
+<!-- 05 CASE STUDY 2 -->
+<section class="case2" id="case-2">
+  <div class="wrap">
+    <div class="section-head"><span class="label">05 / Case study</span><span class="label">New homes</span></div>
+    <div class="case2-grid">
+      <div>
+        <h2 class="h2">Four new build homes, completed and snagged.</h2>
+        <dl class="spec">
+          <div class="spec-row"><dt>Project</dt><dd>Four new build homes to finish and hand over to buyers</dd></div>
+          <div class="spec-row"><dt>Client</dt><dd>GAGE Properties</dd></div>
+          <div class="spec-row"><dt>InScope</dt><dd>Construction programme, snagging management and budget control. 15 companies and 3 sets of homeowners.</dd></div>
+          <div class="spec-row"><dt>Result</dt><dd>The sales were completed, and the homeowners are enjoying their new homes.</dd></div>
+        </dl>
+      </div>
+      <div class="case2-photos">
+        <figure class="fig-a"><img class="tall" src="img/hero_window.jpg" alt="Arched window detail on one of the new homes"><figcaption><span>Detail</span></figcaption></figure>
+        <figure class="fig-b"><div class="shot"><img src="img/shot_programme.jpg" alt="InScope detailed schedule of works, timeline view"></div><figcaption><span>InScope</span><span>Schedule of works</span></figcaption></figure>
+      </div>
+    </div>
+    <div class="case2-quote">
+      <p class="quote">“Everyone could see what was left to do on every home.”</p>
+      <p class="quote-cite">Construction manager <span class="flag">Placeholder quote</span></p>
+      <div class="ctas" style="justify-content:center"><a class="btn js-book" data-track="Book Call Open" href="#">Book a call</a></div>
+    </div>
+  </div>
+</section>
 
-        <div class="faq-list">
+<!-- 06 GETTING STARTED -->
+<section class="plan" id="start">
+  <div class="wrap">
+    <div class="section-head"><span class="label">06 / Getting started</span><span class="label">Three steps</span></div>
+    <h2 class="h2" style="margin-bottom:clamp(36px,5vw,60px)">Put your project InScope.</h2>
+    <ol class="steps">
+      <li><span class="num">01</span><p class="h3">Book a call and tell us about your project.</p></li>
+      <li><span class="num">02</span><p class="h3">We set up your project in InScope.</p></li>
+      <li><span class="num">03</span><p class="h3">Get on top of your project.</p></li>
+    </ol>
+    <div class="plan-notes">
+      <p><strong>Start with the information you already have.</strong> A task list, spreadsheet, compliance checklist or project notes. Build over time.</p>
+      <p>Desktop, tablet and mobile. <strong>Guided onboarding</strong> on every project.</p>
+    </div>
+    <div class="pricing">
+      <p class="offer"><span>Early clients: no setup fee</span><span>Three-month minimum term</span></p>
+      <div class="price-card"><span class="label">Solo developers &amp; PMs</span><p class="price">£125<small>a month</small></p><p>You, on up to 3 projects. £100 a month for each additional project.</p><p>Add team members from £50 per user, per project.</p></div>
+      <div class="price-card"><span class="label">Consultancies</span><p class="price">£50<small>per PM, per month</small></p><p>Includes your first project, plus £100 a month for each additional project.</p></div>
+      <div class="price-note"><h3 class="h3">Better value as you grow.</h3><p>If InScope saves the PM more than half an hour per project each month, it has already paid for itself.</p></div>
+    </div>
+  </div>
+</section>
 
+<!-- 07 FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head"><span class="label">07 / Questions</span><span class="label">FAQ</span></div>
+    <div class="faq-list">
             <div class="faq-item">
-    <button class="faq-question">
+    <button class="faq-question" data-faq="FAQ Who Is It For">
         <span>Who is InScope for?</span>
         <span class="faq-icon">+</span>
     </button>
                 <div class="faq-answer">
-                      <p>
-            InScope is for project owners, whether a homeowner, business owner, developer or lead professional such as a project manager or architect.
-       </p>
-        <p>
-            It can be used on projects of any type and size — residential, commercial, hospitality and more — and can be used by teams including consultants and trades.
-        </p>
-                </div>
+        <p>InScope is for solo developers and PMs, PM consultancies and developers’ in-house PMs. It works best when the whole team uses it: everyone shares the same picture of the project, so the more people on it, the more value it brings.</p>
+        <p>It can be used on projects of any type and size — residential, commercial, hospitality and more — by teams including consultants and trades.</p>
+    </div>
             </div>
-
             <div class="faq-item">
-                <button class="faq-question">
-                    <span>How does pricing work?</span>
+                <button class="faq-question" data-faq="FAQ Planning Tracker">
+                    <span>What is the free Planning Tracker?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                         <p>
-            Pricing is tailored to the size of the project and team, based on the number of users and projects. An initial three-month minimum period and setup fee apply.
-        </p>
-
-  
+                    <p>A free, lite version of InScope’s Planning Tracker, built from your planning decision notice. See what every condition needs and who’s doing it. It’s a simple way to try working in InScope. It helps you spot problems early; it doesn’t do the chasing for you.</p>
                 </div>
             </div>
-
        <div class="faq-item">
     <button class="faq-question">
         <span>Who can see and edit information?</span>
         <span class="faq-icon">+</span>
     </button>
-
     <div class="faq-answer">
         <p>
-            Access and editing rights are configured for each project. Typically, internal project team members (e.g. project owners) have full visibility, while external users (e.g. contractors and consultants) see and edit information based on assignment and relevance.
+            Access and editing rights are configured for each project. Typically, internal project team members (e.g. project owners, PMs) have full visibility, while external users (e.g. contractors and consultants) see and edit information based on assignment and relevance.
         </p>
-
         <p>
-            Key record information, including who created a record, when it was created and "Status" Last Modified By and "Status" Last Modified Time fields, is recorded. For details of record-level revision history, see the Terms of Service.
+            InScope records who created each record and when, and who last changed its status. See the Terms of Service for revision history.
         </p>
     </div>
 </div>
-
                 <div class="faq-item">
     <button class="faq-question">
         <span>What is InScope built on?</span>
         <span class="faq-icon">+</span>
     </button>
-
     <div class="faq-answer">
         <p>
-            InScope is built on Airtable, a digital operations platform that combines relational databases, automation and application design tools to create custom workflows and operational systems.
+            InScope is built on Airtable, a leading database and workflow platform.
         </p>
     </div>
 </div>
-          
-
             <div class="faq-item">
-    <button class="faq-question">
+    <button class="faq-question" data-faq="FAQ Data Security">
         <span>Where is my data stored and is it secure?</span>
         <span class="faq-icon">+</span>
     </button>
-
     <div class="faq-answer">
         <p>
             Airtable is hosted on Amazon Web Services (AWS) in Europe, with customer data encrypted both in transit and at rest.
         </p>
-
         <p>
             Airtable maintains high enterprise-level security and privacy standards, including compliance with SOC 2 Type 2, ISO 27001 and ISO 27701 certifications.
         </p>
-
         <p>
             All project data remains the property of the user. See the Terms of Service for further details.
         </p>
     </div>
 </div>
-
             <div class="faq-item">
                 <button class="faq-question">
                     <span>What happens at the end of a project?</span>
@@ -780,77 +492,56 @@
                     <p>Following a short handover period, the project environment is closed.</p>
                 </div>
             </div>
-
+            <div class="faq-item">
+                <button class="faq-question" data-faq="FAQ Stops Trading">
+                    <span>What if TheBIMLine stops trading?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Your project information is yours. InScope projects are run by TheBIMLine, with the data hosted by Airtable, so the service would end if we stopped trading. Before that happened, you would receive a structured export of your project information, as set out in the Terms of Service.</p>
+                </div>
+            </div>
       <div class="faq-item">
-    <button class="faq-question">
+    <button class="faq-question" data-faq="FAQ Replace Software">
         <span>Does InScope replace my existing software?</span>
         <span class="faq-icon">+</span>
     </button>
-
     <div class="faq-answer">
-        <p>
-            Not necessarily. InScope is designed to work alongside existing tools and processes.
-        </p>
-
-        <p>
-            Teams can continue using email, WhatsApp, meetings and specialist software where appropriate. InScope acts as the definitive project record, allowing important project information, updates, decisions and documents to be curated and maintained in one place.
-        </p>
+        <p>No. Property projects always run across several systems: drawings and reports are made in other programs, and letters, quotes and reports arrive by email from people not using InScope.</p>
+        <p>InScope sits above them. It’s where the important information is brought together: the decisions, approvals, updates and key documents. Your team can keep using email and WhatsApp, but we recommend InScope becomes the official record and project memory of everything that matters.</p>
     </div>
 </div>
-
           <div class="faq-item">
     <button class="faq-question">
-        <span>What documents can LABS process?</span>
+        <span>What documents can the AI processing handle?</span>
         <span class="faq-icon">+</span>
     </button>
-
     <div class="faq-answer">
         <p>
-            LABS can process supported project documents such as planning decision notices, building control plan checks, drawing registers, specifications, RFIs and meeting minutes.
+            InScope’s AI processing handles supported project documents such as planning decision notices, building control plan checks, drawing registers, specifications, RFIs and meeting minutes.
         </p>
     </div>
 </div>
-
         </div>
-
-    </div>
-
-</section>  
-  
-  <section class="final-cta" id="contact">
-
-<h2>Ready to keep your project InScope?</h2>
-
-  <div class="cta-buttons">
-    <button id="openContact" class="contact-btn">
-        Start the conversation
-    </button>
-</div>
-
+  </div>
 </section>
 
-<footer class="footer" id="footer">
-
- <div class="footer-brand">
-
-    <a href="index.html" class="footer-logo">
-        <h3>TheBIMLine<sup>®</sup> Ltd</h3>
-<p>InScope<sup>®</sup> — The Information Worksite for real estate development</p>
-<p>Registered in England & Wales · Company No. 16962806</p>
-    </a>
-
-</div>
-
-  <div class="footer-links">
-    <a href="https://www.linkedin.com/company/thebimline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
+<!-- CLOSING -->
+<section class="closing" id="contact">
+  <div class="wrap">
+    <span class="label">Better • Information • Management</span>
+    <p class="h1" style="margin-top:24px">Be the PM everyone wants on their project.</p>
+    <p class="lead">Want an easier project?</p>
+    <div class="ctas"><a class="btn js-book" data-track="Book Call Open" href="#">Book a call</a><a class="btn blue" data-track="Home CTA Tracker Closing" href="planning-tracker.html">Get a free Planning Tracker</a></div>
   </div>
+</section>
 
-  <div class="footer-copy">
-    © 2026 TheBIMLine Ltd
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div><span class="label">TheBIMLine® Ltd</span>InScope®: the Information Worksite® for real estate development<br>Registered in England &amp; Wales · Company No. 16962806<br>The Chase, Station Road, Lower Shiplake, Oxfordshire, RG9 3JR</div>
+    <div><span class="label">Links</span><a href="https://www.linkedin.com/company/thebimline" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div><span class="label">Better systems. Better projects.</span>© 2026 TheBIMLine Ltd</div>
   </div>
-
 </footer>
 
 <div id="contactModal" class="contact-modal">
@@ -868,7 +559,8 @@
 
       <input type="hidden" name="_subject" value="New InScope enquiry">
 
-     <input type="hidden" name="_next" value="https://google.com">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+
 
       <input type="text" name="name" placeholder="Name" required>
 
@@ -887,6 +579,8 @@
         Send enquiry
       </button>
 
+      <p class="form-status" role="status" aria-live="polite"></p>
+
     </form>
 
     <p class="contact-note">
@@ -897,69 +591,69 @@
 
 </div>
 
-<div class="image-lightbox" id="imageLightbox">
-
-    <div class="image-lightbox-panel">
-
-        <button class="image-lightbox-close">
-            &times;
-        </button>
-
-        <div class="image-lightbox-meta">
-            <div id="lightboxCounter">1 / 4</div>
-            <div id="lightboxTitle">Building Control Items</div>
-        </div>
-
-        <button class="image-lightbox-nav image-lightbox-prev">
-            ‹
-        </button>
-
-        <img
-            id="lightboxImage"
-            src=""
-            alt=""
-        >
-
-        <button class="image-lightbox-nav image-lightbox-next">
-            ›
-        </button>
-
-        <div class="image-lightbox-thumbs" id="lightboxThumbs"></div>
-
-    </div>
-
-</div>
-    
-<script src="script.js"></script>
 
 <script>
-const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-const headerNav = document.getElementById("headerNav");
-
-mobileMenuToggle.addEventListener("click", () => {
-    headerNav.classList.toggle("is-open");
-});
+document.querySelectorAll('.js-book').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();document.getElementById('contactModal').classList.add('active');});});
+var cm=document.getElementById('contactModal');
+document.getElementById('closeContact').addEventListener('click',function(){cm.classList.remove('active');});
+cm.addEventListener('click',function(e){if(e.target===cm)cm.classList.remove('active');});
+document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){
+  var item=btn.closest('.faq-item'),open=item.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active');f.querySelector('.faq-icon').textContent='+';});
+  if(!open){item.classList.add('active');item.querySelector('.faq-icon').textContent='−';}
+});});
 </script>
-  
+
 <script>
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        const icon = item.querySelector('.faq-icon');
-        const isActive = item.classList.contains('active');
+// Analytics: clicks on elements marked with data-track
+document.addEventListener('click', function(e){
+  var el = e.target && e.target.closest ? e.target.closest('[data-track]') : null;
+  if (el) tblTrack(el.getAttribute('data-track'));
+});
+// Forms: submit in the background so a request is only counted when Formspree confirms it.
+// Without JavaScript or fetch, the form still submits normally to Formspree.
+function tblAjaxForm(form, ev){
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    if (!window.fetch || !window.FormData) return;
+    e.preventDefault();
+    if (form.getAttribute('data-sending') === '1') return;
+    form.setAttribute('data-sending', '1');
+    if (ev.submit) tblTrack(ev.submit);
+    var btn = form.querySelector('[type="submit"]');
+    var label = btn ? btn.innerHTML : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending\u2026'; }
+    var status = form.querySelector('.form-status');
+    if (status) status.textContent = '';
+    function fail(){
+      tblTrack(ev.error);
+      form.removeAttribute('data-sending');
+      if (btn) { btn.disabled = false; btn.innerHTML = label; }
+      if (status) status.innerHTML = ev.errorHtml;
+    }
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function(r){
+        if (r.ok) { tblTrack(ev.sent); form.innerHTML = ev.successHtml; }
+        else { fail(); }
+      })
+      .catch(fail);
+  });
+}
+tblAjaxForm(document.querySelector('#contactModal .contact-form'), {
+  sent: 'Enquiry Sent',
+  error: 'Enquiry Error',
+  successHtml: '<p class="contact-intro"><strong>Thanks, your message has been sent.</strong></p>',
+  errorHtml: "Sorry, that didn\u2019t send. Please try again, or email <a href=\"mailto:chris.ward@thebimline.com\">chris.ward@thebimline.com</a>."
+});
 
-        document.querySelectorAll('.faq-item').forEach(faq => {
-            faq.classList.remove('active');
-            faq.querySelector('.faq-icon').textContent = '+';
-        });
-
-        if (!isActive) {
-            item.classList.add('active');
-            icon.textContent = '−';
-        }
-    });
+// FAQ: count openings of selected questions (runs after the existing toggle)
+document.querySelectorAll('[data-faq]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.closest('.faq-item');
+    if (item && item.classList.contains('active')) tblTrack(btn.getAttribute('data-faq'));
+  });
 });
 </script>
-  
+
 </body>
 </html>
