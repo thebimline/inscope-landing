@@ -617,7 +617,7 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
 
     <button id="closeContact" class="close-modal">×</button>
 
-    <h2>Start the conversation</h2>
+    <h2>Book a call</h2>
 
     <form
   class="contact-form"
@@ -638,12 +638,12 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
       <textarea
         name="message"
         rows="5"
-        placeholder="Tell us about your project or enquiry"
+        placeholder="What’s your project, and what would you like to discuss?"
         required
       ></textarea>
 
       <button type="submit" class="submit-btn">
-        Send enquiry
+        Request a call
       </button>
 
       <p class="form-status" role="status" aria-live="polite"></p>
@@ -651,7 +651,7 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
     </form>
 
     <p class="contact-note">
-      We’ll respond by email to discuss your project and next steps.
+      I’ll reply by email to arrange a time that suits you.
     </p>
 
   </div>
@@ -709,7 +709,7 @@ function tblAjaxForm(form, ev){
 tblAjaxForm(document.querySelector('#contactModal .contact-form'), {
   sent: 'Enquiry Sent',
   error: 'Enquiry Error',
-  successHtml: '<p class="contact-intro"><strong>Thanks, your message has been sent.</strong></p>',
+  successHtml: '<p class="contact-intro"><strong>Thanks. I’ll be in touch to arrange a time.</strong></p>',
   errorHtml: "Sorry, that didn\u2019t send. Please try again, or email <a href=\"mailto:chris.ward@thebimline.com\">chris.ward@thebimline.com</a>."
 });
 
