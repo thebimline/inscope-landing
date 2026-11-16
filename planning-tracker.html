@@ -216,6 +216,8 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
 .lp-form button{margin-top:10px;justify-self:start;border:0;cursor:pointer;font:inherit}
 .lp-small{font-size:15px;color:var(--muted);margin-top:22px}
 .lp-small a{color:var(--ink)}
+.lp-form .lp-check{display:flex;align-items:center;gap:8px;font-family:inherit;font-size:15px;letter-spacing:normal;text-transform:none;margin:6px 0 0}
+.lp-form .lp-check input{flex:0 0 auto;width:auto;margin:0;padding:0}
 .lp-me{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
 .lp-me img{width:100%;display:block}
 .lp-quote{margin:28px 0 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.3)}
@@ -223,7 +225,7 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
 .lp-bold .quote-cite{color:rgba(255,255,255,.7)}
 .lp-clients{padding:clamp(32px,4vw,48px) 0}
 .lp-clients .section-head{margin-bottom:clamp(20px,3vw,32px)}
-.lp-qrows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.lp-qrows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
 .lp-qrows blockquote{margin:0}
 .lp-qrows p{margin:0 0 6px;font-size:15px;line-height:1.45}
 .lp-qrows .quote-cite{font-size:11px;line-height:1.5}
@@ -277,7 +279,7 @@ section.lp-bold{color:#fff}
      Visitors who opt out (Privacy Notice, section 11) never load it. -->
 <script>
 (function(){
-  var PLAUSIBLE_SRC = ''; // e.g. 'https://plausible.io/js/pa-XXXXXXXX.js'
+  var PLAUSIBLE_SRC = 'https://plausible.io/js/pa-am8eHyTNMvPAZF0UloEwz.js';
   function optedOut(){ try { return localStorage.getItem('plausible_ignore') === 'true'; } catch (e) { return false; } }
   window.plausible = window.plausible || function(){ (plausible.q = plausible.q || []).push(arguments); };
   plausible.init = plausible.init || function(i){ plausible.o = i || {}; };
@@ -368,6 +370,8 @@ section.lp-bold{color:#fff}
         <label for="lp-site">Planning reference or site address</label>
         <input id="lp-site" type="text" name="site" placeholder="e.g. 23/01234/FUL, or 12 Mill Lane, Taplow SL6" required>
         <p class="hint">Decision notices are public. Just tell us where, and we’ll find it.</p>
+        <p class="lp-small">We’ll also send you occasional emails about InScope. You can unsubscribe at any time.</p>
+        <label class="lp-check"><input type="checkbox" name="no_emails" value="Yes"> I’d rather not get these emails.</label>
         <button type="submit" class="btn blue">Get my free tracker</button>
         <p class="lp-small form-status" role="status" aria-live="polite"></p>
         <p class="lp-small">No decision yet? <a href="https://www.youtube.com/watch?v=MNswdNlrdbc&amp;list=PLDG8Rt-uLloMhTsVn-vCaCgV3vqkmnzmR" target="_blank" rel="noopener">Watch how the tracker works</a></p>
@@ -383,7 +387,6 @@ section.lp-bold{color:#fff}
     <div class="lp-qrows">
       <blockquote><p>“I know where everything is, how to get things. Everything’s recorded.”</p><p class="quote-cite">Lawson Conroy, owner, Cafe 6</p></blockquote>
       <blockquote><p>“His ability to keep all project stakeholders updated with accurate and timely information instilled a deep level of trust and confidence.”</p><p class="quote-cite">Gavin Essex MRICS, CEO &amp; Founder, GAGE Properties</p></blockquote>
-      <blockquote><p>“Quote to come.”</p><p class="quote-cite">Michiel van de Klooster, Property Assets London <span class="flag">Quote tbc</span></p></blockquote>
     </div>
   </div>
 </section>
