@@ -424,6 +424,9 @@ document.addEventListener('click', function(e){
 function tblAjaxForm(form, ev){
   if (!form) return;
   form.addEventListener('submit', function(e){
+    var subject = form.querySelector('[name="_subject"]');
+    var name = form.querySelector('[name="name"]').value.trim();
+    subject.value = name ? 'Planning Tracker request: ' + name : subject.defaultValue;
     if (!window.fetch || !window.FormData) return;
     e.preventDefault();
     if (form.getAttribute('data-sending') === '1') return;
