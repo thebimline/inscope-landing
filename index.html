@@ -243,7 +243,7 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
       </div>
     </div>
     <figure class="hero-photo">
-      <img class="photo" src="img/hero_houses.jpg" alt="A terrace of new gabled homes in evening light">
+      <img class="photo" src="img/hero_houses.jpg" alt="A terrace of new gabled homes in evening light" fetchpriority="high">
       <figcaption><span>New homes</span><span>Finishing works to snagging</span></figcaption>
     </figure>
   </div>
@@ -273,7 +273,7 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
 
       </div>
       <figure class="problem-photo">
-        <img src="img/problem_stripout.jpg" alt="A restaurant mid strip-out, with materials and tools across the floor">
+        <img src="img/problem_stripout.jpg" alt="A restaurant mid strip-out, with materials and tools across the floor" loading="lazy" decoding="async">
         <figcaption><span>Before</span><span>Strip-out</span></figcaption>
         <p class="stakes">Things slip, clients start chasing, and you risk the project and your reputation.</p>
       </figure>
@@ -310,9 +310,9 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
     </div>
 
     <div class="strip">
-      <figure><img src="img/extension.jpg" alt="The rear extension under construction"><figcaption><span>01</span><span>Rear extension</span></figcaption></figure>
-      <figure><img src="img/stone_yard.jpg" alt="Checking a granite slab at the stone yard"><figcaption><span>02</span><span>Choosing the worktop</span></figcaption></figure>
-      <figure><img src="img/counter_stone.jpg" alt="The stone counter top with the pizza oven behind"><figcaption><span>03</span><span>Stone top and oven</span></figcaption></figure>
+      <figure><img src="img/extension.jpg" alt="The rear extension under construction" loading="lazy" decoding="async"><figcaption><span>01</span><span>Rear extension</span></figcaption></figure>
+      <figure><img src="img/stone_yard.jpg" alt="Checking a granite slab at the stone yard" loading="lazy" decoding="async"><figcaption><span>02</span><span>Choosing the worktop</span></figcaption></figure>
+      <figure><img src="img/counter_stone.jpg" alt="The stone counter top with the pizza oven behind" loading="lazy" decoding="async"><figcaption><span>03</span><span>Stone top and oven</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -323,7 +323,7 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
   <div class="wrap">
     <div class="section-head"><span class="label">03 / Why TheBIMLine</span><span class="label">Information management</span></div>
     <div class="guide-grid">
-      <figure class="guide-photo"><img src="img/chris.jpg" alt="Chris Ward, founder of TheBIMLine"><figcaption><span>Chris Ward</span><span>Founder, TheBIMLine</span></figcaption></figure>
+      <figure class="guide-photo"><img src="img/chris.jpg" alt="Chris Ward, founder of TheBIMLine" loading="lazy" decoding="async"><figcaption><span>Chris Ward</span><span>Founder, TheBIMLine</span></figcaption></figure>
       <div>
         <h2 class="h2">We understand the frustration of missing information and managing many moving parts.</h2>
         <p class="lead">I built InScope from managing projects, and I use it on real projects today. It asks the questions a good PM asks, such as ‘Are the materials ready?’, so problems get spotted early.</p>
@@ -379,8 +379,8 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
         </dl>
       </div>
       <div class="case2-photos">
-        <figure class="fig-a"><img class="tall" src="img/hero_window.jpg" alt="Arched window detail on one of the new homes"><figcaption><span>Detail</span></figcaption></figure>
-        <figure class="fig-b"><div class="shot"><img src="img/shot_programme.jpg" alt="InScope detailed schedule of works, timeline view"></div><figcaption><span>InScope</span><span>Schedule of works</span></figcaption></figure>
+        <figure class="fig-a"><img class="tall" src="img/hero_window.jpg" alt="Arched window detail on one of the new homes" loading="lazy" decoding="async"><figcaption><span>Detail</span></figcaption></figure>
+        <figure class="fig-b"><div class="shot"><img src="img/shot_programme.jpg" alt="InScope detailed schedule of works, timeline view" loading="lazy" decoding="async"></div><figcaption><span>InScope</span><span>Schedule of works</span></figcaption></figure>
       </div>
     </div>
     <div class="case2-quote">
@@ -630,7 +630,13 @@ function tblAjaxForm(form, ev){
     }
     fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
       .then(function(r){
-        if (r.ok) { tblTrack(ev.sent); form.innerHTML = ev.successHtml; }
+        if (r.ok) {
+          tblTrack(ev.sent);
+          form.innerHTML = ev.successHtml;
+          var modal = form.closest('#contactModal');
+          var note = modal && modal.querySelector('.contact-note');
+          if (note) note.hidden = true;
+        }
         else { fail(); }
       })
       .catch(fail);
