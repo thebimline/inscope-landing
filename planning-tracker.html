@@ -362,11 +362,16 @@ section.lp-bold{color:#fff}
         <h2 class="h2" style="margin:0 0 10px">Get your free Planning Tracker.</h2>
         <input type="hidden" name="_subject" value="Planning Tracker request">
         <input type="hidden" name="source" value="Planning Tracker landing page">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
         <label for="lp-name">Name</label>
         <input id="lp-name" type="text" name="name" required>
         <label for="lp-email">Email</label>
         <input id="lp-email" type="email" name="email" required>
+        <label for="lp-company">Company (optional)</label>
+        <input id="lp-company" type="text" name="company" autocomplete="organization">
         <label for="lp-site">Planning reference or site address</label>
         <input id="lp-site" type="text" name="site" placeholder="e.g. 23/01234/FUL, or 12 Mill Lane, Taplow SL6" required>
         <p class="hint">Decision notices are public. Just tell us where, and we’ll find it.</p>
@@ -421,6 +426,17 @@ document.addEventListener('click', function(e){
 });
 // Forms: submit in the background so a request is only counted when Formspree confirms it.
 // Without JavaScript or fetch, the form still submits normally to Formspree.
+// UTM tags: copy utm_source / utm_medium / utm_campaign from the page address into any hidden form fields with the same name.
+// Nothing is stored in the browser.
+(function(){
+  if (!window.URLSearchParams) return;
+  var p = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(function(k){
+    var v = p.get(k);
+    if (!v) return;
+    document.querySelectorAll('input[name="' + k + '"]').forEach(function(i){ i.value = v.slice(0, 100); });
+  });
+})();
 function tblAjaxForm(form, ev){
   if (!form) return;
   form.addEventListener('submit', function(e){

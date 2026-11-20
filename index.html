@@ -174,6 +174,9 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
 .contact-box{position:relative;background:var(--paper);max-width:520px;width:100%;padding:36px}
 .contact-box h2{font-family:var(--mono);font-weight:400;text-transform:uppercase;font-size:26px;margin:0 0 20px}
 .contact-form{display:grid;gap:12px}
+.contact-small{font-size:15px;color:var(--muted);margin-top:22px}
+.contact-form .contact-check{display:flex;align-items:center;gap:8px;font-family:inherit;font-size:15px;color:var(--muted);letter-spacing:normal;text-transform:none;margin:6px 0 0}
+.contact-form .contact-check input{flex:0 0 auto;width:auto;margin:0;padding:0}
 .contact-form input,.contact-form textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--rule);background:#fff}
 .submit-btn{font:inherit;border:0;border-radius:8px;padding:14px;background:var(--pink);cursor:pointer}
 .close-modal{position:absolute;top:10px;right:14px;border:0;background:none;font-size:28px;cursor:pointer}
@@ -407,8 +410,8 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
     </div>
     <div class="pricing">
       <p class="offer"><span>Early clients: no setup fee</span><span>Three-month minimum term</span></p>
-      <div class="price-card"><span class="label">Solo developers &amp; PMs</span><p class="price">£125<small>a month</small></p><p>You, on up to 3 projects. £100 a month for each additional project.</p><p>Add team members from £50 per user, per project.</p></div>
-      <div class="price-card"><span class="label">Consultancies</span><p class="price">£50<small>per PM, per month</small></p><p>Includes your first project, plus £100 a month for each additional project.</p></div>
+      <div class="price-card"><span class="label">Solo developers &amp; PMs</span><p class="price">£125<small>a month</small></p><p>You, on up to 3 projects. £100 a month for each additional project.</p><p>Add team members at a per-user, per-project rate.</p></div>
+      <div class="price-card"><span class="label">Consultancies &amp; teams</span><p class="price" style="font-size:clamp(28px,3vw,40px)">By team size</p><p>For teams with multiple users, pricing depends on the number of users, with a discount structure based on team size.</p><p>Book a call for your team’s price.</p></div>
       <div class="price-note"><h3 class="h3">Better value as you grow.</h3><p>If InScope saves the PM more than half an hour per project each month, it has already paid for itself.</p></div>
     </div>
   </div>
@@ -555,6 +558,9 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
   method="POST">
 
       <input type="hidden" name="_subject" value="New InScope enquiry">
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
 
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
@@ -572,6 +578,8 @@ figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-tran
         required
       ></textarea>
 
+      <p class="contact-small">We’ll also send you occasional emails about InScope. You can unsubscribe at any time.</p>
+      <label class="contact-check"><input type="checkbox" name="no_emails" value="Yes"> I’d rather not get these emails.</label>
       <button type="submit" class="submit-btn">
         Let’s talk
       </button>
@@ -609,6 +617,17 @@ document.addEventListener('click', function(e){
 });
 // Forms: submit in the background so a request is only counted when Formspree confirms it.
 // Without JavaScript or fetch, the form still submits normally to Formspree.
+// UTM tags: copy utm_source / utm_medium / utm_campaign from the page address into any hidden form fields with the same name.
+// Nothing is stored in the browser.
+(function(){
+  if (!window.URLSearchParams) return;
+  var p = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(function(k){
+    var v = p.get(k);
+    if (!v) return;
+    document.querySelectorAll('input[name="' + k + '"]').forEach(function(i){ i.value = v.slice(0, 100); });
+  });
+})();
 function tblAjaxForm(form, ev){
   if (!form) return;
   form.addEventListener('submit', function(e){
