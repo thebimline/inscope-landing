@@ -430,12 +430,17 @@ document.addEventListener('click', function(e){
 // Nothing is stored in the browser.
 (function(){
   if (!window.URLSearchParams) return;
-  var p = new URLSearchParams(window.location.search);
-  ['utm_source','utm_medium','utm_campaign'].forEach(function(k){
-    var v = p.get(k);
-    if (!v) return;
-    document.querySelectorAll('input[name="' + k + '"]').forEach(function(i){ i.value = v.slice(0, 100); });
-  });
+  function fillUtm(){
+    var p = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign'].forEach(function(k){
+      var v = p.get(k);
+      if (!v) return;
+      document.querySelectorAll('input[name="' + k + '"]').forEach(function(i){ i.value = v.slice(0, 100); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fillUtm);
+  else fillUtm();
+  document.addEventListener('submit', fillUtm, true);
 })();
 function tblAjaxForm(form, ev){
   if (!form) return;
